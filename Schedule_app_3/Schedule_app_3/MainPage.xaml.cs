@@ -1,4 +1,5 @@
-﻿using static Java.Util.Jar.Attributes;
+﻿using Microsoft.Maui.Controls;
+using static Java.Util.Jar.Attributes;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Schedule_app_3;
@@ -6,11 +7,12 @@ namespace Schedule_app_3;
 public partial class MainPage : ContentPage
 {
 	int count = 0;
-    
     public MainPage()
     {
+       
         InitializeComponent();
-
+       
+        
         //Button button = new Button
         //{
         //    Text = "Navigate!",
@@ -37,9 +39,6 @@ public partial class MainPage : ContentPage
         //    HorizontalOptions = LayoutOptions.Center,
         //    VerticalOptions = LayoutOptions.End
         //};
-
-        StackLayout stackMain = new StackLayout();
-       
         //for(int i = 0; i < 10; i++)
         //{
         //    Label l = new Label
@@ -51,6 +50,348 @@ public partial class MainPage : ContentPage
         //    };
         //    st.Children.Add(l);
         //};
+        //________________________________________Кнопки дней недели__________________________________________________
+        Button btpn = new Button()
+        {
+            Text = "ПН",
+            BorderWidth = 1,
+            TextColor = Color.FromRgb(0, 0, 0),
+            BorderColor = Color.FromRgb(0, 0, 0),
+            Background = Color.FromRgb(255, 255, 255),
+            Margin = new Thickness(5, -10, 0, 0),
+            HeightRequest = 50,
+            WidthRequest = 50,
+            CornerRadius = 50,
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.Start
+        };
+        Button btvt = new Button()
+        {
+            Text = "ВТ",
+            BorderWidth = 1,
+            BorderColor = Color.FromRgb(0, 0, 0),
+            TextColor = Color.FromRgb(0, 0, 0),
+            Background = Color.FromRgb(255, 255, 255),
+            Margin = new Thickness(60, -10, 0, 0),
+            HeightRequest = 50,
+            WidthRequest = 50,
+            CornerRadius = 50,
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.Start
+        };
+        Button btsr = new Button()
+        {
+            Text = "СР",
+            BorderWidth = 1,
+            BorderColor = Color.FromRgb(0, 0, 0),
+            TextColor = Color.FromRgb(0, 0, 0),
+            Background = Color.FromRgb(255, 255, 255),
+            Margin = new Thickness(115, -10, 0, 0),
+            HeightRequest = 50,
+            WidthRequest = 50,
+            CornerRadius = 50,
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.Start
+        };
+        Button btch = new Button()
+        {
+            Text = "ЧТ",
+            BorderWidth = 1,
+            BorderColor = Color.FromRgb(0, 0, 0),
+            TextColor = Color.FromRgb(0, 0, 0),
+            Background = Color.FromRgb(255, 255, 255),
+            Margin = new Thickness(170, -10, 0, 0),
+            HeightRequest = 50,
+            WidthRequest = 50,
+            CornerRadius = 50,
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.Start
+        };
+        Button btpt = new Button()
+        {
+            Text = "ПТ",
+            BorderWidth = 1,
+            BorderColor = Color.FromRgb(0, 0, 0),
+            TextColor = Color.FromRgb(0, 0, 0),
+            Background = Color.FromRgb(255, 255, 255),
+            Margin = new Thickness(225, -10, 0, 0),
+            HeightRequest = 50,
+            WidthRequest = 50,
+            CornerRadius = 50,
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.Start
+        };
+        Button btsb = new Button()
+        {
+            Text = "СБ",
+            BorderWidth = 1,
+            BorderColor = Color.FromRgb(0, 0, 0),
+            TextColor = Color.FromRgb(0, 0, 0),
+            Background = Color.FromRgb(255, 255, 255),
+            Margin = new Thickness(280, -10, 0, 0),
+            HeightRequest = 50,
+            WidthRequest = 50,
+            CornerRadius = 50,
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.Start
+        };
+        Button btvs = new Button()
+        {
+            Text = "ВС",
+            BorderWidth = 1,
+            BorderColor = Color.FromRgb(0, 0, 0),
+            TextColor = Color.FromRgb(0, 0, 0),
+            Background = Color.FromRgb(255, 255, 255),
+            Margin = new Thickness(335, -10, 0, 0),
+            HeightRequest = 50,
+            WidthRequest = 50,
+            CornerRadius = 50,
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.Start,
+        };
+//__________________________________________________________________________________________     
+        StackLayout stackMain = new StackLayout();
+//________________________________________Таблица дней недели__________________________________________________
+        Grid gridButton = new Grid
+        {
+            
+            VerticalOptions = LayoutOptions.Start,
+            Margin = new Thickness(0, 0, 0, 0),
+            Children =
+            {
+                new StackLayout {
+                    
+                    Children ={
+                        new Label
+                            {
+                                
+                                Text = "ПН",
+                                TextColor = Color.FromRgb(0,0,0),
+                                Background = Color.FromRgb(255,255,255),
+                                Padding = new Thickness(0, 17, 0, 0),
+                                Margin = new Thickness(17, 0, 0, 0),
+                                HeightRequest = 50,
+                                WidthRequest = 50,
+                                HorizontalOptions = LayoutOptions.Start,
+                                VerticalOptions = LayoutOptions.Start
+                            },
+                       btpn
+                    }
+                },
+                new StackLayout {
+
+                    Children ={
+                        new Label
+                            {
+
+                                Text = "ВТ",
+                                TextColor = Color.FromRgb(0,0,0),
+                                Background = Color.FromRgb(255,255,255),
+                                Padding = new Thickness(0, 17, 0, 0),
+                                Margin = new Thickness(75, 0, 0, 0),
+                                HeightRequest = 50,
+                                WidthRequest = 50,
+                                HorizontalOptions = LayoutOptions.Start,
+                                VerticalOptions = LayoutOptions.Start
+                            },
+                      btvt
+                    }
+                },
+                     new StackLayout {
+
+                    Children ={
+                        new Label
+                            {
+
+                                Text = "СР",
+                                TextColor = Color.FromRgb(0,0,0),
+                                Background = Color.FromRgb(255,255,255),
+                                Padding = new Thickness(0, 17, 0, 0),
+                                Margin = new Thickness(131, 0, 0, 0),
+                                HeightRequest = 50,
+                                WidthRequest = 50,
+                                HorizontalOptions = LayoutOptions.Start,
+                                VerticalOptions = LayoutOptions.Start
+                            },
+                    btsr
+                    }
+                },
+                new StackLayout {
+
+                    Children ={
+                        new Label
+                            {
+
+                                Text = "ЧТ",
+                                TextColor = Color.FromRgb(0,0,0),
+                                Background = Color.FromRgb(255,255,255),
+                                Padding = new Thickness(0, 17, 0, 0),
+                                Margin = new Thickness(185, 0, 0, 0),
+                                HeightRequest = 50,
+                                WidthRequest = 50,
+                                HorizontalOptions = LayoutOptions.Start,
+                                VerticalOptions = LayoutOptions.Start
+                            },
+                      btch
+                    }
+                },
+                 new StackLayout {
+
+                    Children ={
+                        new Label
+                            {
+
+                                Text = "ПТ",
+                                TextColor = Color.FromRgb(0,0,0),
+                                Background = Color.FromRgb(255,255,255),
+                                Padding = new Thickness(0, 17, 0, 0),
+                                Margin = new Thickness(240, 0, 0, 0),
+                                HeightRequest = 50,
+                                WidthRequest = 50,
+                                HorizontalOptions = LayoutOptions.Start,
+                                VerticalOptions = LayoutOptions.Start
+                            },
+                      btpt
+                    }
+                },
+                   new StackLayout {
+
+                    Children ={
+                        new Label
+                            {
+
+                                Text = "СБ",
+                                TextColor = Color.FromRgb(0,0,0),
+                                Background = Color.FromRgb(255,255,255),
+                                Padding = new Thickness(0, 17, 0, 0),
+                                Margin = new Thickness(295, 0, 0, 0),
+                                HeightRequest = 50,
+                                WidthRequest = 50,
+                                HorizontalOptions = LayoutOptions.Start,
+                                VerticalOptions = LayoutOptions.Start
+                            },
+                     btsb
+                    }
+                },
+               new StackLayout {
+
+                    Children ={
+                        new Label
+                            {
+
+                                Text = "ВС",
+                                TextColor = Color.FromRgb(0,0,0),
+                                Background = Color.FromRgb(255,255,255),
+                                Padding = new Thickness(0, 17, 0, 0),
+                                Margin = new Thickness(352, 0, 0, 0),
+                                HeightRequest = 50,
+                                WidthRequest = 50,
+                                HorizontalOptions = LayoutOptions.Start,
+                                VerticalOptions = LayoutOptions.Start
+                            },
+                    btvs
+                    }
+                },
+            }
+        };
+        //__________________________________________________________________________________________
+        //________________________________________Функции кнопок дней недели__________________________________________________
+        btpn.Clicked += async (sender, args) =>
+        {
+            btvs.Background = Color.FromHex("#ffffff");
+            btpn.Background = Color.FromHex("#5cb0ff");
+            btvt.Background = Color.FromHex("#ffffff");
+            btsr.Background = Color.FromHex("#ffffff");
+            btch.Background = Color.FromHex("#ffffff");
+            btpt.Background = Color.FromHex("#ffffff");
+            btsb.Background = Color.FromHex("#ffffff");
+        };
+        btvt.Clicked += async (sender, args) =>
+        {
+            btvs.Background = Color.FromHex("#ffffff");
+            btpn.Background = Color.FromHex("#ffffff");
+            btvt.Background = Color.FromHex("#5cb0ff");
+            btsr.Background = Color.FromHex("#ffffff");
+            btch.Background = Color.FromHex("#ffffff");
+            btpt.Background = Color.FromHex("#ffffff");
+            btsb.Background = Color.FromHex("#ffffff");
+        };
+        btsr.Clicked += async (sender, args) =>
+        {
+            btvs.Background = Color.FromHex("#ffffff");
+            btpn.Background = Color.FromHex("#ffffff");
+            btvt.Background = Color.FromHex("#ffffff");
+            btsr.Background = Color.FromHex("#5cb0ff");
+            btch.Background = Color.FromHex("#ffffff");
+            btpt.Background = Color.FromHex("#ffffff");
+            btsb.Background = Color.FromHex("#ffffff");
+        };
+        btch.Clicked += async (sender, args) =>
+        {
+            btvs.Background = Color.FromHex("#ffffff");
+            btpn.Background = Color.FromHex("#ffffff");
+            btvt.Background = Color.FromHex("#ffffff");
+            btsr.Background = Color.FromHex("#ffffff");
+            btch.Background = Color.FromHex("#5cb0ff");
+            btpt.Background = Color.FromHex("#ffffff");
+            btsb.Background = Color.FromHex("#ffffff");
+        };
+        btpt.Clicked += async (sender, args) =>
+        {
+            btvs.Background = Color.FromHex("#ffffff");
+            btpn.Background = Color.FromHex("#ffffff");
+            btvt.Background = Color.FromHex("#ffffff");
+            btsr.Background = Color.FromHex("#ffffff");
+            btch.Background = Color.FromHex("#ffffff");
+            btpt.Background = Color.FromHex("#5cb0ff");
+            btsb.Background = Color.FromHex("#ffffff");
+        };
+        btsb.Clicked += async (sender, args) =>
+        {
+            btvs.Background = Color.FromHex("#ffffff");
+            btpn.Background = Color.FromHex("#ffffff");
+            btvt.Background = Color.FromHex("#ffffff");
+            btsr.Background = Color.FromHex("#ffffff");
+            btch.Background = Color.FromHex("#ffffff");
+            btpt.Background = Color.FromHex("#ffffff");
+            btsb.Background = Color.FromHex("#5cb0ff");
+        };
+        btvs.Clicked += async (sender, args) =>
+        {
+            btvs.Background = Color.FromHex("#5cb0ff");
+            btpn.Background = Color.FromHex("#ffffff");
+            btvt.Background = Color.FromHex("#ffffff");
+            btsr.Background = Color.FromHex("#ffffff");
+            btch.Background = Color.FromHex("#ffffff");
+            btpt.Background = Color.FromHex("#ffffff");
+            btsb.Background = Color.FromHex("#ffffff");
+        };
+
+
+        //__________________________________________________________________________________________
+        Label weekLabel = new Label
+        {
+            Text = "День недели",
+            Margin = new Thickness(0,10,0,10),
+            FontSize = 22,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        };
+        StackLayout steckprom = new StackLayout
+        {
+            Children = {
+                gridButton,
+                weekLabel
+            }
+        };
+        //________________________________________Создание блока кнопок дней недели__________________________________________________
+        Frame frameButton = new Frame
+        {
+            Content = steckprom,
+            HeightRequest = 100,
+        };
+
+        //________________________________________Создание стэка расписания__________________________________________________
         for (int i = 0; i < 10; i++)
         {
             StackLayout st = new StackLayout();
@@ -147,22 +488,38 @@ public partial class MainPage : ContentPage
             };
             stackMain.Children.Add(fr);
         }
-        Content = stackMain;
-       
+        StackLayout frameend = new StackLayout
+        {
+            Children =
+            {
+                steckprom,
+                stackMain,
+            }
+
+        };
+        ScrollView scrol = new ScrollView
+        {
+            Content = frameend
+        };
+        
+     
+
+        Content = scrol;
+
 
     }
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+	//private void OnCounterClicked(object sender, EventArgs e)
+	//{
+	//	count++;
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+	//	if (count == 1)
+	//		CounterBtn.Text = $"Clicked {count} time";
+	//	else
+	//		CounterBtn.Text = $"Clicked {count} times";
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+	//	SemanticScreenReader.Announce(CounterBtn.Text);
+	//}
 
 
 
