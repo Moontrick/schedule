@@ -1,26 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "E:\\games\\tests\\Schedule_app_3\\Schedule_app_3\\Schedule_app_3.csproj": {}
+    "D:\\C#\\Shedule\\schedule\\Schedule_app_3\\Schedule_app_3\\Schedule_app_3.csproj": {}
   },
   "projects": {
-    "E:\\games\\tests\\Schedule_app_3\\Schedule_app_3\\Schedule_app_3.csproj": {
+    "D:\\C#\\Shedule\\schedule\\Schedule_app_3\\Schedule_app_3\\Schedule_app_3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\games\\tests\\Schedule_app_3\\Schedule_app_3\\Schedule_app_3.csproj",
+        "projectUniqueName": "D:\\C#\\Shedule\\schedule\\Schedule_app_3\\Schedule_app_3\\Schedule_app_3.csproj",
         "projectName": "Schedule_app_3",
-        "projectPath": "E:\\games\\tests\\Schedule_app_3\\Schedule_app_3\\Schedule_app_3.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\games\\tests\\Schedule_app_3\\Schedule_app_3\\obj\\",
+        "projectPath": "D:\\C#\\Shedule\\schedule\\Schedule_app_3\\Schedule_app_3\\Schedule_app_3.csproj",
+        "packagesPath": "C:\\Users\\Vadim\\.nuget\\packages\\",
+        "outputPath": "D:\\C#\\Shedule\\schedule\\Schedule_app_3\\Schedule_app_3\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vadim\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0-android",

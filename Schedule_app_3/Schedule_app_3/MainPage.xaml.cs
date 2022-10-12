@@ -1,5 +1,5 @@
 ﻿using Microsoft.Maui.Controls;
-using static Java.Util.Jar.Attributes;
+using SheduleFile;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Schedule_app_3;
@@ -11,8 +11,11 @@ public partial class MainPage : ContentPage
     {
        
         InitializeComponent();
-       
-        
+
+
+        //тут я подумал а какой нужно будет путь указвать для юзера, надо обсудить
+        ReadFile readFile = new ReadFile(@"D:\C#\Shedule\schedule\Schedule_app_3\Shedule.txt");
+
         //Button button = new Button
         //{
         //    Text = "Navigate!",
@@ -408,7 +411,7 @@ public partial class MainPage : ContentPage
                      HorizontalOptions = LayoutOptions.Start,
                      VerticalOptions = LayoutOptions.Center
                 },
-                 new Label
+                new Label
                 {
                     TextColor = Color.FromHex("#828181"),
                      FontSize = 16,
@@ -417,7 +420,7 @@ public partial class MainPage : ContentPage
                      HorizontalOptions = LayoutOptions.Start,
                      VerticalOptions = LayoutOptions.Center
                 },
-                 new Label
+                new Label
                 {
                     TextColor = Color.FromHex("#828181"),
                      FontSize = 16,
@@ -425,7 +428,7 @@ public partial class MainPage : ContentPage
                     HorizontalOptions = LayoutOptions.End,
                      VerticalOptions = LayoutOptions.Center
                 },
-           }
+            }
 
             };
             st.Children.Add(fr1);
