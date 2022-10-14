@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Ltvfx7IzYvlt/SDG+mAcsuSJ7NGtw01YPU/ivNv4Iyc9Ng9S8JS7oenRjZxa53C7Fjk/Kyv0nNkQoJY9EFQoLg==",
+  "dgSpecHash": "I1ol2L3DF0FduZuP4aKAjnyztj4syziFhiz1HXMwoS1Gm28N37zCP4gCNm4frSmmYvs43WtV86N9hD4inCyOKw==",
   "success": true,
   "projectFilePath": "D:\\C#\\Shedule\\schedule\\Schedule_app_3\\Schedule_app_3\\Schedule_app_3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vadim\\.nuget\\packages\\googlegson\\2.9.0.1\\googlegson.2.9.0.1.nupkg.sha512",
+    "C:\\Users\\Vadim\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512",
     "C:\\Users\\Vadim\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",
     "C:\\Users\\Vadim\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Vadim\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",

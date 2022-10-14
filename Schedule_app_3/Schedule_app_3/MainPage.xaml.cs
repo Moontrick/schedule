@@ -1,6 +1,10 @@
 ﻿using Microsoft.Maui.Controls;
 using SheduleFile;
 using static System.Net.Mime.MediaTypeNames;
+using System.IO;
+using System.Text;
+using System.Collections.Generic;
+using System.Threading;
 
 namespace Schedule_app_3;
 
@@ -11,11 +15,58 @@ public partial class MainPage : ContentPage
     {
        
         InitializeComponent();
+        #region Storage
+        var path = FileSystem.Current.AppDataDirectory;
+        var fullPath = Path.Combine(path, "Shedule.txt");
+
+        if (!File.Exists(fullPath))
+        {
+            
+            File.Create(fullPath);
+            WriteFromParser();
+        }
+        else
+        {
+            var fi = new FileInfo(fullPath);
+            if (fi.Length == 0)
+                WriteFromParser();
+                
+        }
+
+        //ReadFile readFile = new ReadFile(fullPath);
+
+        #endregion
+
+        static void WriteFromParser()
+        {
+            Dictionary<int, List<Dictionary<int, int>>> IDCommonPair = new Dictionary<int, List<Dictionary<int, int>>>();
+            List<string> _PairType = new List<string>();
+            List<string> _PairName = new List<string>();
+            List<string> _TeacherName = new List<string>();
+            List<string> _Location = new List<string>();
+
+            int h = 1;
+
+            for (int i = 0; i < 6; i++)
+            {
+                Dictionary<int, int> keyValuePairs = new Dictionary<int, int>();
+
+                Parser ob = new Parser(h);
+                
+                _PairType.AddRange(ob.PairType);
+                _PairName.AddRange(ob.PairName);
+                _TeacherName.AddRange(ob.TeacherName);
+                _Location.AddRange(ob.Location);
+                var tmp = new List<Dictionary<int, int>>();
+                tmp.Add(ob._IDCommonPair);
+                IDCommonPair.Add(h, tmp);
+
+                h++;
+
+            }
 
 
-        //тут я подумал а какой нужно будет путь указвать для юзера, надо обсудить
-        ReadFile readFile = new ReadFile(@"D:\C#\Shedule\schedule\Schedule_app_3\Shedule.txt");
-
+        }
         //Button button = new Button
         //{
         //    Text = "Navigate!",
