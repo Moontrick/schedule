@@ -5,16 +5,20 @@ using System.IO;
 using System.Text;
 using System.Collections.Generic;
 using System.Threading;
+using Microsoft.Maui.Controls.Xaml;
 
 namespace Schedule_app_3;
 
 public partial class MainPage : ContentPage
 {
 	int count = 0;
+    int[] weekDate = new int[7];
+    
     public MainPage()
     {
        
         InitializeComponent();
+        GetAllDates();
         #region Storage
         var path = FileSystem.Current.AppDataDirectory;
         var fullPath = Path.Combine(path, "Shedule.txt");
@@ -32,7 +36,35 @@ public partial class MainPage : ContentPage
                 WriteFromParser();
                 
         }
+        
+        // Функция для определения даты
 
+        void GetAllDates()
+        {
+            for (int i = 0; i < weekDate.Length; i++) { weekDate[i] = 0; }
+            DateTime currentDay = DateTime.Now;
+            DayOfWeek dayOfWeek = currentDay.DayOfWeek;
+            int curDate = 0;
+            switch (dayOfWeek) {
+                case DayOfWeek.Monday: curDate = 0; break;        
+                case DayOfWeek.Tuesday: curDate = 1; break;        
+                case DayOfWeek.Wednesday: curDate = 2; break;        
+                case DayOfWeek.Thursday: curDate = 3; break;        
+                case DayOfWeek.Friday: curDate = 4; break;        
+                case DayOfWeek.Saturday: curDate = 5; break;        
+                case DayOfWeek.Sunday: curDate = 6; break;
+                default: break;
+            }
+
+            for (int i = 0; i < weekDate.Length; i++)
+            {
+                
+                weekDate[i] = (currentDay.Add(new TimeSpan(i - curDate, 0, 0, 0))).Day;
+            }
+            
+
+        }
+        //GetAllDates();
         //ReadFile readFile = new ReadFile(fullPath);
 
         #endregion
@@ -107,7 +139,7 @@ public partial class MainPage : ContentPage
         //________________________________________Кнопки дней недели__________________________________________________
         Button btpn = new Button()
         {
-            Text = "ПН",
+            Text = weekDate[0].ToString(),
             BorderWidth = 1,
             TextColor = Color.FromRgb(0, 0, 0),
             BorderColor = Color.FromRgb(0, 0, 0),
@@ -121,7 +153,7 @@ public partial class MainPage : ContentPage
         };
         Button btvt = new Button()
         {
-            Text = "ВТ",
+            Text = weekDate[1].ToString(),
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
@@ -135,7 +167,7 @@ public partial class MainPage : ContentPage
         };
         Button btsr = new Button()
         {
-            Text = "СР",
+            Text = weekDate[2].ToString(),
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
@@ -149,7 +181,7 @@ public partial class MainPage : ContentPage
         };
         Button btch = new Button()
         {
-            Text = "ЧТ",
+            Text = weekDate[3].ToString(),
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
@@ -163,7 +195,7 @@ public partial class MainPage : ContentPage
         };
         Button btpt = new Button()
         {
-            Text = "ПТ",
+            Text = weekDate[4].ToString(),
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
@@ -177,7 +209,7 @@ public partial class MainPage : ContentPage
         };
         Button btsb = new Button()
         {
-            Text = "СБ",
+            Text = weekDate[5].ToString(),
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
@@ -191,7 +223,7 @@ public partial class MainPage : ContentPage
         };
         Button btvs = new Button()
         {
-            Text = "ВС",
+            Text = weekDate[6].ToString(),
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
@@ -485,6 +517,7 @@ public partial class MainPage : ContentPage
             st.Children.Add(fr1);
             Label l1 = new Label
             {
+                
                 FontSize = 17,
                 FontFamily = "Comic Sans MS",
                 TextColor = Color.FromRgb(0, 0, 0),

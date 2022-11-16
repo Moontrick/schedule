@@ -263,3 +263,4 @@ D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-ios\iossim
 D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-ios\iossimulator-x64\Schedule_app_3.pdb
 D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-ios\iossimulator-x64\Schedule_app_3.genruntimeconfig.cache
 D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-ios\iossimulator-x64\ref\Schedule_app_3.dll
+D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\HtmlAgilityPack.dll

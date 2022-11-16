@@ -53,7 +53,9 @@ namespace Schedule_app_3
                 mas_podroup[i] = null;
              }
 
-            using (HttpClientHandler hdl = new HttpClientHandler { AllowAutoRedirect = false, AutomaticDecompression = System.Net.DecompressionMethods.Deflate | System.Net.DecompressionMethods.GZip | System.Net.DecompressionMethods.None })
+            using (HttpClientHandler hdl = new HttpClientHandler { AllowAutoRedirect = false, AutomaticDecompression = System.Net.DecompressionMethods.Deflate 
+                                                                 | System.Net.DecompressionMethods.GZip 
+                                                                 | System.Net.DecompressionMethods.None })
             {
                 using (var client = new HttpClient(hdl))
                 {

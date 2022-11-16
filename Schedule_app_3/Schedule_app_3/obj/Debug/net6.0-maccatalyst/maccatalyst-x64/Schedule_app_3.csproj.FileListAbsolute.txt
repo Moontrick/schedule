@@ -253,3 +253,4 @@ D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-maccatalys
 D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\Schedule_app_3.pdb
 D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\Schedule_app_3.genruntimeconfig.cache
 D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-maccatalyst\maccatalyst-x64\ref\Schedule_app_3.dll
+D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-maccatalyst\maccatalyst-x64\HtmlAgilityPack.dll
