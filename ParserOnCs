@@ -1,0 +1,119 @@
+using System;
+using HtmlAgilityPack;
+using System.Net.Http;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+using System.Reflection.Metadata;
+
+namespace Csharpconsole
+{
+    class Program
+    {
+
+        static void Parsing_Start()
+        {
+            var result = Parsing(url: "https://www.sgu.ru/schedule/knt/do/311");
+        }
+
+        public static string Parsing(string url)
+        {
+            try
+            {
+                string str = "хуй";
+                //Dictionary<string, List<string>> parameters = new Dictionary<string, List<string>>();
+                using (HttpClientHandler hdl = new HttpClientHandler { AllowAutoRedirect = false, AutomaticDecompression = System.Net.DecompressionMethods.Deflate | System.Net.DecompressionMethods.GZip | System.Net.DecompressionMethods.None })
+                {
+                    using (var client = new HttpClient(hdl))
+                    {
+                        using (HttpResponseMessage resp = client.GetAsync(url).Result)
+                        {
+                            if (resp.IsSuccessStatusCode)
+                            {
+                                var html = resp.Content.ReadAsStringAsync().Result;
+                                if (!string.IsNullOrEmpty(html))
+                                {
+                                    HtmlDocument doc = new HtmlDocument();
+                                    doc.LoadHtml(html);
+                                         string type_par = "";
+                                         string group = "";
+                                         string name_par = "";
+                                         string Prepod = "";
+                                         string mesto = "";
+                                         string porgoup = "";
+                                    //for (int i = 1; i < 7; i++) {
+                                        string stri = "//td[@id = '" + System.Convert.ToString(4) + "_1";
+                                        var table1 = doc.DocumentNode.SelectSingleNode(stri + "']/div[1]/div[1]/div[2]");
+                                        if (table1 != null)
+                                        {
+                                        var table5 = doc.DocumentNode.SelectSingleNode(stri + "']/div[1]/div[1]/div[3]");
+                                       
+                                        porgoup = table5.InnerText;
+                                        type_par = table1.InnerText;
+                                        var table = doc.DocumentNode.SelectSingleNode(stri + "']/div[1]/div[2]");
+                                        name_par = table.InnerText;
+                                                                     //var table2 = doc.DocumentNode.SelectSingleNode("//td[@id = '4_1']");
+                                        var table2 = doc.DocumentNode.SelectSingleNode(stri + "']/div[1]/div[3]");
+                                        Prepod = table2.InnerText;
+                                        var table3 = doc.DocumentNode.SelectSingleNode(stri + "']/div[1]/div[4]");
+                                        mesto = table3.InnerText;
+                                        //*[@id="4_1"]/div[1]/div[2]
+                                        //*[@id="4_1"]/div[2]/div[2]
+                                        Console.WriteLine(type_par);
+                                        Console.WriteLine(porgoup);
+                                        Console.WriteLine(name_par);
+                                        Console.WriteLine(Prepod);
+                                        Console.WriteLine(mesto);
+                                        var flag = doc.DocumentNode.SelectSingleNode(stri + "']/div[2]/div[2]");
+                                        if (flag != null){
+                                            int stri_prov = 2;
+                                            while (flag!= null)
+                                            {
+                                                 
+                                                 table1 = doc.DocumentNode.SelectSingleNode(stri + "']/div["+ System.Convert.ToString(stri_prov)+"]/div[1]/div[2]");
+                                                 table5 = doc.DocumentNode.SelectSingleNode(stri + "']/div["+ System.Convert.ToString(stri_prov)+"]/div[1]/div[3]");
+
+                                                porgoup = table5.InnerText;
+                                                type_par = table1.InnerText;
+                                                 table = doc.DocumentNode.SelectSingleNode(stri + "']/div["+ System.Convert.ToString(stri_prov)+"]/div[2]");
+                                                name_par = table.InnerText;
+                                                //var table2 = doc.DocumentNode.SelectSingleNode("//td[@id = '4_1']");
+                                                 table2 = doc.DocumentNode.SelectSingleNode(stri + "']/div["+ System.Convert.ToString(stri_prov)+"]/div[3]");
+                                                Prepod = table2.InnerText;
+                                                 table3 = doc.DocumentNode.SelectSingleNode(stri + "']/div["+ System.Convert.ToString(stri_prov)+"]/div[4]");
+                                                mesto = table3.InnerText;
+                                                Console.WriteLine(type_par);
+                                                Console.WriteLine(porgoup);
+                                                Console.WriteLine(name_par);
+                                                Console.WriteLine(Prepod);
+                                                Console.WriteLine(mesto);
+                                                stri_prov++;
+                                                flag = doc.DocumentNode.SelectSingleNode(stri + "']/div["+ System.Convert.ToString(stri_prov)+"]/div[2]");
+                                            }
+                                        }
+
+
+
+
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("null");
+                                        }
+                                    //}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+            return null;
+        }
+
+        static void Main()
+        {
+            float real = 0.0f / 0.0f; if (real == real) Console.WriteLine("Equal"); else Console.WriteLine("Not equal");
+        }
+    }
+}
