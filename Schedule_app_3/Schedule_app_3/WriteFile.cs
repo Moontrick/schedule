@@ -16,7 +16,7 @@ namespace Schedule_app_3
                         , List<string> _TeacherName, List<string> _Location, string fullPath) {
 
 
-            using (FileStream file = new FileStream(fullPath, FileMode.Append))
+            using (FileStream file = new FileStream(fullPath, FileMode.Open))
             {
                 using (StreamWriter writer = new StreamWriter(file))
                 {
@@ -24,17 +24,17 @@ namespace Schedule_app_3
                     string userType = "0"; // 0 - student 1 - teacher
                     string new_day = "@";
                     string new_pair = "!";
-                    writer.Write(group);
-                    writer.Write(userType);
+                    writer.WriteLine(group);
+                    writer.WriteLine(userType);
                     int id = 0;
                     foreach (var DAY in IDCommonPair)
                     {
-                        writer.Write(new_day);
+                        writer.WriteLine(new_day);
                         foreach (var PAIR_IN_DAY in DAY.Value)
                         {
                             foreach (var PAIR_ID in PAIR_IN_DAY)
                             {
-                                writer.WriteLine(new_pair + " " + PAIR_ID.Key);
+                                writer.WriteLine(new_pair + " " + PAIR_ID.Value);
                                 for (int i = 0; i < PAIR_ID.Value; i++)
                                 {
                                     writer.WriteLine(_PairType[id]);

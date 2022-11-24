@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HtmlAgilityPack;
+
 
 namespace Schedule_app_3
 {
@@ -22,7 +24,7 @@ namespace Schedule_app_3
 
         private Dictionary<int, int> IDCommonPair = new Dictionary<int, int>();
 
-        public Dictionary<int,int> _IDCommonPair { get { return IDCommonPair; } }
+        public Dictionary<int, int> _IDCommonPair { get { return IDCommonPair; } }
 
 
         //string[] mas_type_par = new string[20];
@@ -46,20 +48,19 @@ namespace Schedule_app_3
 
         private int IDPair = 0;
         private int CountPair = 0;
-        public Parser(int h) {
+        public Parser(int h, string faculty, string group)
+        {
             for (int i = 0; i < 20; i++)
             {
                 prov[i] = 0;
                 mas_podroup[i] = null;
-             }
+            }
 
-            using (HttpClientHandler hdl = new HttpClientHandler { AllowAutoRedirect = false, AutomaticDecompression = System.Net.DecompressionMethods.Deflate 
-                                                                 | System.Net.DecompressionMethods.GZip 
-                                                                 | System.Net.DecompressionMethods.None })
+            using (HttpClientHandler hdl = new HttpClientHandler { AllowAutoRedirect = false, AutomaticDecompression = System.Net.DecompressionMethods.Deflate | System.Net.DecompressionMethods.GZip | System.Net.DecompressionMethods.None })
             {
                 using (var client = new HttpClient(hdl))
                 {
-                    string url = "https://www.sgu.ru/schedule/knt/do/311";
+                    string url = "https://www.sgu.ru/schedule/" + $"{faculty}" + "/do/" + $"{group}";
                     using (HttpResponseMessage resp = client.GetAsync(url).Result)
                     {
                         if (resp.IsSuccessStatusCode)
@@ -99,10 +100,10 @@ namespace Schedule_app_3
                                         var table3 = doc.DocumentNode.SelectSingleNode(stri + "']//div[@class = 'l-p']");
                                         mesto = table3.InnerText;
                                         _Location.Add(mesto);
-                                        
+
                                         col++;
                                         var flag = doc.DocumentNode.SelectSingleNode(stri + "']/div[2]/div[2]");
-                                        
+
                                         if (flag != null)
                                         {
                                             prov[i]++;
@@ -147,6 +148,10 @@ namespace Schedule_app_3
                                             prov[i] = 0;
                                         }
                                     }
+                                    else
+                                    {
+                                        IDCommonPair.Add(IDPair++, 0);
+                                    }
                                     chil++;
                                 }
                             }
@@ -154,7 +159,7 @@ namespace Schedule_app_3
                     }
                 }
             }
-            
+
         }
 
     }
