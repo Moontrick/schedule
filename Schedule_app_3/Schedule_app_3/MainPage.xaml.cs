@@ -13,7 +13,11 @@ public partial class MainPage : ContentPage
 {
 	int count = 0;
     int[] weekDate = new int[7];
-    
+    Dictionary<int, List<Dictionary<int, int>>> IDCommonPair = new Dictionary<int, List<Dictionary<int, int>>>();
+    List<string> _PairType = new List<string>();
+    List<string> _PairName = new List<string>();
+    List<string> _TeacherName = new List<string>();
+    List<string> _Location = new List<string>();
     public MainPage()
     {
        
@@ -69,13 +73,9 @@ public partial class MainPage : ContentPage
 
         #endregion
 
-        static void WriteFromParser()
+        void WriteFromParser()
         {
-            Dictionary<int, List<Dictionary<int, int>>> IDCommonPair = new Dictionary<int, List<Dictionary<int, int>>>();
-            List<string> _PairType = new List<string>();
-            List<string> _PairName = new List<string>();
-            List<string> _TeacherName = new List<string>();
-            List<string> _Location = new List<string>();
+           
 
             int h = 1;
 
