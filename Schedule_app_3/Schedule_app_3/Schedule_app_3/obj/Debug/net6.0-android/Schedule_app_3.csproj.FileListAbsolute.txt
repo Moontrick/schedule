@@ -948,6 +948,7 @@ E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\lp\153\jl\
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\lp\155\jl\files.cache
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\android\assets\HtmlAgilityPack.dll
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\android\assets\HtmlAgilityPack.pdb
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\resizetizer\r\drawable\settings.png
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\android\assets\mscorlib.dll
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\android\assets\System.Collections.Concurrent.dll
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\android\assets\System.Data.dll

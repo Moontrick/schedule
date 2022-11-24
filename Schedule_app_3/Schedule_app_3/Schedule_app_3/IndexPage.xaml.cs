@@ -6,15 +6,29 @@ namespace Schedule_app_3;
 
 public partial class IndexPage : ContentPage
 {
-	public IndexPage()
-	{
-        Dictionary<int, List<Dictionary<int, int>>> IDCommonPair = new Dictionary<int, List<Dictionary<int, int>>>();
-        List<string> _PairType = new List<string>();
-        List<string> _PairName = new List<string>();
-        List<string> _TeacherName = new List<string>();
-        List<string> _Location = new List<string>();
+    int count = 0;
+    int[] weekDate = new int[7];
+    Dictionary<int, List<Dictionary<int, int>>> IDCommonPair = new Dictionary<int, List<Dictionary<int, int>>>();
+    List<string> _PairType = new List<string>();
+    List<string> _PairName = new List<string>();
+    List<string> _TeacherName = new List<string>();
+    List<string> _Location = new List<string>();
+    List<string> _TimePair = new List<string>();
+    List<string> _Podgroup = new List<string>();
+    int curDate = 0;
+    public IndexPage(string str1, string str2)
+    {
 
+        _TimePair.Add("8:20 - 9:50");
+        _TimePair.Add("10:00 - 11:35");
+        _TimePair.Add("12:05 - 13:40");
+        _TimePair.Add("13:50 - 15:25");
+        _TimePair.Add("15:35 - 17:10");
+        _TimePair.Add("17:20 - 18:40");
+        _TimePair.Add("18:45 - 20:05");
+        _TimePair.Add("20:10 - 21:30");
         InitializeComponent();
+        GetAllDates();
 
         #region Storage
         var path = FileSystem.Current.AppDataDirectory;
@@ -29,13 +43,42 @@ public partial class IndexPage : ContentPage
         else
         {
             var fi = new FileInfo(fullPath);
-            if (fi.Length == 0)
+            if (fi.Length == 0) 
                 WriteFromParser();
+            else
+            {
+
+            }
 
         }
 
         //ReadFile readFile = new ReadFile(fullPath);
+        void GetAllDates()
+        {
+            for (int i = 0; i < weekDate.Length; i++) { weekDate[i] = 0; }
+            DateTime currentDay = DateTime.Now;
+            DayOfWeek dayOfWeek = currentDay.DayOfWeek;
+          
+            switch (dayOfWeek)
+            {
+                case DayOfWeek.Monday: curDate = 0; break;
+                case DayOfWeek.Tuesday: curDate = 1; break;
+                case DayOfWeek.Wednesday: curDate = 2; break;
+                case DayOfWeek.Thursday: curDate = 3; break;
+                case DayOfWeek.Friday: curDate = 4; break;
+                case DayOfWeek.Saturday: curDate = 5; break;
+                case DayOfWeek.Sunday: curDate = 6; break;
+                default: break;
+            }
+            
+            for (int i = 0; i < weekDate.Length; i++)
+            {
 
+                weekDate[i] = (currentDay.Add(new TimeSpan(i - curDate, 0, 0, 0))).Day;
+            }
+
+
+        }
         #endregion
 
         void WriteFromParser()
@@ -45,13 +88,16 @@ public partial class IndexPage : ContentPage
             for (int i = 0; i < 6; i++)
             {
                 Dictionary<int, int> keyValuePairs = new Dictionary<int, int>();
+                string faculty = "knt";
 
-                Parser ob = new Parser(h);
+                string group = "311";
+                Parser ob = new Parser(h, str1, str2);
 
                 _PairType.AddRange(ob.PairType);
                 _PairName.AddRange(ob.PairName);
                 _TeacherName.AddRange(ob.TeacherName);
                 _Location.AddRange(ob.Location);
+                _Podgroup.AddRange(ob.Podgroup);
                 var tmp = new List<Dictionary<int, int>>();
                 tmp.Add(ob._IDCommonPair);
                 IDCommonPair.Add(h, tmp);
@@ -100,7 +146,7 @@ public partial class IndexPage : ContentPage
         //________________________________________Кнопки дней недели__________________________________________________
         Button btpn = new Button()
         {
-            Text = "ПН",
+            Text = Convert.ToString(weekDate[0]),
             BorderWidth = 1,
             TextColor = Color.FromRgb(0, 0, 0),
             BorderColor = Color.FromRgb(0, 0, 0),
@@ -114,7 +160,7 @@ public partial class IndexPage : ContentPage
         };
         Button btvt = new Button()
         {
-            Text = "ВТ",
+            Text = Convert.ToString(weekDate[1]),
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
@@ -128,7 +174,7 @@ public partial class IndexPage : ContentPage
         };
         Button btsr = new Button()
         {
-            Text = "СР",
+            Text = Convert.ToString(weekDate[2]),
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
@@ -142,7 +188,7 @@ public partial class IndexPage : ContentPage
         };
         Button btch = new Button()
         {
-            Text = "ЧТ",
+            Text = Convert.ToString(weekDate[3]),
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
@@ -156,7 +202,7 @@ public partial class IndexPage : ContentPage
         };
         Button btpt = new Button()
         {
-            Text = "ПТ",
+            Text = Convert.ToString(weekDate[4]),
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
@@ -170,7 +216,7 @@ public partial class IndexPage : ContentPage
         };
         Button btsb = new Button()
         {
-            Text = "СБ",
+            Text = Convert.ToString(weekDate[5]),
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
@@ -184,7 +230,7 @@ public partial class IndexPage : ContentPage
         };
         Button btvs = new Button()
         {
-            Text = "ВС",
+            Text = Convert.ToString(weekDate[6]),
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
@@ -360,9 +406,37 @@ public partial class IndexPage : ContentPage
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
+
+        ImageButton bttitle = new ImageButton
+        {
+            Source = "settings.png",
+            HorizontalOptions = LayoutOptions.End,
+            VerticalOptions = LayoutOptions.End,
+            WidthRequest = 50,
+            HeightRequest = 50,
+            BackgroundColor = Color.FromRgba(0,0,0,1),
+            IsOpaque = false,
+            Aspect = Aspect.Fill
+        };
+        bttitle.Pressed += async (a, e) =>
+        {
+            bttitle.BackgroundColor = Color.FromRgba(0, 255, 255, 255);
+        };
+
+        StackLayout flexLayout = new StackLayout()
+        {
+
+            VerticalOptions = LayoutOptions.Start,
+
+            Children =
+            {
+                titleLabel,
+                bttitle
+            }
+        };
         Frame framtitle = new Frame
         {
-            Content = titleLabel,
+            Content = flexLayout,
             Padding = new Thickness(10, 10, 10, 10),
             Margin = new Thickness(0, 0, 0, 0),
             BackgroundColor = Color.FromHex("#0084ff"),
@@ -373,7 +447,8 @@ public partial class IndexPage : ContentPage
             Children = {
                 framtitle,
                 gridButton,
-                weekLabel
+                //weekLabel,
+                
             }
         };
        
@@ -440,14 +515,14 @@ public partial class IndexPage : ContentPage
                              HorizontalOptions = LayoutOptions.Start,
                              VerticalOptions = LayoutOptions.Center
                         },
-                        // new Label
-                        //{
-                        //    TextColor = Color.FromHex("#828181"),
-                        //     FontSize = 16,
-                        //    Text = "1под",
-                        //    HorizontalOptions = LayoutOptions.End,
-                        //     VerticalOptions = LayoutOptions.Center
-                        //},
+                         new Label
+                        {
+                            TextColor = Color.FromHex("#828181"),
+                             FontSize = 16,
+                            Text = _Podgroup[number_of_pairs],
+                            HorizontalOptions = LayoutOptions.End,
+                             VerticalOptions = LayoutOptions.Center
+                        },
                    }
 
                     };
@@ -490,9 +565,9 @@ public partial class IndexPage : ContentPage
                         },
                          new Label
                         {
-                                        TextColor = Color.FromHex("#828181"),
-                             FontSize = 16,
-                            Text = "8:20 - 9:50",
+                            TextColor = Color.FromHex("#828181"),
+                            FontSize = 16,
+                            Text = _TimePair[i],
                             HorizontalOptions = LayoutOptions.End,
                             VerticalOptions = LayoutOptions.Center
                         },
@@ -531,7 +606,14 @@ public partial class IndexPage : ContentPage
         };
 
         //________________________________________Функции кнопок дней недели__________________________________________________
-        btpn.Clicked += async (sender, args) =>
+        btpn.Clicked += Monday;
+        btvt.Clicked += Tuesday;
+        btsr.Clicked += Wednesday;
+        btch.Clicked += Thursday;
+        btpt.Clicked += Friday;
+        btsb.Clicked += Saturday;
+        btvs.Clicked += Sunday;
+        void Monday(object sender,EventArgs args)
         {
             StackLayout stackMain = new StackLayout();
             btvs.Background = Color.FromHex("#ffffff");
@@ -547,7 +629,7 @@ public partial class IndexPage : ContentPage
             frameend.Children.Add(stackMain);
 
         };
-        btvt.Clicked += async (sender, args) =>
+        void Tuesday(object sender, EventArgs args)
         {
             StackLayout stackMain = new StackLayout();
             btvs.Background = Color.FromHex("#ffffff");
@@ -572,7 +654,7 @@ public partial class IndexPage : ContentPage
             frameend.Children.Add(steckprom);
             frameend.Children.Add(stackMain);
         };
-        btsr.Clicked += async (sender, args) =>
+        void Wednesday(object sender, EventArgs args)
         {
             StackLayout stackMain = new StackLayout();
             btvs.Background = Color.FromHex("#ffffff");
@@ -598,7 +680,7 @@ public partial class IndexPage : ContentPage
 
             frameend.Children.Add(stackMain);
         };
-        btch.Clicked += async (sender, args) =>
+        void Thursday(object sender, EventArgs args)
         {
             StackLayout stackMain = new StackLayout();
             btvs.Background = Color.FromHex("#ffffff");
@@ -618,9 +700,13 @@ public partial class IndexPage : ContentPage
 
                 }
             }
+            frameend.Children.Clear();
+            frameend.Children.Add(steckprom);
             stackMain = make_curremt_day(4, n);
+
+            frameend.Children.Add(stackMain);
         };
-        btpt.Clicked += async (sender, args) =>
+        void Friday(object sender, EventArgs args)
         {
             StackLayout stackMain = new StackLayout();
             btvs.Background = Color.FromHex("#ffffff");
@@ -645,7 +731,7 @@ public partial class IndexPage : ContentPage
             frameend.Children.Add(steckprom);
             frameend.Children.Add(stackMain);
         };
-        btsb.Clicked += async (sender, args) =>
+        void Saturday(object sender, EventArgs args)
         {
             StackLayout stackMain = new StackLayout();
             btvs.Background = Color.FromHex("#ffffff");
@@ -670,7 +756,7 @@ public partial class IndexPage : ContentPage
             frameend.Children.Add(steckprom);
             frameend.Children.Add(stackMain);
         };
-        btvs.Clicked += async (sender, args) =>
+        void Sunday(object sender, EventArgs args)
         {
             btvs.Background = Color.FromHex("#5cb0ff");
             btpn.Background = Color.FromHex("#ffffff");
@@ -683,7 +769,17 @@ public partial class IndexPage : ContentPage
         };
 
         Content = scrol;
-
-
+        EventArgs args321;
+        switch (curDate)
+        {
+            case 0: Monday(btpn, EventArgs.Empty); break;
+            case 1: Tuesday(btvt, EventArgs.Empty); break;
+            case 2: Wednesday(btsr, EventArgs.Empty); break;
+            case 3: Thursday(btch, EventArgs.Empty); break;
+            case 4: Friday(btpt, EventArgs.Empty); break;
+            case 5: Saturday(btsb, EventArgs.Empty); break;
+            case 6: Sunday(btvs, EventArgs.Empty); break;
+            default: break;
+        }
     }
 }

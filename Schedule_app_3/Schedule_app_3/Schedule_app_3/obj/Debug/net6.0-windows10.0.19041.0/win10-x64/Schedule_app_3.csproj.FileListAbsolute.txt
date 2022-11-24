@@ -344,3 +344,4 @@ E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\HtmlAgilityPack.dll
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\settings.scale-100.png

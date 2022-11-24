@@ -1,27 +1,22 @@
 
 
 
-using Android.Text.Style;
-using Javax.Security.Auth;
 using System.Windows.Input;
 
 namespace Schedule_app_3;
 
 public partial class GroupPage : ContentPage
 {
-    List<string> l = new List<string>();
-    public GroupPage()
+    List<string> AllGroup = new List<string>();
+    public GroupPage(string faculty)
 	{
 		InitializeComponent();
-        l.Add("311");
-        l.Add("351");
-        l.Add("341");
-        l.Add("321");
-        l.Add("211");
-        l.Add("251");
-        l.Add("241");
-        l.Add("221");
-        Entry entry = new Entry { Placeholder = "Enter text" };
+        ParserGroup _parserGroup = new ParserGroup(faculty);
+        foreach (var num in _parserGroup.GroupList)
+        {
+            AllGroup.Add(num);
+        }
+        Entry entry = new Entry { Placeholder = "¬ведите номер группы" };
 
         //entry.Completed += OnEntryCompleted;
         StackLayout stackmain = new StackLayout()
@@ -46,11 +41,11 @@ public partial class GroupPage : ContentPage
             WidthRequest = 100,
             HeightRequest = 50,
         };
-        for (int i = 0; i < l.Count(); i++)
+        for (int i = 0; i < AllGroup.Count(); i++)
         {
              bt = new Button()
             {
-                Text = l[i],
+                Text = AllGroup[i],
                 FontSize = 15,
                 WidthRequest = 100,
                 HeightRequest = 50,
@@ -61,9 +56,11 @@ public partial class GroupPage : ContentPage
         }
 
         StackLayout stackend = new StackLayout();
-
-        stackend.Children.Add(stackmain);
+        StackLayout stacklast = new StackLayout();
+       
         stackend.Children.Add(stackbut1);
+        stacklast.Children.Add(stackmain);
+         stacklast.Children.Add(stackend);
         //-----------------------------
         //Button dsa = new Button()
         //{
@@ -82,7 +79,7 @@ public partial class GroupPage : ContentPage
         //-----------------------------
         Frame frame = new Frame()
         {
-            Content = stackend,
+            Content = stacklast,
             
         };
         ScrollView scrol = new ScrollView()
@@ -97,15 +94,15 @@ public partial class GroupPage : ContentPage
             string newText = args.NewTextValue;
             string myText = entry.Text;
             stackend.Clear();
-            stackend.Children.Add(stackmain);
+            
             StackLayout stackbut = new StackLayout()
             {
                 HorizontalOptions = LayoutOptions.Start,
                 VerticalOptions = LayoutOptions.Start,
             };
-            for (int i = 0; i < l.Count(); i++)
+            for (int i = 0; i < AllGroup.Count(); i++)
             {
-                string str = l[i];
+                string str = AllGroup[i];
                 bool flag = true;
                 if (myText.Length > str.Length)
                 {
@@ -127,7 +124,7 @@ public partial class GroupPage : ContentPage
                         {
                            
                            // Command = ic.Execute(NavTogle),
-                            Text = l[i],
+                            Text = AllGroup[i],
                             FontSize = 15,
                             Margin = new Thickness(0, 3, 0, 0),
                             WidthRequest = 100,
@@ -144,12 +141,12 @@ public partial class GroupPage : ContentPage
             stackend.Children.Add(stackbut);
            
         };
-
+         
 
         void onclik(object sender, EventArgs args)
         {
-            
-             Navigation.PushModalAsync(new IndexPage());
+            Button batick = (Button)sender;
+             Navigation.PushModalAsync(new IndexPage(faculty, batick.Text));
         };
 
         //void OnEntryCompleted(object sender, EventArgs e)

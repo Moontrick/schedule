@@ -22,11 +22,13 @@ namespace SheduleFile
         private List<string> _PairName = new List<string>();
         private List<string> _TeacherName = new List<string>();
         private List<string> _Location = new List<string>();
-
+        private List<string> _Podgroup = new List<string>();
         public List<string> PairType { get { return _PairType; } }
         public List<string> PairName { get { return _PairName; } }
         public List<string> TeacherName { get { return _TeacherName; } }
         public List<string> Location { get { return _Location; } }
+        public List<string> Podgroup { get { return _Podgroup; } }
+        
 
         private int idPair = 0;
         private int CountPair = 0;
@@ -81,6 +83,7 @@ namespace SheduleFile
                                 {
                                     _PairType.Add(line[i]);
                                     _PairName.Add(line[i++]);
+                                    _Podgroup.Add(line[i++]);
                                     _TeacherName.Add(line[i++]);
                                     _Location.Add(line[i++]);
                                 }

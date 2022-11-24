@@ -29,25 +29,25 @@
     <AppXManifest Include="E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-10-15T08:31:56.641</Modified>
+      <Modified>2022-11-24T14:07:12.113</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-10-15T08:31:56.391</Modified>
+      <Modified>2022-11-24T14:07:11.550</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Schedule_app_3.runtimeconfig.json">
       <PackagePath>Schedule_app_3.runtimeconfig.json</PackagePath>
-      <Modified>2022-10-15T08:31:56.123</Modified>
+      <Modified>2022-11-16T14:01:49.498</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Schedule_app_3.dll">
       <PackagePath>Schedule_app_3.dll</PackagePath>
-      <Modified>2022-10-15T08:31:54.718</Modified>
+      <Modified>2022-11-24T14:07:09.062</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Schedule_app_3.exe</PackagePath>
-      <Modified>2022-10-15T08:31:54.743</Modified>
+      <Modified>2022-11-24T14:07:09.538</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.8\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1067,7 +1067,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\Schedule_app_3.deps.json">
       <PackagePath>Schedule_app_3.deps.json</PackagePath>
-      <Modified>2022-10-15T08:31:56.531</Modified>
+      <Modified>2022-11-24T14:07:11.986</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\6.0.486\ref\net6.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -1115,147 +1115,151 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2022-10-06T15:59:47.390</Modified>
+      <Modified>2022-11-16T17:03:44.129</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.515</Modified>
+      <Modified>2022-11-16T17:03:44.268</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.522</Modified>
+      <Modified>2022-11-16T17:03:44.275</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.529</Modified>
+      <Modified>2022-11-16T17:03:44.282</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.538</Modified>
+      <Modified>2022-11-16T17:03:44.292</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.576</Modified>
+      <Modified>2022-11-16T17:03:44.328</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.399</Modified>
+      <Modified>2022-11-16T17:03:44.142</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.402</Modified>
+      <Modified>2022-11-16T17:03:44.144</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.405</Modified>
+      <Modified>2022-11-16T17:03:44.157</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.407</Modified>
+      <Modified>2022-11-16T17:03:44.160</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.411</Modified>
+      <Modified>2022-11-16T17:03:44.164</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.446</Modified>
+      <Modified>2022-11-16T17:03:44.199</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.451</Modified>
+      <Modified>2022-11-16T17:03:44.203</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.455</Modified>
+      <Modified>2022-11-16T17:03:44.207</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.461</Modified>
+      <Modified>2022-11-16T17:03:44.212</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.470</Modified>
+      <Modified>2022-11-16T17:03:44.222</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.430</Modified>
+      <Modified>2022-11-16T17:03:44.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.433</Modified>
+      <Modified>2022-11-16T17:03:44.185</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.435</Modified>
+      <Modified>2022-11-16T17:03:44.187</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.438</Modified>
+      <Modified>2022-11-16T17:03:44.190</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.443</Modified>
+      <Modified>2022-11-16T17:03:44.196</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.414</Modified>
+      <Modified>2022-11-16T17:03:44.166</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.417</Modified>
+      <Modified>2022-11-16T17:03:44.170</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.420</Modified>
+      <Modified>2022-11-16T17:03:44.172</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.423</Modified>
+      <Modified>2022-11-16T17:03:44.174</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.427</Modified>
+      <Modified>2022-11-16T17:03:44.178</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.474</Modified>
+      <Modified>2022-11-16T17:03:44.226</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.479</Modified>
+      <Modified>2022-11-16T17:03:44.231</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.484</Modified>
+      <Modified>2022-11-16T17:03:44.236</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.492</Modified>
+      <Modified>2022-11-16T17:03:44.244</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.509</Modified>
+      <Modified>2022-11-16T17:03:44.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.429</Modified>
+      <Modified>2022-11-16T17:03:44.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.436</Modified>
+      <Modified>2022-11-16T17:03:44.084</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.446</Modified>
+      <Modified>2022-11-16T17:03:44.094</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.459</Modified>
+      <Modified>2022-11-16T17:03:44.115</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2022-10-06T15:59:47.489</Modified>
+      <Modified>2022-11-16T17:03:44.150</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\settings.scale-100.png">
+      <PackagePath>settings.scale-100.png</PackagePath>
+      <Modified>2022-11-16T16:57:05.288</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

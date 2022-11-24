@@ -1,4 +1,6 @@
-﻿using Microsoft.Maui.Controls;
+﻿
+
+using Microsoft.Maui.Controls;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Schedule_app_3;
@@ -16,6 +18,7 @@ public partial class MainPage : ContentPage
         };
         Button firstbt = new Button()
         {
+           
             Text = "Студент",
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
@@ -37,6 +40,48 @@ public partial class MainPage : ContentPage
             WidthRequest = 150,
             
         };
+        Button tbbt = new Button()
+        {
+            WidthRequest = 50,
+            HeightRequest = 50,
+            BackgroundColor = Color.FromRgb(255,0,0),
+        };
+        Button tbbt2 = new Button()
+        {
+            WidthRequest = 50,
+            HeightRequest = 50,
+            BackgroundColor = Color.FromRgb(0, 255, 0),
+        };
+        Button tbbt3 = new Button()
+        {
+            WidthRequest = 50,
+            HeightRequest = 50,
+            BackgroundColor = Color.FromRgb(0, 0, 255),
+        };
+        FlyoutItem ft = new FlyoutItem
+        {
+            Title = "cats",
+        };
+
+        ImageButton bttitle = new ImageButton
+        {
+            Source = "settings.png",
+            HorizontalOptions = LayoutOptions.End,
+            VerticalOptions = LayoutOptions.End,
+            WidthRequest = 50,
+            HeightRequest = 50,
+            BackgroundColor = Color.FromRgba(0, 0, 0, 1),
+            IsOpaque = false,
+            Aspect = Aspect.Fill
+        };
+        bttitle.Released += async (a, e) =>
+        {
+            bttitle.BackgroundColor = Color.FromRgba(0, 255, 255, 255);
+        };
+        
+
+        //ToolTipProperties.SetText(button, "Click to Save your data");
+
         StackLayout newstack = new StackLayout()
 		{
             HorizontalOptions = LayoutOptions.Center,
@@ -44,12 +89,19 @@ public partial class MainPage : ContentPage
             Children =
             {   labelt,
                 firstbt,
-                secondbt
+                secondbt,
+                bttitle
             }
         };
+        
         firstbt.Clicked += async (sender, args) =>
         {
             await Navigation.PushAsync(new FactPage());
+            //await Navigation.PushModalAsync(new FactPage());
+        };
+        secondbt.Clicked += async (sender, args) =>
+        {
+            await Navigation.PushAsync(new TestPage());
             //await Navigation.PushModalAsync(new FactPage());
         };
         Content = newstack;
