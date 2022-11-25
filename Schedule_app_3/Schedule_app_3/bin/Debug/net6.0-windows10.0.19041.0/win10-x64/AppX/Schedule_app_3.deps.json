@@ -9,6 +9,7 @@
     ".NETCoreApp,Version=v6.0/win10-x64": {
       "Schedule_app_3/1.0": {
         "dependencies": {
+          "CsvHelper": "30.0.1",
           "HtmlAgilityPack": "1.11.46",
           "Microsoft.Maui.Dependencies": "6.0.486",
           "Microsoft.Maui.Extensions": "6.0.486",
@@ -904,6 +905,14 @@
           }
         }
       },
+      "CsvHelper/30.0.1": {
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "assemblyVersion": "30.0.0.0",
+            "fileVersion": "30.0.1.0"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {
@@ -1149,6 +1158,13 @@
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
+    },
+    "CsvHelper/30.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rcZtgbWR+As4G3Vpgx0AMNmShGuQLFjkHAPIIflzrfkJCx8/AOd4m96ZRmiU1Wi39qS5UVjV0P8qdgqOo5Cwyg==",
+      "path": "csvhelper/30.0.1",
+      "hashPath": "csvhelper.30.0.1.nupkg.sha512"
     },
     "HtmlAgilityPack/1.11.46": {
       "type": "package",

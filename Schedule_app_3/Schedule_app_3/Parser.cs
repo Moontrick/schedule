@@ -15,12 +15,15 @@ namespace Schedule_app_3
         private List<string> _PairName = new List<string>();
         private List<string> _TeacherName = new List<string>();
         private List<string> _Location = new List<string>();
-
+        private List<string> _Podgroup = new List<string>();
+        private List<string> _GroupForTeacher = new List<string>();
         public List<string> PairType { get { return _PairType; } }
         public List<string> PairName { get { return _PairName; } }
         public List<string> TeacherName { get { return _TeacherName; } }
         public List<string> Location { get { return _Location; } }
+        public List<string> GroupForTeacher { get { return _GroupForTeacher; } }
 
+        public List<string> Podgroup { get { return _Podgroup; } }
 
         private Dictionary<int, int> IDCommonPair = new Dictionary<int, int>();
 
@@ -43,11 +46,13 @@ namespace Schedule_app_3
         private string name_par = "";
         private string Prepod = "";
         private string mesto = "";
+        private string dopgr = "";
         //private int h = 1;
         int col = 0;
 
         private int IDPair = 0;
         private int CountPair = 0;
+        bool dopFl = false;
         public Parser(int h, string faculty, string group)
         {
             for (int i = 0; i < 20; i++)
@@ -60,7 +65,17 @@ namespace Schedule_app_3
             {
                 using (var client = new HttpClient(hdl))
                 {
-                    string url = "https://www.sgu.ru/schedule/" + $"{faculty}" + "/do/" + $"{group}";
+                    string url;
+                    if (faculty == "teacher")
+                    {
+                        url = "https://www.sgu.ru/schedule/" + $"{faculty}" + "/" + $"{group}";
+                        dopFl = true;
+                    }
+                    else
+                    {
+                        url = "https://www.sgu.ru/schedule/" + $"{faculty}" + "/do/" + $"{group}";
+
+                    }
                     using (HttpResponseMessage resp = client.GetAsync(url).Result)
                     {
                         if (resp.IsSuccessStatusCode)
@@ -91,15 +106,28 @@ namespace Schedule_app_3
                                         _PairType.Add(type_par);
                                         var table = doc.DocumentNode.SelectSingleNode(stri + "']//div[@class = 'l-dn']");
                                         var table5 = doc.DocumentNode.SelectSingleNode(stri + "']/div[1]/div[1]/div[3]");
-                                        name_par = table.InnerText + table5.InnerText;
+                                        group = table5.InnerText;
+                                        name_par = table.InnerText;
                                         _PairName.Add(name_par);
-
-                                        var table2 = doc.DocumentNode.SelectSingleNode(stri + "']//div[@class = 'l-tn']");
-                                        Prepod = table2.InnerText;
-                                        _TeacherName.Add(Prepod);
+                                        _Podgroup.Add(group);
+                                        
                                         var table3 = doc.DocumentNode.SelectSingleNode(stri + "']//div[@class = 'l-p']");
                                         mesto = table3.InnerText;
                                         _Location.Add(mesto);
+                                        if (dopFl)
+                                        {
+                                            var table6 = doc.DocumentNode.SelectSingleNode(stri + "']//div[@class = 'l-g']");
+                                            dopgr = table6.InnerText;
+                                            _TeacherName.Add(dopgr);
+                                        }
+                                        else
+                                        {
+                                            var table2 = doc.DocumentNode.SelectSingleNode(stri + "']//div[@class = 'l-tn']");
+                                            Prepod = table2.InnerText;
+                                            _TeacherName.Add(Prepod);
+                                        }
+                                        mesto = table3.InnerText;
+
 
                                         col++;
                                         var flag = doc.DocumentNode.SelectSingleNode(stri + "']/div[2]/div[2]");
@@ -108,6 +136,7 @@ namespace Schedule_app_3
                                         {
                                             prov[i]++;
                                             int j = i + 1;
+                                            int k = 2;
                                             int stri_prov = 2;
                                             while (flag != null)
                                             {
@@ -124,19 +153,32 @@ namespace Schedule_app_3
                                                 }
                                                 _PairType.Add(type_par);
                                                 table = doc.DocumentNode.SelectSingleNode(stri + "']//div[@class = 'l-dn']");
-                                                table5 = doc.DocumentNode.SelectSingleNode(stri + "']/div[1]/div[1]/div[3]");
-                                                name_par = table.InnerText + table5.InnerText;
+                                                table5 = doc.DocumentNode.SelectSingleNode(stri + "']/div[" + System.Convert.ToString(k) + "]/div[1]/div[3]");
+                                                group = table5.InnerText;
+                                                name_par = table.InnerText;
                                                 _PairName.Add(name_par);
+                                                _Podgroup.Add(group);
                                                 //var table2 = doc.DocumentNode.SelectSingleNode("//td[@id = '4_1']");
-                                                table2 = doc.DocumentNode.SelectSingleNode(stri + "']/div[" + System.Convert.ToString(stri_prov) + "]/div[3]");
-                                                Prepod = table2.InnerText;
+                                               
                                                 _TeacherName.Add(Prepod);
                                                 table3 = doc.DocumentNode.SelectSingleNode(stri + "']/div[" + System.Convert.ToString(stri_prov) + "]/div[4]");
                                                 mesto = table3.InnerText;
                                                 _Location.Add(mesto);
+                                                if (dopFl)
+                                                {
+                                                    var table6 = doc.DocumentNode.SelectSingleNode(stri + "']//div[@class = 'l-g']");
+                                                    dopgr = table6.InnerText;
+                                                    _TeacherName.Add(dopgr);
+                                                }else
+                                                {
+                                                    var table2 = doc.DocumentNode.SelectSingleNode(stri + "']//div[@class = 'l-tn']");
+                                                    Prepod = table2.InnerText;
+                                                    _TeacherName.Add(Prepod);
+                                                }
                                                 stri_prov++;
                                                 flag = doc.DocumentNode.SelectSingleNode(stri + "']/div[" + System.Convert.ToString(stri_prov) + "]/div[2]");
                                                 j++;
+                                                k++;
                                             }
                                             IDCommonPair.Add(IDPair++, j - i);
 
@@ -160,6 +202,7 @@ namespace Schedule_app_3
                 }
             }
 
+        
         }
 
     }

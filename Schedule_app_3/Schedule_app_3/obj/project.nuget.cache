@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "I1ol2L3DF0FduZuP4aKAjnyztj4syziFhiz1HXMwoS1Gm28N37zCP4gCNm4frSmmYvs43WtV86N9hD4inCyOKw==",
+  "dgSpecHash": "PA5nRzhcBCiVoJ8g0CFUAwaDhmEAiFao9j/Juwf13ocC/o7CjYPTWcDeAB9THgvwu7gNdTGh51B2RCqVD5KNcQ==",
   "success": true,
   "projectFilePath": "D:\\C#\\Shedule\\schedule\\Schedule_app_3\\Schedule_app_3\\Schedule_app_3.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Vadim\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\Vadim\\.nuget\\packages\\googlegson\\2.9.0.1\\googlegson.2.9.0.1.nupkg.sha512",
     "C:\\Users\\Vadim\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512",
     "C:\\Users\\Vadim\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",

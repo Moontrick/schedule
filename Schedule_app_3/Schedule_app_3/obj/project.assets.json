@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0-android31.0": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "GoogleGson/2.9.0.1": {
         "type": "package",
         "compile": {
@@ -1959,6 +1972,19 @@
       }
     },
     "net6.0-android31.0/android-arm": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "GoogleGson/2.9.0.1": {
         "type": "package",
         "compile": {
@@ -3916,6 +3942,19 @@
       }
     },
     "net6.0-android31.0/android-arm64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "GoogleGson/2.9.0.1": {
         "type": "package",
         "compile": {
@@ -5873,6 +5912,19 @@
       }
     },
     "net6.0-android31.0/android-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "GoogleGson/2.9.0.1": {
         "type": "package",
         "compile": {
@@ -7830,6 +7882,19 @@
       }
     },
     "net6.0-android31.0/android-x86": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "GoogleGson/2.9.0.1": {
         "type": "package",
         "compile": {
@@ -9787,6 +9852,19 @@
       }
     },
     "net6.0-android31.0/iossimulator-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "GoogleGson/2.9.0.1": {
         "type": "package",
         "compile": {
@@ -11744,6 +11822,19 @@
       }
     },
     "net6.0-android31.0/maccatalyst-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "GoogleGson/2.9.0.1": {
         "type": "package",
         "compile": {
@@ -13701,6 +13792,19 @@
       }
     },
     "net6.0-android31.0/win10-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "GoogleGson/2.9.0.1": {
         "type": "package",
         "compile": {
@@ -15658,6 +15762,19 @@
       }
     },
     "net6.0-ios15.4": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -15887,6 +16004,19 @@
       }
     },
     "net6.0-ios15.4/android-arm": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -16116,6 +16246,19 @@
       }
     },
     "net6.0-ios15.4/android-arm64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -16345,6 +16488,19 @@
       }
     },
     "net6.0-ios15.4/android-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -16574,6 +16730,19 @@
       }
     },
     "net6.0-ios15.4/android-x86": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -16803,6 +16972,19 @@
       }
     },
     "net6.0-ios15.4/iossimulator-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -17032,6 +17214,19 @@
       }
     },
     "net6.0-ios15.4/maccatalyst-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -17261,6 +17456,19 @@
       }
     },
     "net6.0-ios15.4/win10-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -17490,6 +17698,19 @@
       }
     },
     "net6.0-maccatalyst15.4": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -17719,6 +17940,19 @@
       }
     },
     "net6.0-maccatalyst15.4/android-arm": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -17948,6 +18182,19 @@
       }
     },
     "net6.0-maccatalyst15.4/android-arm64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -18177,6 +18424,19 @@
       }
     },
     "net6.0-maccatalyst15.4/android-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -18406,6 +18666,19 @@
       }
     },
     "net6.0-maccatalyst15.4/android-x86": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -18635,6 +18908,19 @@
       }
     },
     "net6.0-maccatalyst15.4/iossimulator-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -18864,6 +19150,19 @@
       }
     },
     "net6.0-maccatalyst15.4/maccatalyst-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -19093,6 +19392,19 @@
       }
     },
     "net6.0-maccatalyst15.4/win10-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -19322,6 +19634,19 @@
       }
     },
     "net6.0-windows10.0.19041": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -19676,6 +20001,19 @@
       }
     },
     "net6.0-windows10.0.19041/android-arm": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -20002,6 +20340,19 @@
       }
     },
     "net6.0-windows10.0.19041/android-arm64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -20328,6 +20679,19 @@
       }
     },
     "net6.0-windows10.0.19041/android-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -20654,6 +21018,19 @@
       }
     },
     "net6.0-windows10.0.19041/android-x86": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -20980,6 +21357,19 @@
       }
     },
     "net6.0-windows10.0.19041/iossimulator-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -21306,6 +21696,19 @@
       }
     },
     "net6.0-windows10.0.19041/maccatalyst-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -21632,6 +22035,19 @@
       }
     },
     "net6.0-windows10.0.19041/win10-x64": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.46": {
         "type": "package",
         "compile": {
@@ -21965,6 +22381,30 @@
     }
   },
   "libraries": {
+    "CsvHelper/30.0.1": {
+      "sha512": "rcZtgbWR+As4G3Vpgx0AMNmShGuQLFjkHAPIIflzrfkJCx8/AOd4m96ZRmiU1Wi39qS5UVjV0P8qdgqOo5Cwyg==",
+      "type": "package",
+      "path": "csvhelper/30.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "csvhelper.30.0.1.nupkg.sha512",
+        "csvhelper.nuspec",
+        "lib/net45/CsvHelper.dll",
+        "lib/net45/CsvHelper.xml",
+        "lib/net47/CsvHelper.dll",
+        "lib/net47/CsvHelper.xml",
+        "lib/net5.0/CsvHelper.dll",
+        "lib/net5.0/CsvHelper.xml",
+        "lib/net6.0/CsvHelper.dll",
+        "lib/net6.0/CsvHelper.xml",
+        "lib/netstandard2.0/CsvHelper.dll",
+        "lib/netstandard2.0/CsvHelper.xml",
+        "lib/netstandard2.1/CsvHelper.dll",
+        "lib/netstandard2.1/CsvHelper.xml"
+      ]
+    },
     "GoogleGson/2.9.0.1": {
       "sha512": "hztMZzgzX82HUORHX4YHOcfzF7yAOn8dWpXeYcrJa9sjw1qHfFpibrHeiWrk8aKn4C4IO6mBNOuaFiyS6/EOBA==",
       "type": "package",
@@ -25011,23 +25451,27 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-android31.0": [
+      "CsvHelper >= 30.0.1",
       "HtmlAgilityPack >= 1.11.46",
       "Microsoft.Maui.Dependencies >= 6.0.486",
       "Microsoft.Maui.Extensions >= 6.0.486"
     ],
     "net6.0-ios15.4": [
+      "CsvHelper >= 30.0.1",
       "HtmlAgilityPack >= 1.11.46",
       "Microsoft.Maui.Dependencies >= 6.0.486",
       "Microsoft.Maui.Extensions >= 6.0.486",
       "System.Runtime.InteropServices.NFloat.Internal >= 6.0.1"
     ],
     "net6.0-maccatalyst15.4": [
+      "CsvHelper >= 30.0.1",
       "HtmlAgilityPack >= 1.11.46",
       "Microsoft.Maui.Dependencies >= 6.0.486",
       "Microsoft.Maui.Extensions >= 6.0.486",
       "System.Runtime.InteropServices.NFloat.Internal >= 6.0.1"
     ],
     "net6.0-windows10.0.19041": [
+      "CsvHelper >= 30.0.1",
       "HtmlAgilityPack >= 1.11.46",
       "Microsoft.Maui.Dependencies >= 6.0.486",
       "Microsoft.Maui.Extensions >= 6.0.486",
@@ -25098,6 +25542,10 @@
       "net6.0-android31.0": {
         "targetAlias": "net6.0-android",
         "dependencies": {
+          "CsvHelper": {
+            "target": "Package",
+            "version": "[30.0.1, )"
+          },
           "HtmlAgilityPack": {
             "target": "Package",
             "version": "[1.11.46, )"
@@ -25160,6 +25608,10 @@
       "net6.0-ios15.4": {
         "targetAlias": "net6.0-ios",
         "dependencies": {
+          "CsvHelper": {
+            "target": "Package",
+            "version": "[30.0.1, )"
+          },
           "HtmlAgilityPack": {
             "target": "Package",
             "version": "[1.11.46, )"
@@ -25213,6 +25665,10 @@
       "net6.0-maccatalyst15.4": {
         "targetAlias": "net6.0-maccatalyst",
         "dependencies": {
+          "CsvHelper": {
+            "target": "Package",
+            "version": "[30.0.1, )"
+          },
           "HtmlAgilityPack": {
             "target": "Package",
             "version": "[1.11.46, )"
@@ -25267,6 +25723,10 @@
       "net6.0-windows10.0.19041": {
         "targetAlias": "net6.0-windows10.0.19041.0",
         "dependencies": {
+          "CsvHelper": {
+            "target": "Package",
+            "version": "[30.0.1, )"
+          },
           "HtmlAgilityPack": {
             "target": "Package",
             "version": "[1.11.46, )"

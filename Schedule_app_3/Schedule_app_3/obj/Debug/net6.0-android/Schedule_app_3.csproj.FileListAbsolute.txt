@@ -2964,3 +2964,4 @@ D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\st
 D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\stamp\_GenerateJavaStubs.stamp
 D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\stamp\_GeneratePackageManagerJava.stamp
 D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\stamp\_ResolveLibraryProjectImports.stamp
+D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\android\assets\CsvHelper.dll
