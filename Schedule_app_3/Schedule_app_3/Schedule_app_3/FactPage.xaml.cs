@@ -19,7 +19,7 @@ public partial class FactPage : ContentPage
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-			Text = "Факультет КНиИТ",
+			Text = "Р¤Р°РєСѓР»СЊС‚РµС‚ РљРќРёРРў",
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
@@ -35,7 +35,7 @@ public partial class FactPage : ContentPage
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Биологический факультет",
+            Text = "Р‘РёРѕР»РѕРіРёС‡РµСЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚",
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
@@ -51,7 +51,7 @@ public partial class FactPage : ContentPage
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Географический факультет",
+            Text = "Р“РµРѕРіСЂР°С„РёС‡РµСЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚",
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
@@ -67,7 +67,7 @@ public partial class FactPage : ContentPage
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Геологический факультет",
+            Text = "Р“РµРѕР»РѕРіРёС‡РµСЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚",
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
@@ -83,7 +83,7 @@ public partial class FactPage : ContentPage
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Институт дополнительного \n профессионального образования",
+            Text = "РРЅСЃС‚РёС‚СѓС‚ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРіРѕ \n РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅРѕРіРѕ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ",
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
@@ -99,7 +99,7 @@ public partial class FactPage : ContentPage
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Институт искусств",
+            Text = "РРЅСЃС‚РёС‚СѓС‚ РёСЃРєСѓСЃСЃС‚РІ",
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
@@ -115,7 +115,11 @@ public partial class FactPage : ContentPage
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
+<<<<<<< HEAD
             Text = "Институт истории и международных отношений",
+=======
+            Text = "РРЅСЃС‚РёС‚СѓС‚ РёСЃС‚РѕСЂРёРё Рё РјРµР¶РґСѓРЅР°СЂРѕРґРЅС‹С… РѕС‚РЅРѕС€РµРЅРёР№",
+>>>>>>> dadeb6ae7095765cb1fc448387689311b16b2441
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
@@ -131,7 +135,7 @@ public partial class FactPage : ContentPage
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Институт физики",
+            Text = "РРЅСЃС‚РёС‚СѓС‚ С„РёР·РёРєРё",
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
@@ -147,7 +151,7 @@ public partial class FactPage : ContentPage
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Институт физической культуры и спорта",
+            Text = "РРЅСЃС‚РёС‚СѓС‚ С„РёР·РёС‡РµСЃРєРѕР№ РєСѓР»СЊС‚СѓСЂС‹ Рё СЃРїРѕСЂС‚Р°",
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
@@ -163,23 +167,27 @@ public partial class FactPage : ContentPage
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Институт филологии и журналистики",
+            Text = "РРЅСЃС‚РёС‚СѓС‚ С„РёР»РѕР»РѕРіРёРё Рё Р¶СѓСЂРЅР°Р»РёСЃС‚РёРєРё",
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
-
+           
             //HeightRequest = 50,
            WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
+<<<<<<< HEAD
+        Label btfilolog = new Label()
+=======
         Label bthimiki = new Label()
+>>>>>>> dadeb6ae7095765cb1fc448387689311b16b2441
         { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Институт химии",
+            Text = "РРЅСЃС‚РёС‚СѓС‚ С…РёРјРёРё",
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
@@ -189,13 +197,17 @@ public partial class FactPage : ContentPage
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
+<<<<<<< HEAD
+        Label bthimiki = new Label()
+=======
         Label btsoc = new Label()
+>>>>>>> dadeb6ae7095765cb1fc448387689311b16b2441
         { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Социологический факультет",
+            Text = "РЎРѕС†РёРѕР»РѕРіРёС‡РµСЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚",
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
@@ -205,13 +217,17 @@ public partial class FactPage : ContentPage
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
+<<<<<<< HEAD
+        Label btsoc = new Label()
+=======
         Label btino = new Label()
+>>>>>>> dadeb6ae7095765cb1fc448387689311b16b2441
         { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Факультет иностранных языков и лингводидактики.",
+            Text = "Р¤Р°РєСѓР»СЊС‚РµС‚ РёРЅРѕСЃС‚СЂР°РЅРЅС‹С… СЏР·С‹РєРѕРІ Рё Р»РёРЅРіРІРѕРґРёРґР°РєС‚РёРєРё.",
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
@@ -221,13 +237,21 @@ public partial class FactPage : ContentPage
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
+<<<<<<< HEAD
+        Label btino = new Label()
+=======
         Label btpsihi = new Label()
+>>>>>>> dadeb6ae7095765cb1fc448387689311b16b2441
         { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Факультет психологии",
+<<<<<<< HEAD
+            Text = "Факультет иностранных языков и лингводидактики.",
+=======
+            Text = "Р¤Р°РєСѓР»СЊС‚РµС‚ РїСЃРёС…РѕР»РѕРіРёРё",
+>>>>>>> dadeb6ae7095765cb1fc448387689311b16b2441
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
@@ -237,32 +261,66 @@ public partial class FactPage : ContentPage
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
+<<<<<<< HEAD
+        Label btpsihi = new Label()
+=======
         Label btpsihi2 = new Label()
+>>>>>>> dadeb6ae7095765cb1fc448387689311b16b2441
         { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Факультет психолого-педагогического и специального образования",
+            Text = "Р¤Р°РєСѓР»СЊС‚РµС‚ РїСЃРёС…РѕР»РѕРіРѕ-РїРµРґР°РіРѕРіРёС‡РµСЃРєРѕРіРѕ Рё СЃРїРµС†РёР°Р»СЊРЅРѕРіРѕ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ",
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
+            //HeightRequest = 50,
+           WidthRequest = 300,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Start
+        };
+<<<<<<< HEAD
+        Label btpsihi2 = new Label()
+=======
+        Label btmediki = new Label()
+>>>>>>> dadeb6ae7095765cb1fc448387689311b16b2441
+        { GestureRecognizers = { das },
+            FontSize = 20,
+            FontFamily = "Comic Sans MS",
+            Padding = new Thickness(5, 0, 5, 0),
+            Margin = new Thickness(0, 10, 0, 0),
+            Text = "Р¤Р°РєСѓР»СЊС‚РµС‚ С„СѓРЅРґР°РјРµРЅС‚Р°Р»СЊРЅРѕР№ РјРµРґРёС†РёРЅС‹ Рё РјРµРґРёС†РёРЅСЃРєРёС… С‚РµС…РЅРѕР»РѕРіРёР№",
+             
+            TextColor = Color.FromRgb(0, 0, 0),
+            Background = Color.FromHex("D9D9D9"),
+
+<<<<<<< HEAD
             //HeightRequest = 50,
            WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label btmediki = new Label()
+=======
+            //HeightRequest = 75,
+            WidthRequest = 300,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Start
+        };
+        Label btfilosof = new Label()
+>>>>>>> dadeb6ae7095765cb1fc448387689311b16b2441
         { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Факультет фундаментальной медицины и медицинских технологий",
+            Text = "Р¤РёР»РѕСЃРѕС„СЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚",
              
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
+<<<<<<< HEAD
 
             //HeightRequest = 75,
             WidthRequest = 300,
@@ -270,13 +328,22 @@ public partial class FactPage : ContentPage
             VerticalOptions = LayoutOptions.Start
         };
         Label btfilosof = new Label()
+=======
+            
+            //HeightRequest = 50,
+           WidthRequest = 300,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Start
+        };
+        Label bturid = new Label()
+>>>>>>> dadeb6ae7095765cb1fc448387689311b16b2441
         { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
-            Margin = new Thickness(0, 10, 0, 0),
-            Text = "Философский факультет",
-             
+            Margin = new Thickness(0, 10, 0, 10),
+            Text = "Р®СЂРёРґРёС‡РµСЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚",
+            
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
             
@@ -285,6 +352,7 @@ public partial class FactPage : ContentPage
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
+<<<<<<< HEAD
         Label bturid = new Label()
         { GestureRecognizers = { das },
             FontSize = 20,
@@ -305,6 +373,12 @@ public partial class FactPage : ContentPage
         { GestureRecognizers = { das },
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Факультет МехМат",
+=======
+        Label btmah = new Label()
+        { GestureRecognizers = { das },
+            Margin = new Thickness(0, 10, 0, 0),
+            Text = "Р¤Р°РєСѓР»СЊС‚РµС‚ РњРµС…РњР°С‚",
+>>>>>>> dadeb6ae7095765cb1fc448387689311b16b2441
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
@@ -319,7 +393,7 @@ public partial class FactPage : ContentPage
         Label bteco = new Label()
         { GestureRecognizers = { das },
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Экономический факультет",
+            Text = "Р­РєРѕРЅРѕРјРёС‡РµСЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚",
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
@@ -348,7 +422,7 @@ public partial class FactPage : ContentPage
             Background = Color.FromHex("#9B92D6"),
             FontSize = 15,
             CornerRadius = 17,
-            Text = "Выберите факультет",
+            Text = "Р’С‹Р±РµСЂРёС‚Рµ С„Р°РєСѓР»СЊС‚РµС‚",
             TextColor = Color.FromRgb(0, 0, 0),
 
             HorizontalOptions = LayoutOptions.Center,
@@ -359,7 +433,7 @@ public partial class FactPage : ContentPage
         myHorizontalGradient.EndPoint = new Point(0.5, 1);
         myHorizontalGradient.GradientStops.Add(new GradientStop(Color.FromHex("#673FD8"), 0.0f));
         myHorizontalGradient.GradientStops.Add(new GradientStop(Color.FromHex("#934ACD"), 1.0f));
-        string str1 = "Найти преподавателя";
+        string str1 = "РќР°Р№С‚Рё РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏ";
         
         
         Button el = new Button
@@ -378,6 +452,16 @@ public partial class FactPage : ContentPage
             Padding = new Thickness(0, 50, 120, 0),
             
         };
+        //Border br = new Border()
+        //{
+            
+        //    Background = Color.FromHex("D9D9D9"),
+        //    StrokeShape = new RoundRectangle
+        //    {
+        //        CornerRadius = new CornerRadius(Math.Abs(bteco.Height))
+        //    },
+        //    Content = bteco
+        //};
 
         el.Clicked += async (s, e) =>
         {
@@ -476,6 +560,7 @@ public partial class FactPage : ContentPage
             Label batick = (Label)s;
             switch (batick.Text)
             {
+<<<<<<< HEAD
                 case "Факультет МехМат": 
                     await Navigation.PushAsync(new GroupPage("mm"));
                     break;
@@ -531,6 +616,63 @@ public partial class FactPage : ContentPage
                     await Navigation.PushAsync(new GroupPage("ef"));
                     break;
                 case "Юридический факультет":
+=======
+                case "Р¤Р°РєСѓР»СЊС‚РµС‚ РњРµС…РњР°С‚": 
+                    await Navigation.PushAsync(new GroupPage("mm"));
+                    break;
+                case "Р¤Р°РєСѓР»СЊС‚РµС‚ РљРќРёРРў":
+                    await Navigation.PushAsync(new GroupPage("knt"));
+                    break;
+                case "Р‘РёРѕР»РѕРіРёС‡РµСЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚":
+                    await Navigation.PushAsync(new GroupPage("bf"));
+                    break;
+                case "Р“РµРѕРіСЂР°С„РёС‡РµСЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚":
+                    await Navigation.PushAsync(new GroupPage("gf"));
+                    break;
+                case "Р“РµРѕР»РѕРіРёС‡РµСЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚":
+                    await Navigation.PushAsync(new GroupPage("gl"));
+                    break;
+                case "РРЅСЃС‚РёС‚СѓС‚ РёСЃС‚РѕСЂРёРё Рё РјРµР¶РґСѓРЅР°СЂРѕРґРЅС‹С… РѕС‚РЅРѕС€РµРЅРёР№":
+                    await Navigation.PushAsync(new GroupPage("imo"));
+                    break;
+                case "РРЅСЃС‚РёС‚СѓС‚ РёСЃРєСѓСЃСЃС‚РІ":
+                    await Navigation.PushAsync(new GroupPage("ii"));
+                    break;
+                case "РРЅСЃС‚РёС‚СѓС‚ С„РёР·РёРєРё":
+                    await Navigation.PushAsync(new GroupPage("ff"));
+                    break;
+                case "РРЅСЃС‚РёС‚СѓС‚ С„РёР·РёС‡РµСЃРєРѕР№ РєСѓР»СЊС‚СѓСЂС‹ Рё СЃРїРѕСЂС‚Р°":
+                    await Navigation.PushAsync(new GroupPage("ifk"));
+                    break;
+                case "РРЅСЃС‚РёС‚СѓС‚ С„РёР»РѕР»РѕРіРёРё Рё Р¶СѓСЂРЅР°Р»РёСЃС‚РёРєРё":
+                    await Navigation.PushAsync(new GroupPage("ifg"));
+                    break;
+                case "РРЅСЃС‚РёС‚СѓС‚ С…РёРјРёРё":
+                    await Navigation.PushAsync(new GroupPage("ih"));
+                    break;
+                case "РЎРѕС†РёРѕР»РѕРіРёС‡РµСЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚":
+                    await Navigation.PushAsync(new GroupPage("sf"));
+                    break;
+                case "Р¤Р°РєСѓР»СЊС‚РµС‚ РёРЅРѕСЃС‚СЂР°РЅРЅС‹С… СЏР·С‹РєРѕРІ Рё Р»РёРЅРіРІРѕРґРёРґР°РєС‚РёРєРё":
+                    await Navigation.PushAsync(new GroupPage("fi"));
+                    break;
+                case "Р¤Р°РєСѓР»СЊС‚РµС‚ РїСЃРёС…РѕР»РѕРіРёРё":
+                    await Navigation.PushAsync(new GroupPage("fps"));
+                    break;
+                case "Р¤Р°РєСѓР»СЊС‚РµС‚ РїСЃРёС…РѕР»РѕРіРѕ-РїРµРґР°РіРѕРіРёС‡РµСЃРєРѕРіРѕ Рё СЃРїРµС†РёР°Р»СЊРЅРѕРіРѕ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ":
+                    await Navigation.PushAsync(new GroupPage("fppso"));
+                    break;
+                case "Р¤Р°РєСѓР»СЊС‚РµС‚ С„СѓРЅРґР°РјРµРЅС‚Р°Р»СЊРЅРѕР№ РјРµРґРёС†РёРЅС‹ Рё РјРµРґРёС†РёРЅСЃРєРёС… С‚РµС…РЅРѕР»РѕРіРёР№":
+                    await Navigation.PushAsync(new GroupPage("fmimt"));
+                    break;
+                case "Р¤РёР»РѕСЃРѕС„СЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚":
+                    await Navigation.PushAsync(new GroupPage("fp"));
+                    break;
+                case "Р­РєРѕРЅРѕРјРёС‡РµСЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚":
+                    await Navigation.PushAsync(new GroupPage("ef"));
+                    break;
+                case "Р®СЂРёРґРёС‡РµСЃРєРёР№ С„Р°РєСѓР»СЊС‚РµС‚":
+>>>>>>> dadeb6ae7095765cb1fc448387689311b16b2441
                     await Navigation.PushAsync(new GroupPage("uf"));
                     break;
                 default: break;
