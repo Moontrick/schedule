@@ -1,5 +1,7 @@
 ﻿
 
+
+using CsvHelper.Configuration.Attributes;
 using Microsoft.Maui.Controls;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -8,8 +10,29 @@ namespace Schedule_app_3;
 public partial class MainPage : ContentPage
 {
     //int count = 0;
+    void OnPanUpdated(object sender, PanUpdatedEventArgs e)
+    {
+        StackLayout st = (StackLayout)sender;
+        double x = Content.TranslationX;
+            switch (e.StatusType)
+            {
+                case GestureStatus.Running:
+                    // Translate and ensure we don't pan beyond the wrapped user interface element bounds.
+                    Content.TranslationX = Math.Max(Math.Min(0, x + e.TotalX), -Math.Abs(Content.Width - DeviceDisplay.MainDisplayInfo.Width));
+                    //Content.TranslationY = Math.Max(Math.Min(0, y + e.TotalY), -Math.Abs(Content.Height - DeviceDisplay.MainDisplayInfo.Height));
+                    break;
+
+                case GestureStatus.Completed:
+                    // Store the translation applied during the pan
+                    x = Content.TranslationX;
+                    // y = Content.TranslationY;
+                    break;
+            }
+        
+    }
     public MainPage()
     {
+        
         InitializeComponent();
         Label labelt = new Label()
         {
@@ -28,12 +51,14 @@ public partial class MainPage : ContentPage
             HeightRequest = 50,
             WidthRequest = 150,
         };
+        
         Button secondbt = new Button()
         {
+            //StyleClass = "test",
             Text = "Препод",
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
-            TextColor = Color.FromRgb(0, 0, 0),
+            //TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromRgb(0, 200, 255),
             Margin = new Thickness(0, 10, 0, 0),
             HeightRequest = 50,
@@ -65,6 +90,7 @@ public partial class MainPage : ContentPage
 
         ImageButton bttitle = new ImageButton
         {
+
             Source = "settings.png",
             HorizontalOptions = LayoutOptions.End,
             VerticalOptions = LayoutOptions.End,
@@ -78,12 +104,20 @@ public partial class MainPage : ContentPage
         {
             bttitle.BackgroundColor = Color.FromRgba(0, 255, 255, 255);
         };
+
         
-
+        PanGestureRecognizer panGesture = new PanGestureRecognizer();
+      
+        
         //ToolTipProperties.SetText(button, "Click to Save your data");
-
+        
+        panGesture.PanUpdated += OnPanUpdated;
+        
+      
         StackLayout newstack = new StackLayout()
 		{
+
+            GestureRecognizers = { panGesture },
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Center,
             Children =
@@ -98,14 +132,20 @@ public partial class MainPage : ContentPage
         {
             await Navigation.PushAsync(new FactPage());
             //await Navigation.PushModalAsync(new FactPage());
-        };
+        }; 
+        
+        
+            
+        
         secondbt.Clicked += async (sender, args) =>
         {
             await Navigation.PushAsync(new TestPage());
             //await Navigation.PushModalAsync(new FactPage());
         };
         Content = newstack;
-        
+        //WebView webView = new WebView();
+        //webView.Source = "index.html";
+        //Content = webView;
     }
 
 	//private void OnCounterClicked(object sender, EventArgs e)

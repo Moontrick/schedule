@@ -1,5 +1,6 @@
 using Microsoft.Maui.Controls.Shapes;
 
+
 namespace Schedule_app_3;
 
 public partial class TestPage : ContentPage
@@ -99,12 +100,27 @@ public partial class TestPage : ContentPage
             Padding = new Thickness(100, 0, 0, 0),
             Content = gr3,
         };
-       
+        TapGestureRecognizer das = new TapGestureRecognizer()
+        {
+           
+        };
+    
+        Label l111 = new Label()
+        {
+            Text = "dsadasda",
+            FontSize = 30,
+            GestureRecognizers = { das },
+
+        };
+        das.Tapped += async (s, e) =>
+        {
+            await Navigation.PushAsync(new MainPage());
+        };
         StackLayout stackLayout = new StackLayout()
         {
             
             Background = myHorizontalGradient12,
-            Children = {frame }
+            Children = {frame, l111 }
         };
         Background = Color.FromHex("#512cd4");
         

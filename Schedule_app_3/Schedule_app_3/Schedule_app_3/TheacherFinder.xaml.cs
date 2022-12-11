@@ -1,16 +1,27 @@
-
-
-
+using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Shapes;
-using System.Windows.Input;
 
 namespace Schedule_app_3;
 
-public partial class GroupPage : ContentPage
+public partial class TheacherFinder : ContentPage
 {
-    List<string> AllGroup = new List<string>();
-    public GroupPage(string faculty)
-	{
+    async Task str(string fileName)
+    {
+        using (var stream = await FileSystem.OpenAppPackageFileAsync(fileName))
+        {
+            using (var reader = new StreamReader(stream))
+            {
+                var fileContents = await reader.ReadToEndAsync();
+            }
+        }
+    }
+    List<string> _Name = new List<string>();
+    List<string> _SurName = new List<string>();
+    List<string> _Otchestvo = new List<string>();
+    List<string> _Id = new List<string>();
+    public TheacherFinder()
+    {
+        InitializeComponent();
         Shadow sh = new Shadow()
         {
             Brush = Color.FromRgb(0, 0, 0),
@@ -18,28 +29,44 @@ public partial class GroupPage : ContentPage
             Opacity = 0.5f,
             Offset = new Point(0, 5),
         };
-        
-        InitializeComponent();
-        ParserGroup _parserGroup = new ParserGroup(faculty);
-        foreach (var num in _parserGroup.GroupList)
+        //ParserGroup TeacherList = new ParserGroup(faculty);
+        Dictionary<string, string> dic = new Dictionary<string, string>();
+        //var path = FileSystem.Current.AppDataDirectory;
+        //var fullPath = Path.Combine(path, "ScheduleTeachers.csv");
+        var fullPath = "ScheduleTeachers.csv";
+      
+
+        var CsvList = new Csv(fullPath);
+        _Name = CsvList.Name;
+        _SurName = CsvList.SurName;
+        _Otchestvo = CsvList.Otchestvo;
+        _Id = CsvList.Id;
+
+        List<string> FullName = new List<string>();
+
+        for (int i = 0; i < _Name.Count; i++)
         {
-            AllGroup.Add(num);
+            FullName.Add(_SurName[i] + " " + _Name[i] + " " + _Otchestvo[i]);
+            dic.Add(FullName[i], _Id[i]);
         }
-        Entry entry = new Entry { Placeholder = "¬ведите номер группы...",
+
+        Entry entry = new Entry { 
+            Placeholder = "¬ведите фамиллию преподвател€...",
             FontFamily = "Comic Sans MS",
-            WidthRequest = 200,
+            WidthRequest = 300,
             HeightRequest = 40,
             Background = Color.FromHex("#9B92D6"),
             FontSize = 15,
-           
-            
+
+
             TextColor = Color.FromRgb(0, 0, 0),
         };
+
         Border br = new Border()
         {
             StrokeThickness = 1,
             Shadow = sh,
-            Padding = new Thickness(3,0,0,0),
+            Padding = new Thickness(3, 0, 0, 0),
             Background = Color.FromHex("#9B92D6"),
             StrokeShape = new RoundRectangle
             {
@@ -53,7 +80,7 @@ public partial class GroupPage : ContentPage
         {
             HorizontalOptions = LayoutOptions.Start,
             VerticalOptions = LayoutOptions.Start,
-            
+
             Children =
             {
                 br
@@ -69,42 +96,39 @@ public partial class GroupPage : ContentPage
             Text = "",
             FontSize = 15,
             Margin = new Thickness(0, 3, 0, 0),
-            WidthRequest = 100,
+            WidthRequest = 300,
             HeightRequest = 50,
         };
-        for (int i = 0; i < AllGroup.Count(); i++)
+        for (int i = 0; i < _Name.Count(); i++)
         {
-             bt = new Button()
+            bt = new Button()
             {
+                Text = FullName[i],
                 Shadow = sh,
                 TextColor = Color.FromRgb(0, 0, 0),
                 Background = Color.FromHex("D9D9D9"),
-                Text = AllGroup[i],
-                FontSize = 15,
-                WidthRequest = 150,
+                FontSize = 13,
+                WidthRequest = 300,
                 HeightRequest = 50,
                 Margin = new Thickness(0, 5, 0, 0),
             };
             bt.Clicked += onclik;
-            //stackbut1.Add(bt);
+            stackbut1.Add(bt);
         }
         LinearGradientBrush myHorizontalGradient12 = new LinearGradientBrush();
         myHorizontalGradient12.StartPoint = new Point(0.3, 0);
         myHorizontalGradient12.EndPoint = new Point(0.3, 1);
         myHorizontalGradient12.GradientStops.Add(new GradientStop(Color.FromHex("#512cd4"), 0.4f));
         myHorizontalGradient12.GradientStops.Add(new GradientStop(Color.FromHex("#C38BF9"), 1.0f));
-        StackLayout stackend = new StackLayout()
-        {
-            //Background = myHorizontalGradient,
-        };
         StackLayout stacklast = new StackLayout()
         {
             //Background = myHorizontalGradient,
         }; ;
+        StackLayout stackend = new StackLayout();
         Background = Color.FromHex("#512cd4");
         stackend.Children.Add(stackbut1);
         stacklast.Children.Add(stackmain);
-         stacklast.Children.Add(stackend);
+        stacklast.Children.Add(stackend);
         //-----------------------------
         //Button dsa = new Button()
         //{
@@ -126,82 +150,80 @@ public partial class GroupPage : ContentPage
             BorderColor = Color.FromHex("#512cd4"),
             Background = myHorizontalGradient12,
             Content = stacklast,
-            
+
         };
         ScrollView scrol = new ScrollView()
         {
-            
+
             //Background = myHorizontalGradient,
             Content = frame,
         };
-      
-        
+
+
         entry.TextChanged += async (sender, args) =>
         {
             string oldText = args.OldTextValue;
             string newText = args.NewTextValue;
             string myText = entry.Text;
             stackend.Clear();
-           
+            
             StackLayout stackbut = new StackLayout()
             {
                 HorizontalOptions = LayoutOptions.Start,
                 VerticalOptions = LayoutOptions.Start,
-                
             };
-            if (myText.Length != 0)
+            for (int i = 0; i < _Name.Count(); i++)
             {
-                for (int i = 0; i < AllGroup.Count(); i++)
+                string str = FullName[i];
+                bool flag = true;
+                if (myText.Length > str.Length)
                 {
-                    string str = AllGroup[i];
-                    bool flag = true;
-                    if (myText.Length > str.Length)
-                    {
 
+                }
+                else
+                {
+                    for (int j = 0; j < myText.Length; j++)
+                    {
+                        if (!str[j].ToString().Equals( myText[j].ToString().ToLower()) 
+                                && !str[j].ToString().Equals(myText[j].ToString().ToUpper()))
+                        {
+                            flag = false;
+                        }
                     }
-                    else
+                    if (flag)
                     {
-                        for (int j = 0; j < myText.Length; j++)
+                        // ICommand ic;
+                        bt = new Button()
                         {
-                            if (str[j] != myText[j])
-                            {
-                                flag = false;
-                            }
-                        }
-                        if (flag)
-                        {
-                            // ICommand ic;
-                            bt = new Button()
-                            {
 
-                                // Command = ic.Execute(NavTogle),
-                                Text = AllGroup[i],
-                                FontSize = 15,
-                                Margin = new Thickness(0, 3, 0, 0),
-                                WidthRequest = 100,
-                                HeightRequest = 50,
-                                Shadow = sh,
-                                TextColor = Color.FromRgb(0, 0, 0),
-                                Background = Color.FromHex("D9D9D9"),
+                            // Command = ic.Execute(NavTogle),
+                            Text = FullName[i],
+                            Shadow = sh,
+                            TextColor = Color.FromRgb(0, 0, 0),
+                            Background = Color.FromHex("D9D9D9"),
+                            FontSize = 13,
+                            WidthRequest = 300,
+                            HeightRequest = 50,
+                            Margin = new Thickness(0, 5, 0, 0),
 
-                            };
-                            bt.Clicked += onclik;
-                            stackbut.Add(bt);
-                        }
+
+                        };
+                        bt.Clicked += onclik;
+                        stackbut.Add(bt);
                     }
                 }
             }
-    
+
             stackend.Children.Add(stackbut);
-           
+
         };
-         
+
 
         void onclik(object sender, EventArgs args)
         {
-            Button batick = (Button)sender;
-            Navigation.PushAsync(new IndexPage(faculty, batick.Text));
-            //Navigation.PushModalAsync(new IndexPage(faculty, batick.Text));
+            Button btn = (Button)sender;
+            string str = btn.Text;
+            Navigation.PushAsync(new IndexPage("teacher", dic[str]));
         };
 
         //void OnEntryCompleted(object sender, EventArgs e)
@@ -209,5 +231,7 @@ public partial class GroupPage : ContentPage
         //    string text = ((Entry)sender).Text;
         //}
         Content = scrol;
+
+
     }
 }
