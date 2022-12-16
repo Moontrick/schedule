@@ -1,5 +1,6 @@
-ï»¿using Microsoft.Maui.Controls.PlatformConfiguration;
+using Microsoft.Maui.Controls.PlatformConfiguration;
 using Microsoft.Maui.Graphics.Text;
+using SheduleFile;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Schedule_app_3;
@@ -7,8 +8,6 @@ namespace Schedule_app_3;
 public partial class IndexPage : ContentPage
 {
     int count = 0;
-    int curDate = 0;
-
     int[] weekDate = new int[7];
     Dictionary<int, List<Dictionary<int, int>>> IDCommonPair = new Dictionary<int, List<Dictionary<int, int>>>();
     List<string> _PairType = new List<string>();
@@ -17,9 +16,16 @@ public partial class IndexPage : ContentPage
     List<string> _Location = new List<string>();
     List<string> _TimePair = new List<string>();
     List<string> _Podgroup = new List<string>();
-
+    int curDate = 0;
+    protected override bool OnBackButtonPressed()
+    {
+        return true;
+    }
     public IndexPage(string str1, string str2)
-	{
+    {
+
+
+
         _TimePair.Add("8:20 - 9:50");
         _TimePair.Add("10:00 - 11:35");
         _TimePair.Add("12:05 - 13:40");
@@ -34,26 +40,34 @@ public partial class IndexPage : ContentPage
         #region Storage
         var path = FileSystem.Current.AppDataDirectory;
         var fullPath = Path.Combine(path, "Shedule.txt");
+        //FileSystem.OpenAppPackageFileAsync(fullPath);
 
-        if (!File.Exists(fullPath))
-        {
+        //using (var reader = FileSystem.OpenAppPackageFileAsync("Shedule.txt").Result)
+        //{
+        //    using (StreamReader streamReader = new StreamReader(reader))
+        //    {
 
-            File.Create(fullPath);
-            WriteFromParser();
-        }
-        else
-        {
-            var fi = new FileInfo(fullPath);
-            if (fi.Length == 0)
-                WriteFromParser();
-            else
-            {
+        //        while (!streamReader.EndOfStream)
+        //        {
+                    
 
-            }
+        //        }
 
-        }
+        //    }
+        //}
 
-        //ReadFile readFile = new ReadFile(fullPath);
+        var fi = new FileInfo(fullPath);
+           
+
+        
+
+        ReadFile readFile = new ReadFile(fullPath);
+        IDCommonPair = readFile._IDCommonPair;
+        _PairType = readFile.PairType;
+        _PairName = readFile.PairName;
+        _TeacherName = readFile.TeacherName;
+        _Location = readFile.Location;
+        _Podgroup = readFile.Podgroup;
         void GetAllDates()
         {
             for (int i = 0; i < weekDate.Length; i++) { weekDate[i] = 0; }
@@ -82,31 +96,31 @@ public partial class IndexPage : ContentPage
         }
         #endregion
 
-        void WriteFromParser()
-        {
-            int h = 1;
+        //void WriteFromParser()
+        //{
+        //    int h = 1;
 
-            for (int i = 0; i < 6; i++)
-            {
-                Dictionary<int, int> keyValuePairs = new Dictionary<int, int>();
-                string faculty = "knt";
+        //    for (int i = 0; i < 6; i++)
+        //    {
+        //        Dictionary<int, int> keyValuePairs = new Dictionary<int, int>();
+        //        string faculty = "knt";
 
-                string group = "311";
-                Parser ob = new Parser(h, str1, str2);
+        //        string group = "311";
+        //        Parser ob = new Parser(h, str1, str2);
 
-                _PairType.AddRange(ob.PairType);
-                _PairName.AddRange(ob.PairName);
-                _TeacherName.AddRange(ob.TeacherName);
-                _Location.AddRange(ob.Location);
-                _Podgroup.AddRange(ob.Podgroup);
-                var tmp = new List<Dictionary<int, int>>();
-                tmp.Add(ob._IDCommonPair);
-                IDCommonPair.Add(h, tmp);
+        //        _PairType.AddRange(ob.PairType);
+        //        _PairName.AddRange(ob.PairName);
+        //        _TeacherName.AddRange(ob.TeacherName);
+        //        _Location.AddRange(ob.Location);
+        //        _Podgroup.AddRange(ob.Podgroup);
+        //        var tmp = new List<Dictionary<int, int>>();
+        //        tmp.Add(ob._IDCommonPair);
+        //        IDCommonPair.Add(h, tmp);
 
-                h++;
+        //        h++;
 
-            }
-        }
+        //    }
+        //}
         //Button button = new Button
         //{
         //    Text = "Navigate!",
@@ -144,14 +158,14 @@ public partial class IndexPage : ContentPage
         //    };
         //    st.Children.Add(l);
         //};
-        //________________________________________ÃŠÃ­Ã®Ã¯ÃªÃ¨ Ã¤Ã­Ã¥Ã© Ã­Ã¥Ã¤Ã¥Ã«Ã¨__________________________________________________
+        //________________________________________Êíîïêè äíåé íåäåëè__________________________________________________
         Button btpn = new Button()
         {
             Text = Convert.ToString(weekDate[0]),
             BorderWidth = 1,
             TextColor = Color.FromRgb(0, 0, 0),
             BorderColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromRgb(255, 255, 255),
+            Background = Color.FromHex("#512cd4"),
             Margin = new Thickness(5, -10, 0, 0),
             HeightRequest = 50,
             WidthRequest = 50,
@@ -165,7 +179,7 @@ public partial class IndexPage : ContentPage
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromRgb(255, 255, 255),
+            Background = Color.FromHex("#512cd4"),
             Margin = new Thickness(60, -10, 0, 0),
             HeightRequest = 50,
             WidthRequest = 50,
@@ -179,7 +193,7 @@ public partial class IndexPage : ContentPage
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromRgb(255, 255, 255),
+            Background = Color.FromHex("#D9D9D9"),
             Margin = new Thickness(115, -10, 0, 0),
             HeightRequest = 50,
             WidthRequest = 50,
@@ -193,7 +207,7 @@ public partial class IndexPage : ContentPage
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromRgb(255, 255, 255),
+            Background = Color.FromHex("#512cd4"),
             Margin = new Thickness(170, -10, 0, 0),
             HeightRequest = 50,
             WidthRequest = 50,
@@ -207,7 +221,7 @@ public partial class IndexPage : ContentPage
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromRgb(255, 255, 255),
+            Background = Color.FromHex("#512cd4"),
             Margin = new Thickness(225, -10, 0, 0),
             HeightRequest = 50,
             WidthRequest = 50,
@@ -221,7 +235,7 @@ public partial class IndexPage : ContentPage
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromRgb(255, 255, 255),
+            Background = Color.FromHex("#512cd4"),
             Margin = new Thickness(280, -10, 0, 0),
             HeightRequest = 50,
             WidthRequest = 50,
@@ -235,7 +249,7 @@ public partial class IndexPage : ContentPage
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromRgb(255, 255, 255),
+            Background = Color.FromHex("#512cd4"),
             Margin = new Thickness(335, -10, 0, 0),
             HeightRequest = 50,
             WidthRequest = 50,
@@ -244,11 +258,16 @@ public partial class IndexPage : ContentPage
             VerticalOptions = LayoutOptions.Start,
         };
         //__________________________________________________________________________________________     
+        LinearGradientBrush myHorizontalGradient12 = new LinearGradientBrush();
+        myHorizontalGradient12.StartPoint = new Point(0.3, 0);
+        myHorizontalGradient12.EndPoint = new Point(0.3, 1);
+        myHorizontalGradient12.GradientStops.Add(new GradientStop(Color.FromHex("#512cd4"), 0.4f));
+        myHorizontalGradient12.GradientStops.Add(new GradientStop(Color.FromHex("#C38BF9"), 1.0f));
+        //________________________________________Òàáëèöà äíåé íåäåëè__________________________________________________
 
-        //________________________________________Ã’Ã Ã¡Ã«Ã¨Ã¶Ã  Ã¤Ã­Ã¥Ã© Ã­Ã¥Ã¤Ã¥Ã«Ã¨__________________________________________________
         Grid gridButton = new Grid
         {
-
+            HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start,
             Margin = new Thickness(0, 0, 0, 0),
             Children =
@@ -258,10 +277,10 @@ public partial class IndexPage : ContentPage
                     Children ={
                         new Label
                             {
+                            Background = Color.FromHex("#512cd4"),
+                                Text = "ÏÍ",
+                                TextColor = Color.FromRgb(255,255,255),
 
-                                Text = "ÐŸÐ",
-                                TextColor = Color.FromRgb(0,0,0),
-                                Background = Color.FromRgb(255,255,255),
                                 Padding = new Thickness(0, 17, 0, 0),
                                 Margin = new Thickness(17, 0, 0, 0),
                                 HeightRequest = 50,
@@ -278,9 +297,9 @@ public partial class IndexPage : ContentPage
                         new Label
                             {
 
-                                Text = "Ð’Ð¢",
-                                TextColor = Color.FromRgb(0,0,0),
-                                Background = Color.FromRgb(255,255,255),
+                                Text = "ÂÒ",
+                                TextColor = Color.FromRgb(255,255,255),
+                                Background = Color.FromHex("#512cd4"),
                                 Padding = new Thickness(0, 17, 0, 0),
                                 Margin = new Thickness(75, 0, 0, 0),
                                 HeightRequest = 50,
@@ -297,9 +316,9 @@ public partial class IndexPage : ContentPage
                         new Label
                             {
 
-                                Text = "Ð¡Ð ",
-                                TextColor = Color.FromRgb(0,0,0),
-                                Background = Color.FromRgb(255,255,255),
+                                Text = "ÑÐ",
+                                TextColor = Color.FromRgb(255,255,255),
+                               Background = Color.FromHex("#512cd4"),
                                 Padding = new Thickness(0, 17, 0, 0),
                                 Margin = new Thickness(131, 0, 0, 0),
                                 HeightRequest = 50,
@@ -316,9 +335,9 @@ public partial class IndexPage : ContentPage
                         new Label
                             {
 
-                                Text = "Ð§Ð¢",
-                                TextColor = Color.FromRgb(0,0,0),
-                                Background = Color.FromRgb(255,255,255),
+                                Text = "×Ò",
+                                TextColor = Color.FromRgb(255,255,255),
+                                Background = Color.FromHex("#512cd4"),
                                 Padding = new Thickness(0, 17, 0, 0),
                                 Margin = new Thickness(185, 0, 0, 0),
                                 HeightRequest = 50,
@@ -335,9 +354,9 @@ public partial class IndexPage : ContentPage
                         new Label
                             {
 
-                                Text = "ÐŸÐ¢",
-                                TextColor = Color.FromRgb(0,0,0),
-                                Background = Color.FromRgb(255,255,255),
+                                Text = "ÏÒ",
+                                TextColor = Color.FromRgb(255,255,255),
+                                Background = Color.FromHex("#512cd4"),
                                 Padding = new Thickness(0, 17, 0, 0),
                                 Margin = new Thickness(240, 0, 0, 0),
                                 HeightRequest = 50,
@@ -354,9 +373,9 @@ public partial class IndexPage : ContentPage
                         new Label
                             {
 
-                                Text = "Ð¡Ð‘",
-                                TextColor = Color.FromRgb(0,0,0),
-                                Background = Color.FromRgb(255,255,255),
+                                Text = "ÑÁ",
+                                TextColor = Color.FromRgb(255,255,255),
+                                Background = Color.FromHex("#512cd4"),
                                 Padding = new Thickness(0, 17, 0, 0),
                                 Margin = new Thickness(295, 0, 0, 0),
                                 HeightRequest = 50,
@@ -373,9 +392,9 @@ public partial class IndexPage : ContentPage
                         new Label
                             {
 
-                                Text = "Ð’Ð¡",
-                                TextColor = Color.FromRgb(0,0,0),
-                                Background = Color.FromRgb(255,255,255),
+                                Text = "ÂÑ",
+                                TextColor = Color.FromRgb(255,255,255),
+                               Background = Color.FromHex("#512cd4"),
                                 Padding = new Thickness(0, 17, 0, 0),
                                 Margin = new Thickness(352, 0, 0, 0),
                                 HeightRequest = 50,
@@ -389,11 +408,12 @@ public partial class IndexPage : ContentPage
             }
         };
         StackLayout frameend = new StackLayout();
+        Background = Color.FromHex("#512cd4");
         //__________________________________________________________________________________________
         //__________________________________________________________________________________________
         Label weekLabel = new Label
         {
-            Text = "Ð”ÐµÐ½ÑŒ Ð½ÐµÐ´ÐµÐ»Ð¸",
+            Text = "Äåíü íåäåëè",
             Margin = new Thickness(0, 10, 0, 10),
             FontSize = 22,
             HorizontalOptions = LayoutOptions.Center,
@@ -401,7 +421,7 @@ public partial class IndexPage : ContentPage
         };
         Label titleLabel = new Label()
         {
-            Text = "Ð Ð°ÑÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ",
+            Text = "Ðàñïèñàíèå",
             FontSize = 30,
             TextColor = Color.FromRgb(0, 0, 0),
             HorizontalOptions = LayoutOptions.Center,
@@ -413,18 +433,18 @@ public partial class IndexPage : ContentPage
             Source = "settings.png",
             HorizontalOptions = LayoutOptions.End,
             VerticalOptions = LayoutOptions.End,
-            WidthRequest = 50,
-            HeightRequest = 50,
+            WidthRequest = 30,
+            HeightRequest = 30,
             BackgroundColor = Color.FromRgba(0, 0, 0, 1),
             IsOpaque = false,
             Aspect = Aspect.Fill
         };
-        bttitle.Pressed += async (a, e) =>
+        bttitle.Clicked += async (a, e) =>
         {
-            bttitle.BackgroundColor = Color.FromRgba(0, 255, 255, 255);
+            await Navigation.PushAsync(new SettingsPage());
         };
 
-        StackLayout flexLayout = new StackLayout()
+        Grid flexLayout = new Grid()
         {
 
             VerticalOptions = LayoutOptions.Start,
@@ -440,7 +460,8 @@ public partial class IndexPage : ContentPage
             Content = flexLayout,
             Padding = new Thickness(10, 10, 10, 10),
             Margin = new Thickness(0, 0, 0, 0),
-            BackgroundColor = Color.FromHex("#0084ff"),
+            BackgroundColor = Color.FromHex("#512cd4"),
+            BorderColor = Color.FromHex("#512cd4"),
             CornerRadius = 0
         };
         StackLayout steckprom = new StackLayout
@@ -453,7 +474,7 @@ public partial class IndexPage : ContentPage
             }
         };
 
-        //________________________________________Ã‘Ã®Ã§Ã¤Ã Ã­Ã¨Ã¥ Ã¡Ã«Ã®ÃªÃ  ÃªÃ­Ã®Ã¯Ã®Ãª Ã¤Ã­Ã¥Ã© Ã­Ã¥Ã¤Ã¥Ã«Ã¨__________________________________________________
+        //________________________________________Ñîçäàíèå áëîêà êíîïîê äíåé íåäåëè__________________________________________________
         Frame frameButton = new Frame
         {
             Content = steckprom,
@@ -464,12 +485,13 @@ public partial class IndexPage : ContentPage
 
 
 
-        //________________________________________Ã‘Ã®Ã§Ã¤Ã Ã­Ã¨Ã¥ Ã±Ã²Ã½ÃªÃ  Ã°Ã Ã±Ã¯Ã¨Ã±Ã Ã­Ã¨Ã¿__________________________________________________
+        //________________________________________Ñîçäàíèå ñòýêà ðàñïèñàíèÿ__________________________________________________
         StackLayout make_curremt_day(int cur_day, int n)
         {
             StackLayout stackMain = new StackLayout();
             var current_days = IDCommonPair[cur_day];
             int number_of_pairs = n;
+            bool flagick = true;
             for (int i = 0; i < current_days[0].Count; i++)
             {
 
@@ -504,27 +526,27 @@ public partial class IndexPage : ContentPage
                     {
                         Padding = new Thickness(0, 0, 0, 0),
                         Children =
-                    {
-                        number_p,
-                         new Label
                         {
-                             Margin = new Thickness(10, 0, 0, 0),
-                            TextColor = Color.FromHex("#828181"),
-                             FontSize = 16,
-                            Text = _PairType[number_of_pairs],
-                            Padding = new Thickness (20,0,0,0),
-                             HorizontalOptions = LayoutOptions.Start,
-                             VerticalOptions = LayoutOptions.Center
-                        },
-                         new Label
-                        {
-                            TextColor = Color.FromHex("#828181"),
-                             FontSize = 16,
-                            Text = _Podgroup[number_of_pairs],
-                            HorizontalOptions = LayoutOptions.End,
-                             VerticalOptions = LayoutOptions.Center
-                        },
-                   }
+                            number_p,
+                             new Label
+                            {
+                                 Margin = new Thickness(10, 0, 0, 0),
+                                TextColor = Color.FromHex("#828181"),
+                                 FontSize = 16,
+                                Text = _PairType[number_of_pairs],
+                                Padding = new Thickness (20,0,0,0),
+                                 HorizontalOptions = LayoutOptions.Start,
+                                 VerticalOptions = LayoutOptions.Center
+                            },
+                             new Label
+                            {
+                                TextColor = Color.FromHex("#828181"),
+                                 FontSize = 16,
+                                Text = _Podgroup[number_of_pairs],
+                                HorizontalOptions = LayoutOptions.End,
+                                 VerticalOptions = LayoutOptions.Center
+                            },
+                       }
 
                     };
                     st.Children.Add(fr1);
@@ -583,17 +605,105 @@ public partial class IndexPage : ContentPage
                     {
                         Content = st,
                         Margin = new Thickness(5, 10, 5, 5),
-                        BackgroundColor = Color.FromHex("#f9f9f9"),
+                        BackgroundColor = Color.FromHex("#D9D9D9"),
                         CornerRadius = 5,
                     };
                     stackMain.Children.Add(fr);
                     number_of_pairs++;
+                    flagick = false;
                 }
+                //if ((current_days[0][i] == 0) && flagick)
+                //{
+
+                //        Label number_p = new Label();
+
+                //        number_p = new Label
+                //        {
+                //            TextColor = Color.FromHex("#828181"),
+                //            FontSize = 16,
+                //            Text = System.Convert.ToString(i + 1),
+                //            HorizontalOptions = LayoutOptions.Start,
+                //            VerticalOptions = LayoutOptions.Center
+                //        };
+
+
+                //        StackLayout st = new StackLayout();
+                //        st.Children.Add(number_p);
+
+                //        Label l1 = new Label
+                //        {
+                //            FontSize = 17,
+                //            FontFamily = "Comic Sans MS",
+                //            TextColor = Color.FromRgb(0, 0, 0),
+                //            Padding = new Thickness(0, 5, 0, 0),
+                //            Text = "Ïîçäðàâëÿþ, âàì ñåãîäíÿ íå ê ïåðâîé ïàðå!",
+                //            HorizontalOptions = LayoutOptions.Center,
+                //            VerticalOptions = LayoutOptions.Center,
+                //        };
+                //        st.Children.Add(l1);
+
+
+
+
+
+                //        //___________________________________________________________________________________
+
+                //        Frame fr = new Frame
+                //        {
+                //            Content = st,
+                //            Margin = new Thickness(5, 10, 5, 5),
+                //            BackgroundColor = Color.FromHex("#D9D9D9"),
+                //            CornerRadius = 5,
+                //        };
+                //        stackMain.Children.Add(fr);
+                //        number_of_pairs++;
+                //    }
             }
+
+            return stackMain;
+
+        }
+
+        //__________________________
+        StackLayout make_vs_day()
+        {
+
+
+
+            Label lbvs = new Label()
+            {
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                FontSize = 30,
+                Text = "Âûõîäíîé!",
+
+            };
+            StackLayout stst = new StackLayout()
+            {
+                Children = { lbvs }
+            };
+
+            //*[@id="2_3"]/div/div[5]
+            //*[@id="2_3"]/div/div[5]/a[1]
+            StackLayout stackMain = new StackLayout();
+
+            Frame fr = new Frame
+            {
+                Content = stst,
+                Margin = new Thickness(5, 10, 5, 5),
+                BackgroundColor = Color.FromHex("#D9D9D9"),
+                CornerRadius = 5,
+            };
+            stackMain.Children.Add(fr);
+
+
+
             return stackMain;
         }
+        //__________________________
         frameend = new StackLayout
         {
+
+            Background = myHorizontalGradient12,
             Children =
             {
                 steckprom,
@@ -606,7 +716,7 @@ public partial class IndexPage : ContentPage
             Content = frameend
         };
 
-        //________________________________________Ã”Ã³Ã­ÃªÃ¶Ã¨Ã¨ ÃªÃ­Ã®Ã¯Ã®Ãª Ã¤Ã­Ã¥Ã© Ã­Ã¥Ã¤Ã¥Ã«Ã¨__________________________________________________
+        //________________________________________Ôóíêöèè êíîïîê äíåé íåäåëè__________________________________________________
         btpn.Clicked += Monday;
         btvt.Clicked += Tuesday;
         btsr.Clicked += Wednesday;
@@ -617,14 +727,14 @@ public partial class IndexPage : ContentPage
         void Monday(object sender, EventArgs args)
         {
             StackLayout stackMain = new StackLayout();
-            btvs.Background = Color.FromHex("#ffffff");
-            btpn.Background = Color.FromHex("#5cb0ff");
-            btvt.Background = Color.FromHex("#ffffff");
-            btsr.Background = Color.FromHex("#ffffff");
-            btch.Background = Color.FromHex("#ffffff");
-            btpt.Background = Color.FromHex("#ffffff");
-            btsb.Background = Color.FromHex("#ffffff");
-            stackMain = make_curremt_day(1, 0);
+            btvs.Background = Color.FromHex("#D9D9D9");
+            btpn.Background = Color.FromHex("#C38BF9");
+            btvt.Background = Color.FromHex("#D9D9D9");
+            btsr.Background = Color.FromHex("#D9D9D9");
+            btch.Background = Color.FromHex("#D9D9D9");
+            btpt.Background = Color.FromHex("#D9D9D9");
+            btsb.Background = Color.FromHex("#D9D9D9");
+            stackMain = make_curremt_day(0, 0);
             frameend.Children.Clear();
             frameend.Children.Add(steckprom);
             frameend.Children.Add(stackMain);
@@ -633,24 +743,24 @@ public partial class IndexPage : ContentPage
         void Tuesday(object sender, EventArgs args)
         {
             StackLayout stackMain = new StackLayout();
-            btvs.Background = Color.FromHex("#ffffff");
-            btpn.Background = Color.FromHex("#ffffff");
-            btvt.Background = Color.FromHex("#5cb0ff");
-            btsr.Background = Color.FromHex("#ffffff");
-            btch.Background = Color.FromHex("#ffffff");
-            btpt.Background = Color.FromHex("#ffffff");
-            btsb.Background = Color.FromHex("#ffffff");
+            btvs.Background = Color.FromHex("#D9D9D9");
+            btpn.Background = Color.FromHex("#D9D9D9");
+            btvt.Background = Color.FromHex("#C38BF9");
+            btsr.Background = Color.FromHex("#D9D9D9");
+            btch.Background = Color.FromHex("#D9D9D9");
+            btpt.Background = Color.FromHex("#D9D9D9");
+            btsb.Background = Color.FromHex("#D9D9D9");
             int n = 0;
             for (int i = 0; i < 1; i++)
             {
-                var current_days = IDCommonPair[i + 1];
+                var current_days = IDCommonPair[i];
                 for (int j = 0; j < current_days[0].Count; j++)
                 {
                     n = n + current_days[0][j];
 
                 }
             }
-            stackMain = make_curremt_day(2, n);
+            stackMain = make_curremt_day(1, n);
             frameend.Children.Clear();
             frameend.Children.Add(steckprom);
             frameend.Children.Add(stackMain);
@@ -658,17 +768,43 @@ public partial class IndexPage : ContentPage
         void Wednesday(object sender, EventArgs args)
         {
             StackLayout stackMain = new StackLayout();
-            btvs.Background = Color.FromHex("#ffffff");
-            btpn.Background = Color.FromHex("#ffffff");
-            btvt.Background = Color.FromHex("#ffffff");
-            btsr.Background = Color.FromHex("#5cb0ff");
-            btch.Background = Color.FromHex("#ffffff");
-            btpt.Background = Color.FromHex("#ffffff");
-            btsb.Background = Color.FromHex("#ffffff");
+            btvs.Background = Color.FromHex("#D9D9D9");
+            btpn.Background = Color.FromHex("#D9D9D9");
+            btvt.Background = Color.FromHex("#D9D9D9");
+            btsr.Background = Color.FromHex("#C38BF9");
+            btch.Background = Color.FromHex("#D9D9D9");
+            btpt.Background = Color.FromHex("#D9D9D9");
+            btsb.Background = Color.FromHex("#D9D9D9");
             int n = 0;
             for (int i = 0; i < 2; i++)
             {
-                var current_days = IDCommonPair[i + 1];
+                var current_days = IDCommonPair[i];
+                for (int j = 0; j < current_days[0].Count; j++)
+                {
+                    n = n + current_days[0][j];
+
+                }
+            }
+            frameend.Children.Clear();
+            frameend.Children.Add(steckprom);
+            stackMain = make_curremt_day(2, n);
+
+            frameend.Children.Add(stackMain);
+        };
+        void Thursday(object sender, EventArgs args)
+        {
+            StackLayout stackMain = new StackLayout();
+            btvs.Background = Color.FromHex("#D9D9D9");
+            btpn.Background = Color.FromHex("#D9D9D9");
+            btvt.Background = Color.FromHex("#D9D9D9");
+            btsr.Background = Color.FromHex("#D9D9D9");
+            btch.Background = Color.FromHex("#C38BF9");
+            btpt.Background = Color.FromHex("#D9D9D9");
+            btsb.Background = Color.FromHex("#D9D9D9");
+            int n = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                var current_days = IDCommonPair[i];
                 for (int j = 0; j < current_days[0].Count; j++)
                 {
                     n = n + current_days[0][j];
@@ -681,46 +817,45 @@ public partial class IndexPage : ContentPage
 
             frameend.Children.Add(stackMain);
         };
-        void Thursday(object sender, EventArgs args)
+        void Friday(object sender, EventArgs args)
         {
             StackLayout stackMain = new StackLayout();
-            btvs.Background = Color.FromHex("#ffffff");
-            btpn.Background = Color.FromHex("#ffffff");
-            btvt.Background = Color.FromHex("#ffffff");
-            btsr.Background = Color.FromHex("#ffffff");
-            btch.Background = Color.FromHex("#5cb0ff");
-            btpt.Background = Color.FromHex("#ffffff");
-            btsb.Background = Color.FromHex("#ffffff");
+            btvs.Background = Color.FromHex("#D9D9D9");
+            btpn.Background = Color.FromHex("#D9D9D9");
+            btvt.Background = Color.FromHex("#D9D9D9");
+            btsr.Background = Color.FromHex("#D9D9D9");
+            btch.Background = Color.FromHex("#D9D9D9");
+            btpt.Background = Color.FromHex("#C38BF9");
+            btsb.Background = Color.FromHex("#D9D9D9");
             int n = 0;
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 4; i++)
             {
-                var current_days = IDCommonPair[i + 1];
+                var current_days = IDCommonPair[i];
                 for (int j = 0; j < current_days[0].Count; j++)
                 {
                     n = n + current_days[0][j];
 
                 }
             }
+            stackMain = make_curremt_day(4, n);
             frameend.Children.Clear();
             frameend.Children.Add(steckprom);
-            stackMain = make_curremt_day(4, n);
-
             frameend.Children.Add(stackMain);
         };
-        void Friday(object sender, EventArgs args)
+        void Saturday(object sender, EventArgs args)
         {
             StackLayout stackMain = new StackLayout();
-            btvs.Background = Color.FromHex("#ffffff");
-            btpn.Background = Color.FromHex("#ffffff");
-            btvt.Background = Color.FromHex("#ffffff");
-            btsr.Background = Color.FromHex("#ffffff");
-            btch.Background = Color.FromHex("#ffffff");
-            btpt.Background = Color.FromHex("#5cb0ff");
-            btsb.Background = Color.FromHex("#ffffff");
+            btvs.Background = Color.FromHex("#D9D9D9");
+            btpn.Background = Color.FromHex("#D9D9D9");
+            btvt.Background = Color.FromHex("#D9D9D9");
+            btsr.Background = Color.FromHex("#D9D9D9");
+            btch.Background = Color.FromHex("#D9D9D9");
+            btpt.Background = Color.FromHex("#D9D9D9");
+            btsb.Background = Color.FromHex("#C38BF9");
             int n = 0;
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 5; i++)
             {
-                var current_days = IDCommonPair[i + 1];
+                var current_days = IDCommonPair[i];
                 for (int j = 0; j < current_days[0].Count; j++)
                 {
                     n = n + current_days[0][j];
@@ -732,41 +867,21 @@ public partial class IndexPage : ContentPage
             frameend.Children.Add(steckprom);
             frameend.Children.Add(stackMain);
         };
-        void Saturday(object sender, EventArgs args)
+        void Sunday(object sender, EventArgs args)
         {
+            btvs.Background = Color.FromHex("#C38BF9");
+            btpn.Background = Color.FromHex("#D9D9D9");
+            btvt.Background = Color.FromHex("#D9D9D9");
+            btsr.Background = Color.FromHex("#D9D9D9");
+            btch.Background = Color.FromHex("#D9D9D9");
+            btpt.Background = Color.FromHex("#D9D9D9");
+            btsb.Background = Color.FromHex("#D9D9D9");
             StackLayout stackMain = new StackLayout();
-            btvs.Background = Color.FromHex("#ffffff");
-            btpn.Background = Color.FromHex("#ffffff");
-            btvt.Background = Color.FromHex("#ffffff");
-            btsr.Background = Color.FromHex("#ffffff");
-            btch.Background = Color.FromHex("#ffffff");
-            btpt.Background = Color.FromHex("#ffffff");
-            btsb.Background = Color.FromHex("#5cb0ff");
-            int n = 0;
-            for (int i = 0; i < 5; i++)
-            {
-                var current_days = IDCommonPair[i + 1];
-                for (int j = 0; j < current_days[0].Count; j++)
-                {
-                    n = n + current_days[0][j];
-
-                }
-            }
-            stackMain = make_curremt_day(6, n);
+            stackMain = make_vs_day();
             frameend.Children.Clear();
             frameend.Children.Add(steckprom);
             frameend.Children.Add(stackMain);
-        };
-        void Sunday(object sender, EventArgs args)
-        {
-            btvs.Background = Color.FromHex("#5cb0ff");
-            btpn.Background = Color.FromHex("#ffffff");
-            btvt.Background = Color.FromHex("#ffffff");
-            btsr.Background = Color.FromHex("#ffffff");
-            btch.Background = Color.FromHex("#ffffff");
-            btpt.Background = Color.FromHex("#ffffff");
-            btsb.Background = Color.FromHex("#ffffff");
-            //await Navigation.PushAsync(new IndexPage());
+
         };
 
         Content = scrol;
@@ -782,6 +897,5 @@ public partial class IndexPage : ContentPage
             case 6: Sunday(btvs, EventArgs.Empty); break;
             default: break;
         }
-
     }
 }

@@ -1,278 +1,266 @@
+using Microsoft.Maui;
+using Microsoft.Maui.Controls.Shapes;
+
 namespace Schedule_app_3;
 
 public partial class FactPage : ContentPage
 {
 	public FactPage()
 	{
-        InitializeComponent();
+        //23
+		InitializeComponent();
         TapGestureRecognizer das = new TapGestureRecognizer()
         {
 
         };
         Label btkniit = new Label()
-        {
-            GestureRecognizers = { das },
+		{ GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
-            Text = "Факультет КНиИТ",
-
+			Text = "Факультет КНиИТ",
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
-
+        
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label btbiolog = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Биологический факультет",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label btgeogr = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Географический факультет",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label btgeolog = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Геологический факультет",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label btdopobr = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Институт дополнительного \n профессионального образования",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label btisc = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Институт искусств",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label bthistory = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Институт истории и международных отношений",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label btfiozik = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Институт физики",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label btfizra = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Институт физической культуры и спорта",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
-
+           
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label btfilolog = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Институт филологии и журналистики",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label bthimiki = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Институт химии",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label btsoc = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Социологический факультет",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label btino = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Факультет иностранных языков и лингводидактики.",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label btpsihi = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Факультет психологии",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label btpsihi2 = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Факультет психолого-педагогического и специального образования",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label btmediki = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Факультет фундаментальной медицины и медицинских технологий",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
@@ -282,42 +270,39 @@ public partial class FactPage : ContentPage
             VerticalOptions = LayoutOptions.Start
         };
         Label btfilosof = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Философский факультет",
-
+             
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
-
+            
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label bturid = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             FontSize = 20,
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             Margin = new Thickness(0, 10, 0, 10),
             Text = "Юридический факультет",
-
+            
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
 
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label btmah = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Факультет МехМат",
             FontSize = 20,
@@ -325,15 +310,14 @@ public partial class FactPage : ContentPage
             Padding = new Thickness(5, 0, 5, 0),
             TextColor = Color.FromRgb(0, 0, 0),
             Background = Color.FromHex("D9D9D9"),
-
+         
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start
         };
         Label bteco = new Label()
-        {
-            GestureRecognizers = { das },
+        { GestureRecognizers = { das },
             Margin = new Thickness(0, 10, 0, 0),
             Text = "Экономический факультет",
             FontSize = 20,
@@ -343,10 +327,10 @@ public partial class FactPage : ContentPage
             //Background = Color.FromHex("D9D9D9"),
             Background = Color.FromHex("D9D9D9"),
             //HeightRequest = 50,
-            WidthRequest = 300,
+           WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Start,
-
+           
         };
         Shadow sh = new Shadow()
         {
@@ -376,8 +360,8 @@ public partial class FactPage : ContentPage
         myHorizontalGradient.GradientStops.Add(new GradientStop(Color.FromHex("#673FD8"), 0.0f));
         myHorizontalGradient.GradientStops.Add(new GradientStop(Color.FromHex("#934ACD"), 1.0f));
         string str1 = "Найти преподавателя";
-
-
+        
+        
         Button el = new Button
         {
             TextColor = Color.FromRgb(255, 255, 255),
@@ -390,21 +374,18 @@ public partial class FactPage : ContentPage
             HorizontalOptions = LayoutOptions.End,
             WidthRequest = 300,
             HeightRequest = 200,
-
+            
             Padding = new Thickness(0, 50, 120, 0),
-
+            
         };
 
         el.Clicked += async (s, e) =>
         {
             await Navigation.PushAsync(new TheacherFinder());
         };
-
-
-
         //Border br = new Border()
         //{
-
+            
         //    Background = Color.FromHex("D9D9D9"),
         //    StrokeShape = new RoundRectangle
         //    {
@@ -462,7 +443,7 @@ public partial class FactPage : ContentPage
             Content = gr3,
         };
 
-
+        
         Background = Color.FromHex("#512cd4");
         StackLayout stackmain = new StackLayout()
         {
@@ -479,7 +460,7 @@ public partial class FactPage : ContentPage
         };
         StackLayout stackLayout = new StackLayout()
         {
-
+            
             Background = myHorizontalGradient12,
             Children = { frame, stackmain }
         };
@@ -495,7 +476,7 @@ public partial class FactPage : ContentPage
             Label batick = (Label)s;
             switch (batick.Text)
             {
-                case "Факультет МехМат":
+                case "Факультет МехМат": 
                     await Navigation.PushAsync(new GroupPage("mm"));
                     break;
                 case "Факультет КНиИТ":
@@ -554,8 +535,91 @@ public partial class FactPage : ContentPage
                     break;
                 default: break;
             }
-
+            
         };
+        //btkniit.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("knt"));
+        //    //await Navigation.PushModalAsync(new FactPage());
+        //};
+        //bturid.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("uf"));
+        //};
+        //btfilosof.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("fp"));
+        //};
+        //btmediki.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("fmimt"));
+        //};
+        //btpsihi2.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("fppso"));
+        //};
+        //btpsihi.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("fps"));
+        //};
+        //btino.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("fi"));
+        //};
+        //btsoc.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("sf"));
+        //};
+        //bthimiki.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("ih"));
+        //};
+        //btfilolog.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("ifg"));
+        //};
+        //btfizra.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("ifk"));
+        //};
+        //btfiozik.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("ff"));
+        //};
+        //bthistory.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("imo"));
+        //};
+        //btisc.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("ii"));
+        //};
+        //btbiolog.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("bf"));
+        //};
+        //btgeogr.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("gf"));
+        //};
+        //btgeolog.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("gl"));
+        //};
+        //btdopobr.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("idpo"));
+        //};
+        //btmah.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("mm"));
+        //    //await Navigation.PushModalAsync(new FactPage());
+        //};
+        //bteco.Clicked += async (sender, args) =>
+        //{
+        //    await Navigation.PushAsync(new GroupPage("ef"));
+        //    //await Navigation.PushModalAsync(new FactPage());
+        //};
         Content = scroll;
     }
 }

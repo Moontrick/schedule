@@ -32,11 +32,11 @@ namespace Schedule_app_3
 
         //string[] mas_type_par = new string[20];
 
-        string[] mas_podroup = new string[20];
+        string[] mas_podroup = new string[30];
         //string[] mas_mesto = new string[20];
         //string[] name_prep = new string[20];
         //string[] mas_str = new string[20];
-        int[] prov = new int[20];
+        int[] prov = new int[30];
 
 
         private string week_now = "";
@@ -110,7 +110,7 @@ namespace Schedule_app_3
                                         name_par = table.InnerText;
                                         _PairName.Add(name_par);
                                         _Podgroup.Add(group);
-                                        
+
                                         var table3 = doc.DocumentNode.SelectSingleNode(stri + "']//div[@class = 'l-p']");
                                         mesto = table3.InnerText;
                                         _Location.Add(mesto);
@@ -152,15 +152,16 @@ namespace Schedule_app_3
                                                     type_par = "Практика";
                                                 }
                                                 _PairType.Add(type_par);
-                                                table = doc.DocumentNode.SelectSingleNode(stri + "']//div[@class = 'l-dn']");
+                                                table = doc.DocumentNode.SelectSingleNode(stri + "']/div[" + System.Convert.ToString(k) + "]/div[2]");
+
                                                 table5 = doc.DocumentNode.SelectSingleNode(stri + "']/div[" + System.Convert.ToString(k) + "]/div[1]/div[3]");
                                                 group = table5.InnerText;
                                                 name_par = table.InnerText;
                                                 _PairName.Add(name_par);
                                                 _Podgroup.Add(group);
                                                 //var table2 = doc.DocumentNode.SelectSingleNode("//td[@id = '4_1']");
-                                               
-                                                _TeacherName.Add(Prepod);
+
+                                                //_TeacherName.Add(Prepod);
                                                 table3 = doc.DocumentNode.SelectSingleNode(stri + "']/div[" + System.Convert.ToString(stri_prov) + "]/div[4]");
                                                 mesto = table3.InnerText;
                                                 _Location.Add(mesto);
@@ -169,9 +170,11 @@ namespace Schedule_app_3
                                                     var table6 = doc.DocumentNode.SelectSingleNode(stri + "']//div[@class = 'l-g']");
                                                     dopgr = table6.InnerText;
                                                     _TeacherName.Add(dopgr);
-                                                }else
+                                                }
+                                                else
+
                                                 {
-                                                    var table2 = doc.DocumentNode.SelectSingleNode(stri + "']//div[@class = 'l-tn']");
+                                                    var table2 = doc.DocumentNode.SelectSingleNode(stri + "']/div[" + System.Convert.ToString(stri_prov) + "]/div[3]");
                                                     Prepod = table2.InnerText;
                                                     _TeacherName.Add(Prepod);
                                                 }
@@ -202,7 +205,7 @@ namespace Schedule_app_3
                 }
             }
 
-        
+
         }
 
     }

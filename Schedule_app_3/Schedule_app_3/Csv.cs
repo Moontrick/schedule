@@ -20,21 +20,23 @@ namespace Schedule_app_3
         public List<string> Id { get { return _Id; } }
         public Csv(string str)
         {
-            using (StreamReader streamReader = new StreamReader(str))
+            using (var reader = FileSystem.OpenAppPackageFileAsync(str).Result)
             {
-
-                while (!streamReader.EndOfStream)
+                using (StreamReader streamReader = new StreamReader(reader))
                 {
-                    var line = streamReader.ReadLine();
-                    var Stringvalues = line.Split(';');
-                    var values = line.Split(',');
 
-                    _SurName.Add(values[0]);
-                    _Name.Add(values[1]);
-                    _Otchestvo.Add(values[2]);
-                    _Id.Add(values[3]);
+                    while (!streamReader.EndOfStream)
+                    {
+                        var line = streamReader.ReadLine();
+                        var Stringvalues = line.Split(';');
+                        var values = line.Split(',');
+
+                        _SurName.Add(values[0]);
+                        _Name.Add(values[1]);
+                        _Otchestvo.Add(values[2]);
+                        _Id.Add(values[3]);
+                    }
                 }
-
             }
         }
     }

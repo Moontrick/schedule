@@ -817,6 +817,12 @@
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\Resources\Raw\ScheduleTeachers.csv">
+      <PackagePath>ScheduleTeachers.csv</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\Resources\Raw\Shedule.txt">
+      <PackagePath>Shedule.txt</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
     </AppxPackagedFile>
@@ -945,6 +951,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\settings.scale-100.png">
+      <PackagePath>settings.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\vopros.scale-100.png">
+      <PackagePath>vopros.scale-100.png</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

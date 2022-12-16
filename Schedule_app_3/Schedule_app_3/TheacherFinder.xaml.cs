@@ -1,3 +1,7 @@
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.Shapes;
+using System.Runtime.CompilerServices;
+
 namespace Schedule_app_3;
 
 public partial class TheacherFinder : ContentPage
@@ -6,15 +10,32 @@ public partial class TheacherFinder : ContentPage
     List<string> _SurName = new List<string>();
     List<string> _Otchestvo = new List<string>();
     List<string> _Id = new List<string>();
-    public TheacherFinder()
-	{
-		InitializeComponent();
 
+
+    public TheacherFinder()
+    {
+        InitializeComponent();
+        Shadow sh = new Shadow()
+        {
+            Brush = Color.FromRgb(0, 0, 0),
+            Radius = 20,
+            Opacity = 0.5f,
+            Offset = new Point(0, 5),
+        };
         //ParserGroup TeacherList = new ParserGroup(faculty);
         Dictionary<string, string> dic = new Dictionary<string, string>();
         //var path = FileSystem.Current.AppDataDirectory;
         //var fullPath = Path.Combine(path, "ScheduleTeachers.csv");
-        string fullPath = @"D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\ScheduleTeachers.csv";
+        string fullPath = "ScheduleTeachers.csv";
+
+        //var stream = FileSystem.OpenAppPackageFileAsync(fullPath).Result;
+
+        //var reader = new StreamReader(stream);
+
+        //var contents = reader.ReadToEnd();
+
+        //var fileName = "mybundledfile.txt";
+
         var CsvList = new Csv(fullPath);
         _Name = CsvList.Name;
         _SurName = CsvList.SurName;
@@ -29,16 +50,41 @@ public partial class TheacherFinder : ContentPage
             dic.Add(FullName[i], _Id[i]);
         }
 
-        Entry entry = new Entry { Placeholder = "Enter text" };
+        Entry entry = new Entry
+        {
+            Placeholder = "¬ведите фамиллию преподвател€...",
+            FontFamily = "Comic Sans MS",
+            WidthRequest = 300,
+            HeightRequest = 40,
+            Background = Color.FromHex("#9B92D6"),
+            FontSize = 15,
 
+
+            TextColor = Color.FromRgb(0, 0, 0),
+        };
+
+        Border br = new Border()
+        {
+            StrokeThickness = 1,
+            Shadow = sh,
+            Padding = new Thickness(3, 0, 0, 0),
+            Background = Color.FromHex("#9B92D6"),
+            StrokeShape = new RoundRectangle
+            {
+                CornerRadius = new CornerRadius(40)
+            },
+            Margin = new Thickness(0, 0, 0, 50),
+            Content = entry
+        };
         //entry.Completed += OnEntryCompleted;
         StackLayout stackmain = new StackLayout()
         {
             HorizontalOptions = LayoutOptions.Start,
             VerticalOptions = LayoutOptions.Start,
+
             Children =
             {
-                entry
+                br
             }
         };
         StackLayout stackbut1 = new StackLayout()
@@ -51,7 +97,7 @@ public partial class TheacherFinder : ContentPage
             Text = "",
             FontSize = 15,
             Margin = new Thickness(0, 3, 0, 0),
-            WidthRequest = 100,
+            WidthRequest = 300,
             HeightRequest = 50,
         };
         for (int i = 0; i < _Name.Count(); i++)
@@ -59,19 +105,31 @@ public partial class TheacherFinder : ContentPage
             bt = new Button()
             {
                 Text = FullName[i],
-                FontSize = 15,
-                WidthRequest = 100,
+                Shadow = sh,
+                TextColor = Color.FromRgb(0, 0, 0),
+                Background = Color.FromHex("D9D9D9"),
+                FontSize = 13,
+                WidthRequest = 300,
                 HeightRequest = 50,
                 Margin = new Thickness(0, 5, 0, 0),
             };
             bt.Clicked += onclik;
             stackbut1.Add(bt);
         }
-
+        LinearGradientBrush myHorizontalGradient12 = new LinearGradientBrush();
+        myHorizontalGradient12.StartPoint = new Point(0.3, 0);
+        myHorizontalGradient12.EndPoint = new Point(0.3, 1);
+        myHorizontalGradient12.GradientStops.Add(new GradientStop(Color.FromHex("#512cd4"), 0.4f));
+        myHorizontalGradient12.GradientStops.Add(new GradientStop(Color.FromHex("#C38BF9"), 1.0f));
+        StackLayout stacklast = new StackLayout()
+        {
+            //Background = myHorizontalGradient,
+        }; ;
         StackLayout stackend = new StackLayout();
-
-        stackend.Children.Add(stackmain);
+        Background = Color.FromHex("#512cd4");
         stackend.Children.Add(stackbut1);
+        stacklast.Children.Add(stackmain);
+        stacklast.Children.Add(stackend);
         //-----------------------------
         //Button dsa = new Button()
         //{
@@ -90,11 +148,15 @@ public partial class TheacherFinder : ContentPage
         //-----------------------------
         Frame frame = new Frame()
         {
-            Content = stackend,
+            BorderColor = Color.FromHex("#512cd4"),
+            Background = myHorizontalGradient12,
+            Content = stacklast,
 
         };
         ScrollView scrol = new ScrollView()
         {
+
+            //Background = myHorizontalGradient,
             Content = frame,
         };
 
@@ -105,7 +167,7 @@ public partial class TheacherFinder : ContentPage
             string newText = args.NewTextValue;
             string myText = entry.Text;
             stackend.Clear();
-            stackend.Children.Add(stackmain);
+
             StackLayout stackbut = new StackLayout()
             {
                 HorizontalOptions = LayoutOptions.Start,
@@ -123,7 +185,10 @@ public partial class TheacherFinder : ContentPage
                 {
                     for (int j = 0; j < myText.Length; j++)
                     {
-                        if (str[j] != myText[j])
+                        
+                        if ( (!str[j].ToString().Equals( myText[j].ToString().ToLower()) 
+                             && !str[j].ToString().Equals(myText[j].ToString().ToUpper()) ) )
+                            
                         {
                             flag = false;
                         }
@@ -136,10 +201,13 @@ public partial class TheacherFinder : ContentPage
 
                             // Command = ic.Execute(NavTogle),
                             Text = FullName[i],
-                            FontSize = 15,
-                            Margin = new Thickness(0, 3, 0, 0),
-                            WidthRequest = 100,
+                            Shadow = sh,
+                            TextColor = Color.FromRgb(0, 0, 0),
+                            Background = Color.FromHex("D9D9D9"),
+                            FontSize = 13,
+                            WidthRequest = 300,
                             HeightRequest = 50,
+                            Margin = new Thickness(0, 5, 0, 0),
 
 
                         };
@@ -158,7 +226,7 @@ public partial class TheacherFinder : ContentPage
         {
             Button btn = (Button)sender;
             string str = btn.Text;
-            Navigation.PushModalAsync(new IndexPage("teacher", dic[str]));
+            Navigation.PushAsync(new IndexPage("teacher", dic[str]));
         };
 
         //void OnEntryCompleted(object sender, EventArgs e)

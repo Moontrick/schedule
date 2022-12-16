@@ -29,13 +29,13 @@
     <AppXManifest Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-11-25T16:43:52.476</Modified>
+      <Modified>2022-12-16T18:15:54.941</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-11-25T16:43:51.987</Modified>
+      <Modified>2022-12-16T18:15:54.449</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Schedule_app_3.runtimeconfig.json">
       <PackagePath>Schedule_app_3.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Schedule_app_3.dll">
       <PackagePath>Schedule_app_3.dll</PackagePath>
-      <Modified>2022-11-25T16:43:50.951</Modified>
+      <Modified>2022-12-16T18:15:53.385</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Schedule_app_3.exe</PackagePath>
-      <Modified>2022-11-25T16:43:50.966</Modified>
+      <Modified>2022-12-16T18:15:53.405</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Vadim\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.8\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1071,7 +1071,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\Schedule_app_3.deps.json">
       <PackagePath>Schedule_app_3.deps.json</PackagePath>
-      <Modified>2022-11-25T16:43:52.314</Modified>
+      <Modified>2022-12-16T18:15:54.776</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\6.0.486\ref\net6.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -1088,6 +1088,14 @@
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
       <Modified>2022-11-24T02:29:17.184</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\Resources\Raw\ScheduleTeachers.csv">
+      <PackagePath>ScheduleTeachers.csv</PackagePath>
+      <Modified>2022-11-25T18:48:19.296</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\Resources\Raw\Shedule.txt">
+      <PackagePath>Shedule.txt</PackagePath>
+      <Modified>2022-12-11T12:40:33.199</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
@@ -1119,147 +1127,155 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2022-11-24T02:29:27.718</Modified>
+      <Modified>2022-11-25T17:41:04.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.719</Modified>
+      <Modified>2022-11-25T17:41:04.980</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.720</Modified>
+      <Modified>2022-11-25T17:41:04.995</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.720</Modified>
+      <Modified>2022-11-25T17:41:05.008</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.721</Modified>
+      <Modified>2022-11-25T17:41:05.031</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.722</Modified>
+      <Modified>2022-11-25T17:41:05.120</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.722</Modified>
+      <Modified>2022-11-25T17:41:04.759</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.723</Modified>
+      <Modified>2022-11-25T17:41:04.763</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.723</Modified>
+      <Modified>2022-11-25T17:41:04.767</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.725</Modified>
+      <Modified>2022-11-25T17:41:04.771</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.725</Modified>
+      <Modified>2022-11-25T17:41:04.778</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.726</Modified>
+      <Modified>2022-11-25T17:41:04.835</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.726</Modified>
+      <Modified>2022-11-25T17:41:04.841</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.727</Modified>
+      <Modified>2022-11-25T17:41:04.853</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.727</Modified>
+      <Modified>2022-11-25T17:41:04.863</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.728</Modified>
+      <Modified>2022-11-25T17:41:04.885</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.728</Modified>
+      <Modified>2022-11-25T17:41:04.805</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.729</Modified>
+      <Modified>2022-11-25T17:41:04.809</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.730</Modified>
+      <Modified>2022-11-25T17:41:04.814</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.730</Modified>
+      <Modified>2022-11-25T17:41:04.819</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.731</Modified>
+      <Modified>2022-11-25T17:41:04.829</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.731</Modified>
+      <Modified>2022-11-25T17:41:04.782</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.732</Modified>
+      <Modified>2022-11-25T17:41:04.786</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.732</Modified>
+      <Modified>2022-11-25T17:41:04.790</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.733</Modified>
+      <Modified>2022-11-25T17:41:04.794</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.734</Modified>
+      <Modified>2022-11-25T17:41:04.801</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.734</Modified>
+      <Modified>2022-11-25T17:41:04.892</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.735</Modified>
+      <Modified>2022-11-25T17:41:04.901</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.735</Modified>
+      <Modified>2022-11-25T17:41:04.911</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.736</Modified>
+      <Modified>2022-11-25T17:41:04.927</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.737</Modified>
+      <Modified>2022-11-25T17:41:04.970</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.737</Modified>
+      <Modified>2022-11-25T17:41:04.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.738</Modified>
+      <Modified>2022-11-25T17:41:04.757</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.738</Modified>
+      <Modified>2022-11-25T17:41:04.773</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.739</Modified>
+      <Modified>2022-11-25T17:41:04.795</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2022-11-24T02:29:27.740</Modified>
+      <Modified>2022-11-25T17:41:04.851</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\settings.scale-100.png">
+      <PackagePath>settings.scale-100.png</PackagePath>
+      <Modified>2022-11-25T16:31:30.321</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\vopros.scale-100.png">
+      <PackagePath>vopros.scale-100.png</PackagePath>
+      <Modified>2022-11-25T17:19:21.117</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

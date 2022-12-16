@@ -1,6 +1,7 @@
+﻿
 
 
-
+using Microsoft.Maui.Controls.Shapes;
 using System.Windows.Input;
 
 namespace Schedule_app_3;
@@ -8,26 +9,61 @@ namespace Schedule_app_3;
 public partial class GroupPage : ContentPage
 {
     List<string> AllGroup = new List<string>();
+    Dictionary<int, List<Dictionary<int, int>>> IDCommonPair = new Dictionary<int, List<Dictionary<int, int>>>();
+    List<string> _PairType = new List<string>();
+    List<string> _PairName = new List<string>();
+    List<string> _TeacherName = new List<string>();
+    List<string> _Location = new List<string>();
+    List<string> _TimePair = new List<string>();
+    List<string> _Podgroup = new List<string>();
     public GroupPage(string faculty)
 	{
-		InitializeComponent();
-
+        Shadow sh = new Shadow()
+        {
+            Brush = Color.FromRgb(0, 0, 0),
+            Radius = 20,
+            Opacity = 0.5f,
+            Offset = new Point(0, 5),
+        };
+        
+        InitializeComponent();
         ParserGroup _parserGroup = new ParserGroup(faculty);
-
         foreach (var num in _parserGroup.GroupList)
         {
             AllGroup.Add(num);
         }
-        Entry entry = new Entry { Placeholder = "Enter text" };
-
+        Entry entry = new Entry { Placeholder = "Введите номер группы...",
+            FontFamily = "Comic Sans MS",
+            WidthRequest = 200,
+            HeightRequest = 40,
+            Background = Color.FromHex("#9B92D6"),
+            FontSize = 15,
+           
+            
+            TextColor = Color.FromRgb(0, 0, 0),
+        };
+        Border br = new Border()
+        {
+            StrokeThickness = 1,
+            Shadow = sh,
+            Padding = new Thickness(3,0,0,0),
+            Background = Color.FromHex("#9B92D6"),
+            StrokeShape = new RoundRectangle
+            {
+                CornerRadius = new CornerRadius(40)
+            },
+            Margin = new Thickness(0, 0, 0, 50),
+            Content = entry
+        };
         //entry.Completed += OnEntryCompleted;
         StackLayout stackmain = new StackLayout()
         {
             HorizontalOptions = LayoutOptions.Start,
             VerticalOptions = LayoutOptions.Start,
+            
             Children =
             {
-                entry
+                br
             }
         };
         StackLayout stackbut1 = new StackLayout()
@@ -47,20 +83,35 @@ public partial class GroupPage : ContentPage
         {
              bt = new Button()
             {
+                Shadow = sh,
+                TextColor = Color.FromRgb(0, 0, 0),
+                Background = Color.FromHex("D9D9D9"),
                 Text = AllGroup[i],
                 FontSize = 15,
-                WidthRequest = 100,
+                WidthRequest = 150,
                 HeightRequest = 50,
                 Margin = new Thickness(0, 5, 0, 0),
             };
             bt.Clicked += onclik;
-            stackbut1.Add(bt);
+            //stackbut1.Add(bt);
         }
-
-        StackLayout stackend = new StackLayout();
-
-        stackend.Children.Add(stackmain);
+        LinearGradientBrush myHorizontalGradient12 = new LinearGradientBrush();
+        myHorizontalGradient12.StartPoint = new Point(0.3, 0);
+        myHorizontalGradient12.EndPoint = new Point(0.3, 1);
+        myHorizontalGradient12.GradientStops.Add(new GradientStop(Color.FromHex("#512cd4"), 0.4f));
+        myHorizontalGradient12.GradientStops.Add(new GradientStop(Color.FromHex("#C38BF9"), 1.0f));
+        StackLayout stackend = new StackLayout()
+        {
+            //Background = myHorizontalGradient,
+        };
+        StackLayout stacklast = new StackLayout()
+        {
+            //Background = myHorizontalGradient,
+        }; ;
+        Background = Color.FromHex("#512cd4");
         stackend.Children.Add(stackbut1);
+        stacklast.Children.Add(stackmain);
+         stacklast.Children.Add(stackend);
         //-----------------------------
         //Button dsa = new Button()
         //{
@@ -79,11 +130,15 @@ public partial class GroupPage : ContentPage
         //-----------------------------
         Frame frame = new Frame()
         {
-            Content = stackend,
+            BorderColor = Color.FromHex("#512cd4"),
+            Background = myHorizontalGradient12,
+            Content = stacklast,
             
         };
         ScrollView scrol = new ScrollView()
         {
+            
+            //Background = myHorizontalGradient,
             Content = frame,
         };
       
@@ -94,46 +149,52 @@ public partial class GroupPage : ContentPage
             string newText = args.NewTextValue;
             string myText = entry.Text;
             stackend.Clear();
-            stackend.Children.Add(stackmain);
+           
             StackLayout stackbut = new StackLayout()
             {
                 HorizontalOptions = LayoutOptions.Start,
                 VerticalOptions = LayoutOptions.Start,
+                
             };
-            for (int i = 0; i < AllGroup.Count(); i++)
+            if (myText.Length != 0)
             {
-                string str = AllGroup[i];
-                bool flag = true;
-                if (myText.Length > str.Length)
+                for (int i = 0; i < AllGroup.Count(); i++)
                 {
+                    string str = AllGroup[i];
+                    bool flag = true;
+                    if (myText.Length > str.Length)
+                    {
 
-                }
-                else
-                {
-                    for (int j = 0; j < myText.Length; j++)
-                    {
-                        if (str[j] != myText[j])
-                        {
-                            flag = false;
-                        }
                     }
-                    if (flag)
+                    else
                     {
-                       // ICommand ic;
-                        bt = new Button()
+                        for (int j = 0; j < myText.Length; j++)
                         {
-                           
-                           // Command = ic.Execute(NavTogle),
-                            Text = AllGroup[i],
-                            FontSize = 15,
-                            Margin = new Thickness(0, 3, 0, 0),
-                            WidthRequest = 100,
-                            HeightRequest = 50,
-                      
-                            
-                        };
-                        bt.Clicked += onclik;
-                        stackbut.Add(bt);
+                            if (str[j] != myText[j])
+                            {
+                                flag = false;
+                            }
+                        }
+                        if (flag)
+                        {
+                            // ICommand ic;
+                            bt = new Button()
+                            {
+
+                                // Command = ic.Execute(NavTogle),
+                                Text = AllGroup[i],
+                                FontSize = 15,
+                                Margin = new Thickness(0, 3, 0, 0),
+                                WidthRequest = 100,
+                                HeightRequest = 50,
+                                Shadow = sh,
+                                TextColor = Color.FromRgb(0, 0, 0),
+                                Background = Color.FromHex("D9D9D9"),
+
+                            };
+                            bt.Clicked += onclik;
+                            stackbut.Add(bt);
+                        }
                     }
                 }
             }
@@ -141,12 +202,43 @@ public partial class GroupPage : ContentPage
             stackend.Children.Add(stackbut);
            
         };
-
+         
 
         void onclik(object sender, EventArgs args)
         {
             Button batick = (Button)sender;
-            Navigation.PushModalAsync(new IndexPage(faculty, batick.Text));
+
+            int h = 1;
+            //WriteFromParser
+            for (int i = 0; i < 6; i++)
+            {
+                Dictionary<int, int> keyValuePairs = new Dictionary<int, int>();
+                //string faculty = "knt";
+
+                //string group = "311";
+                Parser ob = new Parser(h, faculty, batick.Text);
+
+                _PairType.AddRange(ob.PairType);
+                _PairName.AddRange(ob.PairName);
+                _TeacherName.AddRange(ob.TeacherName);
+                _Location.AddRange(ob.Location);
+                _Podgroup.AddRange(ob.Podgroup);
+                var tmp = new List<Dictionary<int, int>>();
+                tmp.Add(ob._IDCommonPair);
+                IDCommonPair.Add(h, tmp);
+
+                h++;
+
+            }
+            
+            //
+            WriteFile WF = new WriteFile(IDCommonPair, _PairType, _PairName, _TeacherName, _Location, _Podgroup);
+
+
+
+
+            Navigation.PushAsync(new IndexPage(faculty, batick.Text));
+            //Navigation.PushModalAsync(new IndexPage(faculty, batick.Text));
         };
 
         //void OnEntryCompleted(object sender, EventArgs e)

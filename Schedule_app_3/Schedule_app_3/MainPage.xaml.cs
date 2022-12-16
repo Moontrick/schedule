@@ -1,4 +1,6 @@
-﻿using Microsoft.Maui.Controls;
+﻿
+
+using Microsoft.Maui.Controls;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Schedule_app_3;
@@ -8,6 +10,7 @@ public partial class MainPage : ContentPage
     //int count = 0;
     public MainPage()
     {
+        
         InitializeComponent();
         Label labelt = new Label()
         {
@@ -16,6 +19,7 @@ public partial class MainPage : ContentPage
         };
         Button firstbt = new Button()
         {
+           
             Text = "Студент",
             BorderWidth = 1,
             BorderColor = Color.FromRgb(0, 0, 0),
@@ -41,7 +45,7 @@ public partial class MainPage : ContentPage
         {
             WidthRequest = 50,
             HeightRequest = 50,
-            BackgroundColor = Color.FromRgb(255, 0, 0),
+            BackgroundColor = Color.FromRgb(255,0,0),
         };
         Button tbbt2 = new Button()
         {
@@ -75,6 +79,9 @@ public partial class MainPage : ContentPage
         {
             bttitle.BackgroundColor = Color.FromRgba(0, 255, 255, 255);
         };
+        
+
+        //ToolTipProperties.SetText(button, "Click to Save your data");
 
         StackLayout newstack = new StackLayout()
 		{
@@ -83,21 +90,27 @@ public partial class MainPage : ContentPage
             Children =
             {   labelt,
                 firstbt,
-                secondbt
+                secondbt,
+                bttitle
             }
         };
+        
         firstbt.Clicked += async (sender, args) =>
         {
             await Navigation.PushAsync(new FactPage());
             //await Navigation.PushModalAsync(new FactPage());
-        };
+        }; 
+        
+        
+            
+        
         secondbt.Clicked += async (sender, args) =>
         {
             await Navigation.PushAsync(new TestPage());
             //await Navigation.PushModalAsync(new FactPage());
         };
         Content = newstack;
-
+        
     }
 
 	//private void OnCounterClicked(object sender, EventArgs e)

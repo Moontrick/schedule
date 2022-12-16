@@ -9,10 +9,10 @@ namespace Schedule_app_3
 {
     internal class ParserGroup
     {
-        List<string> GroupType = new List<string>();  
+        List<string> GroupType = new List<string>();
         private List<string> _GroupList = new List<string>();
 
-        public List<string> GroupList { get {return _GroupList; } }
+        public List<string> GroupList { get { return _GroupList; } }
 
 
         public ParserGroup(string faculty)
