@@ -1,11 +1,18 @@
-﻿namespace Schedule_app_3;
+namespace Schedule_app_3;
 
 public partial class App : Application
 {
 	public App()
 	{
 		InitializeComponent();
+        if (!System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
+        {
+            MainPage = new NavigationPage(new IndexPage("", ""));
 
-		MainPage = new NavigationPage(new MainPage());
+        }
+        else
+        {
+            MainPage = new NavigationPage(new MainPage());
+        }
     }
 }
