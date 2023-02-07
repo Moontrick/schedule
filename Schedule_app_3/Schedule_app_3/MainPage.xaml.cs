@@ -1,4 +1,4 @@
-﻿
+
 
 
 using CsvHelper.Configuration.Attributes;
@@ -10,26 +10,26 @@ namespace Schedule_app_3;
 public partial class MainPage : ContentPage
 {
     //int count = 0;
-    void OnPanUpdated(object sender, PanUpdatedEventArgs e)
-    {
-        StackLayout st = (StackLayout)sender;
-        double x = Content.TranslationX;
-            switch (e.StatusType)
-            {
-                case GestureStatus.Running:
-                    // Translate and ensure we don't pan beyond the wrapped user interface element bounds.
-                    Content.TranslationX = Math.Max(Math.Min(0, x + e.TotalX), -Math.Abs(Content.Width - DeviceDisplay.MainDisplayInfo.Width));
-                    //Content.TranslationY = Math.Max(Math.Min(0, y + e.TotalY), -Math.Abs(Content.Height - DeviceDisplay.MainDisplayInfo.Height));
-                    break;
+    //void OnPanUpdated(object sender, PanUpdatedEventArgs e)
+    //{
+    //    StackLayout st = (StackLayout)sender;
+    //    double x = Content.TranslationX;
+    //        switch (e.StatusType)
+    //        {
+    //            case GestureStatus.Running:
+    //                // Translate and ensure we don't pan beyond the wrapped user interface element bounds.
+    //                Content.TranslationX = Math.Max(Math.Min(0, x + e.TotalX), -Math.Abs(Content.Width - DeviceDisplay.MainDisplayInfo.Width));
+    //                //Content.TranslationY = Math.Max(Math.Min(0, y + e.TotalY), -Math.Abs(Content.Height - DeviceDisplay.MainDisplayInfo.Height));
+    //                break;
 
-                case GestureStatus.Completed:
-                    // Store the translation applied during the pan
-                    x = Content.TranslationX;
-                    // y = Content.TranslationY;
-                    break;
-            }
+    //            case GestureStatus.Completed:
+    //                // Store the translation applied during the pan
+    //                x = Content.TranslationX;
+    //                // y = Content.TranslationY;
+    //                break;
+    //        }
         
-    }
+    //}
     public MainPage()
     {
         
@@ -111,7 +111,7 @@ public partial class MainPage : ContentPage
         
         //ToolTipProperties.SetText(button, "Click to Save your data");
         
-        panGesture.PanUpdated += OnPanUpdated;
+        //panGesture.PanUpdated += OnPanUpdated;
         
       
         StackLayout newstack = new StackLayout()
@@ -142,7 +142,33 @@ public partial class MainPage : ContentPage
             await Navigation.PushAsync(new TestPage());
             //await Navigation.PushModalAsync(new FactPage());
         };
-        Content = newstack;
+
+
+        Label lref = new Label() { 
+            Text = "Ошибка! Отсутствует интернет соединение!",
+            FontSize = 30,
+        };
+        Button btref = new Button() {
+            Text = "Обновить",
+            WidthRequest = 300,
+            CornerRadius = 50,
+        };
+
+        btref.Clicked += async (sender, args) =>
+        {
+            await Navigation.PushAsync(new FactPage());
+            //await Navigation.PushModalAsync(new FactPage());
+        };
+
+
+        StackLayout stackrefresh = new StackLayout() {
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center,
+            Children = {lref, btref}
+
+        };
+
+        Content = stackrefresh;
         //WebView webView = new WebView();
         //webView.Source = "index.html";
         //Content = webView;
