@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 ï»¿
 
 
+=======
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 using Microsoft.Maui.Controls.Shapes;
 using System.Windows.Input;
 
@@ -17,7 +20,11 @@ public partial class GroupPage : ContentPage
     List<string> _TimePair = new List<string>();
     List<string> _Podgroup = new List<string>();
     public GroupPage(string faculty)
+<<<<<<< HEAD
 	{
+=======
+    {
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
         Shadow sh = new Shadow()
         {
             Brush = Color.FromRgb(0, 0, 0),
@@ -25,28 +32,47 @@ public partial class GroupPage : ContentPage
             Opacity = 0.5f,
             Offset = new Point(0, 5),
         };
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
         InitializeComponent();
         ParserGroup _parserGroup = new ParserGroup(faculty);
         foreach (var num in _parserGroup.GroupList)
         {
             AllGroup.Add(num);
         }
+<<<<<<< HEAD
         Entry entry = new Entry { Placeholder = "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹...",
+=======
+        Entry entry = new Entry
+        {
+            Placeholder = "Ââåäèòå íîìåð ãðóïïû...",
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
             FontFamily = "Comic Sans MS",
             WidthRequest = 200,
             HeightRequest = 40,
             Background = Color.FromHex("#9B92D6"),
             FontSize = 15,
+<<<<<<< HEAD
            
             
+=======
+
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
             TextColor = Color.FromRgb(0, 0, 0),
         };
         Border br = new Border()
         {
             StrokeThickness = 1,
             Shadow = sh,
+<<<<<<< HEAD
             Padding = new Thickness(3,0,0,0),
+=======
+            Padding = new Thickness(3, 0, 0, 0),
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
             Background = Color.FromHex("#9B92D6"),
             StrokeShape = new RoundRectangle
             {
@@ -60,7 +86,11 @@ public partial class GroupPage : ContentPage
         {
             HorizontalOptions = LayoutOptions.Start,
             VerticalOptions = LayoutOptions.Start,
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
             Children =
             {
                 br
@@ -81,7 +111,11 @@ public partial class GroupPage : ContentPage
         };
         for (int i = 0; i < AllGroup.Count(); i++)
         {
+<<<<<<< HEAD
              bt = new Button()
+=======
+            bt = new Button()
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
             {
                 Shadow = sh,
                 TextColor = Color.FromRgb(0, 0, 0),
@@ -111,7 +145,11 @@ public partial class GroupPage : ContentPage
         Background = Color.FromHex("#512cd4");
         stackend.Children.Add(stackbut1);
         stacklast.Children.Add(stackmain);
+<<<<<<< HEAD
          stacklast.Children.Add(stackend);
+=======
+        stacklast.Children.Add(stackend);
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
         //-----------------------------
         //Button dsa = new Button()
         //{
@@ -133,6 +171,7 @@ public partial class GroupPage : ContentPage
             BorderColor = Color.FromHex("#512cd4"),
             Background = myHorizontalGradient12,
             Content = stacklast,
+<<<<<<< HEAD
             
         };
         ScrollView scrol = new ScrollView()
@@ -143,18 +182,38 @@ public partial class GroupPage : ContentPage
         };
       
         
+=======
+
+        };
+        ScrollView scrol = new ScrollView()
+        {
+
+            //Background = myHorizontalGradient,
+            Content = frame,
+        };
+
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
         entry.TextChanged += async (sender, args) =>
         {
             string oldText = args.OldTextValue;
             string newText = args.NewTextValue;
             string myText = entry.Text;
             stackend.Clear();
+<<<<<<< HEAD
            
+=======
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
             StackLayout stackbut = new StackLayout()
             {
                 HorizontalOptions = LayoutOptions.Start,
                 VerticalOptions = LayoutOptions.Start,
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
             };
             if (myText.Length != 0)
             {
@@ -198,11 +257,19 @@ public partial class GroupPage : ContentPage
                     }
                 }
             }
+<<<<<<< HEAD
     
             stackend.Children.Add(stackbut);
            
         };
          
+=======
+
+            stackend.Children.Add(stackbut);
+
+        };
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 
         void onclik(object sender, EventArgs args)
         {
@@ -230,7 +297,11 @@ public partial class GroupPage : ContentPage
                 h++;
 
             }
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
             //
             WriteFile WF = new WriteFile(IDCommonPair, _PairType, _PairName, _TeacherName, _Location, _Podgroup);
 

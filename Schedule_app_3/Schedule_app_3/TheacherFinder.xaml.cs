@@ -10,7 +10,18 @@ public partial class TheacherFinder : ContentPage
     List<string> _SurName = new List<string>();
     List<string> _Otchestvo = new List<string>();
     List<string> _Id = new List<string>();
+<<<<<<< HEAD
 
+=======
+    List<string> AllGroup = new List<string>();
+    Dictionary<int, List<Dictionary<int, int>>> IDCommonPair = new Dictionary<int, List<Dictionary<int, int>>>();
+    List<string> _PairType = new List<string>();
+    List<string> _PairName = new List<string>();
+    List<string> _TeacherName = new List<string>();
+    List<string> _Location = new List<string>();
+    List<string> _TimePair = new List<string>();
+    List<string> _Podgroup = new List<string>();
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 
     public TheacherFinder()
     {
@@ -185,10 +196,17 @@ public partial class TheacherFinder : ContentPage
                 {
                     for (int j = 0; j < myText.Length; j++)
                     {
+<<<<<<< HEAD
                         
                         if ( (!str[j].ToString().Equals( myText[j].ToString().ToLower()) 
                              && !str[j].ToString().Equals(myText[j].ToString().ToUpper()) ) )
                             
+=======
+
+                        if ((!str[j].ToString().Equals(myText[j].ToString().ToLower())
+                             && !str[j].ToString().Equals(myText[j].ToString().ToUpper())))
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
                         {
                             flag = false;
                         }
@@ -226,6 +244,42 @@ public partial class TheacherFinder : ContentPage
         {
             Button btn = (Button)sender;
             string str = btn.Text;
+<<<<<<< HEAD
+=======
+            //Navigation.PushAsync(new IndexPage("teacher", dic[str]));
+
+            //Button batick = (Button)sender;
+
+            int h = 1;
+            //WriteFromParser
+            for (int i = 0; i < 6; i++)
+            {
+                Dictionary<int, int> keyValuePairs = new Dictionary<int, int>();
+                //string faculty = "knt";
+
+                //string group = "311";
+                Parser ob = new Parser(h, "teacher", dic[str]);
+
+                _PairType.AddRange(ob.PairType);
+                _PairName.AddRange(ob.PairName);
+                _TeacherName.AddRange(ob.TeacherName);
+                _Location.AddRange(ob.Location);
+                _Podgroup.AddRange(ob.Podgroup);
+                var tmp = new List<Dictionary<int, int>>();
+                tmp.Add(ob._IDCommonPair);
+                IDCommonPair.Add(h, tmp);
+
+                h++;
+
+            }
+
+            //
+            WriteFile WF = new WriteFile(IDCommonPair, _PairType, _PairName, _TeacherName, _Location, _Podgroup);
+
+
+
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
             Navigation.PushAsync(new IndexPage("teacher", dic[str]));
         };
 

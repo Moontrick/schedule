@@ -359,7 +359,11 @@ public partial class FactPage : ContentPage
         myHorizontalGradient.EndPoint = new Point(0.5, 1);
         myHorizontalGradient.GradientStops.Add(new GradientStop(Color.FromHex("#673FD8"), 0.0f));
         myHorizontalGradient.GradientStops.Add(new GradientStop(Color.FromHex("#934ACD"), 1.0f));
+<<<<<<< HEAD
         string str1 = "Найти преподавателя";
+=======
+        string str1 = "Для преподавателя";
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
         
         
         Button el = new Button
@@ -369,13 +373,21 @@ public partial class FactPage : ContentPage
             Text = str1,
             Shadow = sh,
             Background = myHorizontalGradient,
+<<<<<<< HEAD
             FontSize = 15,
+=======
+            FontSize = 14,
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
             CornerRadius = 100,
             HorizontalOptions = LayoutOptions.End,
             WidthRequest = 300,
             HeightRequest = 200,
             
+<<<<<<< HEAD
             Padding = new Thickness(0, 50, 120, 0),
+=======
+            Padding = new Thickness(0, 50, 130, 0),
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
             
         };
 

@@ -21,19 +21,31 @@ build_metadata.AdditionalFiles.ManifestResourceName = Schedule_app_3.AppShell.xa
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
+<<<<<<< HEAD
 [D:/C\#/Shedule/schedule/Schedule_app_3/Schedule_app_3/FactPage.xaml]
+=======
+[E:/games/tests/Schedule_app_3/Schedule_app_3/FactPage.xaml]
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Schedule_app_3.FactPage.xaml
 build_metadata.AdditionalFiles.TargetPath = FactPage.xaml
 build_metadata.AdditionalFiles.RelativePath = FactPage.xaml
 
+<<<<<<< HEAD
 [D:/C\#/Shedule/schedule/Schedule_app_3/Schedule_app_3/GroupPage.xaml]
+=======
+[E:/games/tests/Schedule_app_3/Schedule_app_3/GroupPage.xaml]
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Schedule_app_3.GroupPage.xaml
 build_metadata.AdditionalFiles.TargetPath = GroupPage.xaml
 build_metadata.AdditionalFiles.RelativePath = GroupPage.xaml
 
+<<<<<<< HEAD
 [D:/C\#/Shedule/schedule/Schedule_app_3/Schedule_app_3/IndexPage.xaml]
+=======
+[E:/games/tests/Schedule_app_3/Schedule_app_3/IndexPage.xaml]
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Schedule_app_3.IndexPage.xaml
 build_metadata.AdditionalFiles.TargetPath = IndexPage.xaml
@@ -57,26 +69,51 @@ build_metadata.AdditionalFiles.ManifestResourceName = Schedule_app_3.Resources.S
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+<<<<<<< HEAD
 [D:/C\#/Shedule/schedule/Schedule_app_3/Schedule_app_3/Settings.xaml]
+=======
+[E:/games/tests/Schedule_app_3/Schedule_app_3/Settings.xaml]
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Schedule_app_3.Settings.xaml
 build_metadata.AdditionalFiles.TargetPath = Settings.xaml
 build_metadata.AdditionalFiles.RelativePath = Settings.xaml
 
+<<<<<<< HEAD
 [D:/C\#/Shedule/schedule/Schedule_app_3/Schedule_app_3/SettingsPage.xaml]
+=======
+[E:/games/tests/Schedule_app_3/Schedule_app_3/SettingsPage.xaml]
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Schedule_app_3.SettingsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = SettingsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = SettingsPage.xaml
 
+<<<<<<< HEAD
 [D:/C\#/Shedule/schedule/Schedule_app_3/Schedule_app_3/TestPage.xaml]
+=======
+[E:/games/tests/Schedule_app_3/Schedule_app_3/TestPage.xaml]
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Schedule_app_3.TestPage.xaml
 build_metadata.AdditionalFiles.TargetPath = TestPage.xaml
 build_metadata.AdditionalFiles.RelativePath = TestPage.xaml
 
+<<<<<<< HEAD
 [D:/C\#/Shedule/schedule/Schedule_app_3/Schedule_app_3/TheacherFinder.xaml]
+=======
+[E:/games/tests/Schedule_app_3/Schedule_app_3/TheacherFinder.xaml]
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Schedule_app_3.TheacherFinder.xaml
 build_metadata.AdditionalFiles.TargetPath = TheacherFinder.xaml
 build_metadata.AdditionalFiles.RelativePath = TheacherFinder.xaml
+<<<<<<< HEAD
+=======
+
+[E:/games/tests/Schedule_app_3/Schedule_app_3/Resources/Raw/Style.css]
+build_metadata.AdditionalFiles.GenKind = Css
+build_metadata.AdditionalFiles.ManifestResourceName = Schedule_app_3.Resources.Raw.Style.css
+build_metadata.AdditionalFiles.TargetPath = Resources\Raw\Style.css
+build_metadata.AdditionalFiles.RelativePath = Resources\Raw\Style.css
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4

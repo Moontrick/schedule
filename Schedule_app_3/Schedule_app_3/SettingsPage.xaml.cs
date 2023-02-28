@@ -24,6 +24,13 @@ public partial class SettingsPage : ContentPage
             Margin = new Thickness(0,0,0,20),
             TextColor = Color.FromRgb(0,0,0),
         };
+<<<<<<< HEAD
+=======
+        btfirst.Clicked += async (s, e) =>
+        {
+            await Navigation.PushAsync(new TheacherFinder());
+        };
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
         Button btsecond = new Button()
         {
             Background = Color.FromHex("#D9D9D9"),
@@ -35,6 +42,14 @@ public partial class SettingsPage : ContentPage
             Margin = new Thickness(0, 0, 0, 20),
             TextColor = Color.FromRgb(0, 0, 0),
         };
+<<<<<<< HEAD
+=======
+       
+        btsecond.Clicked += async (s, e) =>
+        {
+            await Navigation.PushAsync(new FactPage());
+        };
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
         Button btthird = new Button()
         {
             Background = Color.FromHex("#D9D9D9"),
@@ -46,6 +61,13 @@ public partial class SettingsPage : ContentPage
             Margin = new Thickness(0, 0, 0, 20),
             TextColor = Color.FromRgb(0, 0, 0),
         };
+<<<<<<< HEAD
+=======
+        btthird.Clicked += async (s, e) =>
+        {
+            await Navigation.PushAsync(new FactPage());
+        };
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
         StackLayout stackmain = new StackLayout()
         {
             Margin = new Thickness(0,20,0,0),

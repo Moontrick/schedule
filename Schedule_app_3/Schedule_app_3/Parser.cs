@@ -209,4 +209,8 @@ namespace Schedule_app_3
         }
 
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4

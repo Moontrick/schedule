@@ -19,6 +19,7 @@ namespace Schedule_app_3
 
 
             string targetFile = System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, "Shedule.txt");
+<<<<<<< HEAD
         
             using (FileStream fileStream = System.IO.File.OpenWrite(targetFile))
                 {
@@ -58,6 +59,46 @@ namespace Schedule_app_3
                         }
                     }
                 
+=======
+
+            using (FileStream fileStream = System.IO.File.Create(targetFile))
+            {
+
+                using (StreamWriter writer = new StreamWriter(fileStream))
+                {
+                    string group = "311";
+                    string userType = "0"; // 0 - student 1 - teacher
+                    string new_day = "@";
+                    string new_pair = "!";
+                    writer.WriteLine(group);
+                    writer.WriteLine(userType);
+                    int id = 0;
+                    foreach (var DAY in IDCommonPair)
+                    {
+                        writer.WriteLine(new_day);
+                        foreach (var PAIR_IN_DAY in DAY.Value)
+                        {
+                            foreach (var PAIR_ID in PAIR_IN_DAY)
+                            {
+                                writer.WriteLine(new_pair);
+                                writer.WriteLine(PAIR_ID.Value);
+                                for (int i = 0; i < PAIR_ID.Value; i++)
+                                {
+                                    writer.WriteLine(_PairType[id]);
+                                    writer.WriteLine(_PairName[id]);
+                                    writer.WriteLine(_Podgroup[id]);
+                                    writer.WriteLine(_TeacherName[id]);
+                                    writer.WriteLine(_Location[id]);
+                                    id++;
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
             }
 
 

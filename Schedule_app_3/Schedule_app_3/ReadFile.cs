@@ -28,7 +28,11 @@ namespace SheduleFile
         public List<string> TeacherName { get { return _TeacherName; } }
         public List<string> Location { get { return _Location; } }
         public List<string> Podgroup { get { return _Podgroup; } }
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 
         private int idPair = 0;
         private int CountPair = 0;
@@ -41,7 +45,11 @@ namespace SheduleFile
         public List<Dictionary<int, int>> tmp_Value { get { return _tmp_Value; } }
 
         private Dictionary<int, int> keyValuePairs = new Dictionary<int, int>();
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 
         public ReadFile(string path)
         {
@@ -54,11 +62,19 @@ namespace SheduleFile
                     int DayCount = 0;
 
                     _Type = Convert.ToInt32(line[0]);
+<<<<<<< HEAD
                     if (_Type == 0) _Group = Convert.ToInt32(line[1]);  else _Name = line[1];
                     
                     for (int i = 2; i < line.Length - 1;)
                     {
                         if (line[i] == "@\r")
+=======
+                    if (_Type == 0) _Group = Convert.ToInt32(line[1]); else _Name = line[1];
+
+                    for (int i = 2; i < line.Length - 1;)
+                    {
+                        if (line[i] == "@\r" || line[i] == "@")
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
                         {
                             //_tmp_Value.Add(keyValuePairs);
                             //_tmp_Value = new List<Dictionary<int, int>>();
@@ -73,7 +89,12 @@ namespace SheduleFile
                                 IDCommonPair[DayCount] = tmp_Value;
                                 DayCount++;
 
+<<<<<<< HEAD
                             } else if (DayCount != 0)
+=======
+                            }
+                            else if (DayCount != 0)
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
                             {
                                 IDCommonPair[DayCount] = tmp_Value;
                                 DayCount++;
@@ -92,15 +113,25 @@ namespace SheduleFile
                             i++;
                         }
 
+<<<<<<< HEAD
                         if (line[i] == "!\r") {
                             
+=======
+                        if (line[i] == "!\r" || line[i] == "!")
+                        {
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
                             i++;
                             CountPair = Convert.ToInt32(line[i]);
                             keyValuePairs.Add(idPair, CountPair);
                             idPair++;
 
 
+<<<<<<< HEAD
                            
+=======
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
                             if (CountPair != 0)
                             {
                                 i++;
@@ -114,7 +145,11 @@ namespace SheduleFile
                                 }
                             }
                             else i++;
+<<<<<<< HEAD
                             
+=======
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
                         }
 
                     }
@@ -135,5 +170,9 @@ namespace SheduleFile
 
         }
     }
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4

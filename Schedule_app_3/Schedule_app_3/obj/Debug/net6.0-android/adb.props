@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 AdbTarget=
+=======
+AdbTarget=-s 03a73f7b0405
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 AdbOptions=

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿obj\Debug\net6.0-android\resizetizer\r\drawable\settings.png
+=======
+﻿obj\Debug\net6.0-android\resizetizer\r\drawable\sch.png
+obj\Debug\net6.0-android\resizetizer\r\drawable\settings.png
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 obj\Debug\net6.0-android\resizetizer\r\drawable\vopros.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-hdpi\splash.png

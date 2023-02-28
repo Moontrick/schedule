@@ -49,7 +49,11 @@ public partial class IndexPage : ContentPage
 
         //        while (!streamReader.EndOfStream)
         //        {
+<<<<<<< HEAD
                     
+=======
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 
         //        }
 
@@ -57,9 +61,15 @@ public partial class IndexPage : ContentPage
         //}
 
         var fi = new FileInfo(fullPath);
+<<<<<<< HEAD
            
 
         
+=======
+
+
+
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 
         ReadFile readFile = new ReadFile(fullPath);
         IDCommonPair = readFile._IDCommonPair;
@@ -533,7 +543,11 @@ public partial class IndexPage : ContentPage
                                  Margin = new Thickness(10, 0, 0, 0),
                                 TextColor = Color.FromHex("#828181"),
                                  FontSize = 16,
+<<<<<<< HEAD
                                 Text = _PairType[number_of_pairs],
+=======
+                                Text = _PairType[number_of_pairs].Split('\r')[0],
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
                                 Padding = new Thickness (20,0,0,0),
                                  HorizontalOptions = LayoutOptions.Start,
                                  VerticalOptions = LayoutOptions.Center
@@ -542,7 +556,11 @@ public partial class IndexPage : ContentPage
                             {
                                 TextColor = Color.FromHex("#828181"),
                                  FontSize = 16,
+<<<<<<< HEAD
                                 Text = _Podgroup[number_of_pairs],
+=======
+                                Text = _Podgroup[number_of_pairs].Split('\r')[0],
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
                                 HorizontalOptions = LayoutOptions.End,
                                  VerticalOptions = LayoutOptions.Center
                             },
@@ -556,7 +574,11 @@ public partial class IndexPage : ContentPage
                         FontFamily = "Comic Sans MS",
                         TextColor = Color.FromRgb(0, 0, 0),
                         Padding = new Thickness(0, 5, 0, 0),
+<<<<<<< HEAD
                         Text = _PairName[number_of_pairs],
+=======
+                        Text = _PairName[number_of_pairs].Split('\r')[0],
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
                         HorizontalOptions = LayoutOptions.Start,
                         VerticalOptions = LayoutOptions.Center,
                     };
@@ -566,7 +588,11 @@ public partial class IndexPage : ContentPage
                         TextColor = Color.FromHex("#828181"),
                         FontSize = 16,
                         Padding = new Thickness(0, 5, 0, 0),
+<<<<<<< HEAD
                         Text = _TeacherName[number_of_pairs],
+=======
+                        Text = _TeacherName[number_of_pairs].Split('\r')[0],
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
                         HorizontalOptions = LayoutOptions.Start,
                         VerticalOptions = LayoutOptions.Center,
                     };
@@ -581,7 +607,11 @@ public partial class IndexPage : ContentPage
                         {
                             TextColor = Color.FromHex("#828181"),
                             FontSize = 16,
+<<<<<<< HEAD
                             Text = _Location[number_of_pairs],
+=======
+                            Text = _Location[number_of_pairs].Split('\r')[0],
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
                              HorizontalOptions = LayoutOptions.Start,
                              VerticalOptions = LayoutOptions.Center,
 
@@ -898,4 +928,8 @@ public partial class IndexPage : ContentPage
             default: break;
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4

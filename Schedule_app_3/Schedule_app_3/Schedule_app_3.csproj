@@ -49,6 +49,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+<<<<<<< HEAD
+=======
+	  <None Remove="Resources\Raw\index.html" />
+	</ItemGroup>
+
+	<ItemGroup>
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
 	  <PackageReference Include="CsvHelper" Version="30.0.1" />
 	  <PackageReference Include="HtmlAgilityPack" Version="1.11.46" />
 	</ItemGroup>

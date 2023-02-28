@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\Schedule_app_3.csproj;x64
+=======
+E:\games\tests\Schedule_app_3\Schedule_app_3\Schedule_app_3.csproj;x64
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4

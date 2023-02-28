@@ -11082,6 +11082,7 @@ public final class R {
     public static final int notification_template_icon_low_bg=0x7f070096;
     public static final int notification_tile_bg=0x7f070097;
     public static final int notify_panel_notification_icon_bg=0x7f070098;
+<<<<<<< HEAD
     public static final int settings=0x7f070099;
     public static final int splash=0x7f07009a;
     public static final int test_custom_background=0x7f07009b;
@@ -11089,6 +11090,16 @@ public final class R {
     public static final int tooltip_frame_dark=0x7f07009d;
     public static final int tooltip_frame_light=0x7f07009e;
     public static final int vopros=0x7f07009f;
+=======
+    public static final int sch=0x7f070099;
+    public static final int settings=0x7f07009a;
+    public static final int splash=0x7f07009b;
+    public static final int test_custom_background=0x7f07009c;
+    public static final int test_level_drawable=0x7f07009d;
+    public static final int tooltip_frame_dark=0x7f07009e;
+    public static final int tooltip_frame_light=0x7f07009f;
+    public static final int vopros=0x7f0700a0;
+>>>>>>> 1ac3029d253b2fe0d2456bc698d36359048c87a4
   }
   public static final class id {
     public static final int ALT=0x7f080000;
