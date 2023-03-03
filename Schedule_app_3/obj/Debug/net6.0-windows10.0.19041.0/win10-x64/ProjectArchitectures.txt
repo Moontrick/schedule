@@ -1,1 +1,0 @@
-D:\C#\Shedule\schedule\Schedule_app_3\Schedule_app_3\Schedule_app_3.csproj;x64
