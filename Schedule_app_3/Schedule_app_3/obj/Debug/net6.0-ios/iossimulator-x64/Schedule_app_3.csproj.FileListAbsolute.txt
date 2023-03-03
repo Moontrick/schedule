@@ -199,13 +199,10 @@ E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\libicuuc.a
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\libmono-component-debugger-static.a
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\libmono-component-debugger-stub-static.a
-E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\libmono-component-debugger.dylib
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\libmono-component-diagnostics_tracing-static.a
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\libmono-component-diagnostics_tracing-stub-static.a
-E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\libmono-component-diagnostics_tracing.dylib
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\libmono-component-hot_reload-static.a
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\libmono-component-hot_reload-stub-static.a
-E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\libmono-component-hot_reload.dylib
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\libmonosgen-2.0.a
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\libmonosgen-2.0.dylib
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\Microsoft.iOS.registrar.a
@@ -265,3 +262,9 @@ E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-ios\iossimulator-x
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-ios\iossimulator-x64\Schedule_app_3.pdb
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-ios\iossimulator-x64\Schedule_app_3.genruntimeconfig.cache
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-ios\iossimulator-x64\ref\Schedule_app_3.dll
+E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\CsvHelper.dll
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Resources\sch.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Resources\vopros.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\libmono-component-debugger.dylib
+E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\libmono-component-diagnostics_tracing.dylib
+E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-ios\iossimulator-x64\libmono-component-hot_reload.dylib

@@ -2,19 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Schedule_app_3.MainPage"
-             
+             NavigationPage.HasNavigationBar="false"
+             NavigationPage.HasBackButton="false"
                          >
     
-    <NavigationPage.TitleView>
-        <Label
-            Text="Расписание"
-            FontSize="30"
-            TextColor= "Black"
-            VerticalOptions="CenterAndExpand"
-             HorizontalOptions="CenterAndExpand" 
-            
-            />
-    </NavigationPage.TitleView>
     <!--<ScrollView>
         <VerticalStackLayout
             Spacing="25"

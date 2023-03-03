@@ -264,7 +264,6 @@ E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\hostfxr.dll
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\hostpolicy.dll
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\mscordaccore.dll
-E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_6.0.822.36306.dll
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\mscordbi.dll
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\mscorrc.dll
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\msquic.dll
@@ -348,3 +347,19 @@ E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\vopros.scale-100.png
 E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\CsvHelper.dll
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\sch.scale-100.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_6.0.1322.58009.dll
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png

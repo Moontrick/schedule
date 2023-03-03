@@ -13,8 +13,6 @@ E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\Schedule_a
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\mauiimage.inputs
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\mauifont.inputs
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\mauisplash.inputs
-E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\resizetizer\sp\maui_colors.xml
-E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\resizetizer\sp\maui_splash_image.xml
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\mauisplash.stamp
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\mauifont.stamp
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\resizetizer\f\OpenSans-Regular.ttf
@@ -94,8 +92,6 @@ E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\android\bi
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\android\bin\com.companyname.schedule_app_3.aab
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\android\bin\com.companyname.schedule_app_3.apks
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\res\values\colors.xml
-E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\res\resources\drawable\maui_splash_image.xml
-E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\res\resources\values\maui_colors.xml
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\uploadflags.txt
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\resolvedassemblies.hash
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\android\assets\GoogleGson.dll
@@ -960,3 +956,7 @@ E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\android\as
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\android\assets\System.Private.CoreLib.dll
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\android\assets\System.Private.Uri.dll
 E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\android\assets\System.Xml.dll
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\resizetizer\sp\drawable-v31\maui_splash_image.xml
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\resizetizer\sp\drawable\maui_splash_image.xml
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\resizetizer\sp\values\maui_colors.xml
+E:\games\tests\Schedule_app_3\Schedule_app_3\obj\Debug\net6.0-android\resizetizer\F7B9BBA4792A9F04-files.cache

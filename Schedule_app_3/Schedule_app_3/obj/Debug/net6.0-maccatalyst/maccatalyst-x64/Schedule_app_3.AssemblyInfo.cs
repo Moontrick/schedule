@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyProductAttribute("Schedule_app_3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Schedule_app_3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
-[assembly: System.Runtime.Versioning.TargetPlatformAttribute("MacCatalyst15.4")]
+[assembly: System.Runtime.Versioning.TargetPlatformAttribute("MacCatalyst16.1")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("MacCatalyst14.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

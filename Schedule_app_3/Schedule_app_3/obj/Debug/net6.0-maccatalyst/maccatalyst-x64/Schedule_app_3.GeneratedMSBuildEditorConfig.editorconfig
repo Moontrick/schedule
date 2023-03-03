@@ -5,6 +5,7 @@ build_property.UsingMicrosoftNETSdkWeb =
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = false
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Schedule_app_3
 build_property.ProjectDir = E:\games\tests\Schedule_app_3\Schedule_app_3\
