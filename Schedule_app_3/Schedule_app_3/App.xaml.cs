@@ -1,4 +1,8 @@
+
 ﻿namespace Schedule_app_3;
+
+namespace Schedule_app_3;
+
 using Microsoft.Maui.Networking;
 
 public partial class App : Application
