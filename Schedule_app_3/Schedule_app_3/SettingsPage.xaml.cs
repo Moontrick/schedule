@@ -7,15 +7,17 @@ public partial class SettingsPage : ContentPage
 		InitializeComponent();
         Label tit = new Label()
         {
+            FontFamily = "Inter",
             FontSize = 30,
             Text = "Настройки",
-            TextColor = Color.FromRgb(255,255,255),
+            TextColor = Color.FromRgb(0,0,0),
             Margin = new Thickness(0,0,0,20),
             HorizontalOptions = LayoutOptions.Center,
         };
 		Button btfirst = new Button()
 		{
-			Background = Color.FromHex("#D9D9D9"),
+            FontFamily = "Inter",
+            Background = Color.FromHex("#D9D9D9"),
 			Text = "Поиск преподавателя",
 			WidthRequest = 325,
 			HeightRequest = 50,
@@ -30,6 +32,7 @@ public partial class SettingsPage : ContentPage
         };
         Button btsecond = new Button()
         {
+            FontFamily = "Inter",
             Background = Color.FromHex("#D9D9D9"),
             Text = "Поиск группы",
             WidthRequest = 325,
@@ -46,6 +49,7 @@ public partial class SettingsPage : ContentPage
         };
         Button btthird = new Button()
         {
+            FontFamily = "Inter",
             Background = Color.FromHex("#D9D9D9"),
             Text = "Изменить текущую группу",
             WidthRequest = 325,
@@ -94,6 +98,7 @@ public partial class SettingsPage : ContentPage
         }
         Label prod = new Label()
         {
+            FontFamily = "Inter",
             Text = "C.P. @ CSIT Production",
             FontSize = 15,
             TextColor = Color.FromRgb(0, 0, 0),
@@ -103,14 +108,14 @@ public partial class SettingsPage : ContentPage
         };
         Grid gridend = new Grid()
         {
-            Background = myHorizontalGradient12,
+            //Background = myHorizontalGradient12,
             
             Children =
             {
                 stackmain, prod,alertButton
             }
         };
-        Background = Color.FromHex("#512cd4");
+        //Background = Color.FromHex("#512cd4");
         Content = gridend;
     }
 }
