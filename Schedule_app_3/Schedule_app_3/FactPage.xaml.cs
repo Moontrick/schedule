@@ -22,7 +22,7 @@ public partial class FactPage : ContentPage
 			Text = "Факультет КНиИТ",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
         
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -38,7 +38,7 @@ public partial class FactPage : ContentPage
             Text = "Биологический факультет",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
 
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -54,7 +54,7 @@ public partial class FactPage : ContentPage
             Text = "Географический факультет",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
 
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -70,7 +70,7 @@ public partial class FactPage : ContentPage
             Text = "Геологический факультет",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
 
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -86,7 +86,7 @@ public partial class FactPage : ContentPage
             Text = "Институт доп. образования",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
 
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -102,7 +102,7 @@ public partial class FactPage : ContentPage
             Text = "Институт искусств",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
 
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -118,7 +118,7 @@ public partial class FactPage : ContentPage
             Text = "Институт истории",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
 
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -134,7 +134,7 @@ public partial class FactPage : ContentPage
             Text = "Институт физики",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
 
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -150,7 +150,7 @@ public partial class FactPage : ContentPage
             Text = "Институт спорта",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
            
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -166,7 +166,7 @@ public partial class FactPage : ContentPage
             Text = "Институт филологии",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
 
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -182,7 +182,7 @@ public partial class FactPage : ContentPage
             Text = "Институт химии",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
 
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -198,7 +198,7 @@ public partial class FactPage : ContentPage
             Text = "Социологический факультет",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
 
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -214,7 +214,7 @@ public partial class FactPage : ContentPage
             Text = "Факультет Ин. Яз.",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
 
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -230,7 +230,7 @@ public partial class FactPage : ContentPage
             Text = "Факультет психологии",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
 
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -246,7 +246,7 @@ public partial class FactPage : ContentPage
             Text = "Факультет спец. образования",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
 
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -262,7 +262,7 @@ public partial class FactPage : ContentPage
             Text = "Факультет медицины",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
 
             //HeightRequest = 75,
             WidthRequest = 300,
@@ -278,7 +278,7 @@ public partial class FactPage : ContentPage
             Text = "Философский факультет",
              
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
             
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -294,7 +294,7 @@ public partial class FactPage : ContentPage
             Text = "Юридический факультет",
             
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
 
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -310,7 +310,7 @@ public partial class FactPage : ContentPage
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             TextColor = Color.FromRgb(0, 0, 0),
-            Background = Color.FromHex("D9D9D9"),
+            Background = Color.FromHex("EFEFEF"),
          
             //HeightRequest = 50,
            WidthRequest = 300,
@@ -326,8 +326,8 @@ public partial class FactPage : ContentPage
             FontFamily = "Comic Sans MS",
             Padding = new Thickness(5, 0, 5, 0),
             TextColor = Color.FromRgb(0, 0, 0),
-            //Background = Color.FromHex("D9D9D9"),
-            Background = Color.FromHex("D9D9D9"),
+            //Background = Color.FromHex("EFEFEF"),
+            Background = Color.FromHex("EFEFEF"),
             //HeightRequest = 50,
            WidthRequest = 300,
             HorizontalOptions = LayoutOptions.Center,
@@ -410,7 +410,7 @@ public partial class FactPage : ContentPage
         //Border br = new Border()
         //{
             
-        //    Background = Color.FromHex("D9D9D9"),
+        //    Background = Color.FromHex("EFEFEF"),
         //    StrokeShape = new RoundRectangle
         //    {
         //        CornerRadius = new CornerRadius(Math.Abs(bteco.Height))
@@ -463,7 +463,7 @@ public partial class FactPage : ContentPage
         {
             //BorderColor = Color.FromHex("#512cd4"),
             //Background = myHorizontalGradient1,
-            Padding = new Thickness(0, 0, 0, 0),
+            //Padding = new Thickness(0, 0, 0, 0),
             Content = gr3,
         };
 

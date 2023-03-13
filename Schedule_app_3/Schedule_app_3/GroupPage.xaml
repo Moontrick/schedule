@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Schedule_app_3.GroupPage"
              
-             Title="GroupPage">
-    <NavigationPage.TitleView>
+             NavigationPage.HasNavigationBar="false">
+    <!--<NavigationPage.TitleView>
         <Label
             Text="Выберите группу"
             FontSize="30"
@@ -13,5 +13,5 @@
              HorizontalOptions="CenterAndExpand" 
             
             />
-    </NavigationPage.TitleView>
+    </NavigationPage.TitleView>-->
 </ContentPage>

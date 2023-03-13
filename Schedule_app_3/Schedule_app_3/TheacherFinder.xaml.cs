@@ -56,14 +56,24 @@ public partial class TheacherFinder : ContentPage
             FullName.Add(_SurName[i] + " " + _Name[i] + " " + _Otchestvo[i]);
             dic.Add(FullName[i], _Id[i]);
         }
-
+        Label lbtitle = new Label()
+        {
+            FontFamily = "Comic Sans MS",
+            Text = "Поиск преподавателя",
+            FontSize = 20,
+            TextColor = Color.FromRgb(0, 0, 0),
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.Start,
+            Margin = new Thickness(0, 0, 0, 20),
+        };
         Entry entry = new Entry
         {
             Placeholder = "Введите фамиллию преподвателя...",
             FontFamily = "Comic Sans MS",
             WidthRequest = 300,
             HeightRequest = 40,
-            Background = Color.FromHex("#9B92D6"),
+            PlaceholderColor = Color.FromRgb(0, 0, 0),
+            Background = Color.FromHex("#EFEFEF"),
             FontSize = 15,
 
 
@@ -74,11 +84,11 @@ public partial class TheacherFinder : ContentPage
         {
             StrokeThickness = 1,
             Shadow = sh,
-            Padding = new Thickness(3, 0, 0, 0),
-            Background = Color.FromHex("#9B92D6"),
+            Padding = new Thickness(0, 0, 0, 0),
+            //Background = Color.FromHex("#9B92D6"),
             StrokeShape = new RoundRectangle
             {
-                CornerRadius = new CornerRadius(40)
+                CornerRadius = new CornerRadius(10)
             },
             Margin = new Thickness(0, 0, 0, 50),
             Content = entry
@@ -90,7 +100,7 @@ public partial class TheacherFinder : ContentPage
             VerticalOptions = LayoutOptions.Start,
 
             Children =
-            {
+            {lbtitle,
                 br
             }
         };
@@ -114,7 +124,7 @@ public partial class TheacherFinder : ContentPage
                 Text = FullName[i],
                 Shadow = sh,
                 TextColor = Color.FromRgb(0, 0, 0),
-                Background = Color.FromHex("D9D9D9"),
+                Background = Color.FromHex("EFEFEF"),
                 FontSize = 13,
                 WidthRequest = 300,
                 HeightRequest = 50,
@@ -133,7 +143,7 @@ public partial class TheacherFinder : ContentPage
             //Background = myHorizontalGradient,
         }; ;
         StackLayout stackend = new StackLayout();
-        Background = Color.FromHex("#512cd4");
+//Background = Color.FromHex("#512cd4");
         stackend.Children.Add(stackbut1);
         stacklast.Children.Add(stackmain);
         stacklast.Children.Add(stackend);
@@ -155,8 +165,8 @@ public partial class TheacherFinder : ContentPage
         //-----------------------------
         Frame frame = new Frame()
         {
-            BorderColor = Color.FromHex("#512cd4"),
-            Background = myHorizontalGradient12,
+            //BorderColor = Color.FromHex("#512cd4"),
+            //Background = myHorizontalGradient12,
             Content = stacklast,
 
         };
@@ -210,7 +220,7 @@ public partial class TheacherFinder : ContentPage
                             Text = FullName[i],
                             Shadow = sh,
                             TextColor = Color.FromRgb(0, 0, 0),
-                            Background = Color.FromHex("D9D9D9"),
+                            Background = Color.FromHex("EFEFEF"),
                             FontSize = 13,
                             WidthRequest = 300,
                             HeightRequest = 50,

@@ -17,7 +17,7 @@ public partial class SettingsPage : ContentPage
 		Button btfirst = new Button()
 		{
             FontFamily = "Inter",
-            Background = Color.FromHex("#D9D9D9"),
+            Background = Color.FromHex("#EFEFEF"),
 			Text = "Поиск преподавателя",
 			WidthRequest = 325,
 			HeightRequest = 50,
@@ -33,7 +33,7 @@ public partial class SettingsPage : ContentPage
         Button btsecond = new Button()
         {
             FontFamily = "Inter",
-            Background = Color.FromHex("#D9D9D9"),
+            Background = Color.FromHex("#EFEFEF"),
             Text = "Поиск группы",
             WidthRequest = 325,
             HeightRequest = 50,
@@ -50,7 +50,7 @@ public partial class SettingsPage : ContentPage
         Button btthird = new Button()
         {
             FontFamily = "Inter",
-            Background = Color.FromHex("#D9D9D9"),
+            Background = Color.FromHex("#EFEFEF"),
             Text = "Изменить текущую группу",
             WidthRequest = 325,
             HeightRequest = 50,
