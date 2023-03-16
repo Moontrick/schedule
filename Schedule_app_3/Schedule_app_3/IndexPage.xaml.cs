@@ -1,6 +1,8 @@
+using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.PlatformConfiguration;
 using Microsoft.Maui.Graphics.Text;
 using SheduleFile;
+using System.Security.Cryptography.X509Certificates;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Schedule_app_3;
@@ -173,6 +175,7 @@ public partial class IndexPage : ContentPage
         //    };
         //    st.Children.Add(l);
         //};
+
         //________________________________________Кнопки дней недели__________________________________________________
         Button btpn = new Button()
         {
@@ -314,7 +317,9 @@ public partial class IndexPage : ContentPage
                             },
                        btpn
                     }
+                    
                 },
+                
                 new StackLayout {
 
                     Children ={
@@ -505,7 +510,8 @@ public partial class IndexPage : ContentPage
                 bttkip,
                 titleLabel,
                 btrefres,
-                bttitle
+                bttitle,
+
             }
         };
         //Вверхник блок
@@ -524,7 +530,7 @@ public partial class IndexPage : ContentPage
                 framtitle,
                 gridButton,
                 weekLabel,
-                
+
             }
         };
 
@@ -656,7 +662,6 @@ public partial class IndexPage : ContentPage
 
                     };
                     st.Children.Add(fr2);
-
                     //___________________________________________________________________________________
 
                     Frame fr = new Frame
@@ -755,7 +760,6 @@ public partial class IndexPage : ContentPage
             stackMain.Children.Add(fr);
 
 
-
             return stackMain;
         }
         //__________________________
@@ -779,6 +783,33 @@ public partial class IndexPage : ContentPage
         };
 
         //________________________________________Функции кнопок дней недели__________________________________________________
+        SwipeGestureRecognizer LeftSwipeGesture = new SwipeGestureRecognizer();
+        SwipeGestureRecognizer RightSwipeGesture = new SwipeGestureRecognizer();
+        LeftSwipeGesture.Direction = SwipeDirection.Left;
+        RightSwipeGesture.Direction = SwipeDirection.Right;
+
+        LeftSwipeGesture.Swiped += (sender, e) =>
+        {
+            if (curDate == 6)
+                curDate = 0;
+            else
+                curDate++;
+            Show_Day(curDate);
+        };
+
+
+        RightSwipeGesture.Swiped += (sender, e) =>
+        {
+
+            if (curDate == 0)
+                curDate = 6;
+            else
+                curDate--;
+            Show_Day(curDate);
+            
+        };
+
+
         btpn.Clicked += Monday;
         btvt.Clicked += Tuesday;
         btsr.Clicked += Wednesday;
@@ -800,6 +831,8 @@ public partial class IndexPage : ContentPage
             stackMain = make_curremt_day(0, 0);
             frameend.Children.Clear();
             frameend.Children.Add(steckprom);
+            stackMain.GestureRecognizers.Add(LeftSwipeGesture);
+            stackMain.GestureRecognizers.Add(RightSwipeGesture);
             frameend.Children.Add(stackMain);
 
         };
@@ -827,6 +860,8 @@ public partial class IndexPage : ContentPage
             stackMain = make_curremt_day(1, n);
             frameend.Children.Clear();
             frameend.Children.Add(steckprom);
+            stackMain.GestureRecognizers.Add(LeftSwipeGesture);
+            stackMain.GestureRecognizers.Add(RightSwipeGesture);
             frameend.Children.Add(stackMain);
         };
         void Wednesday(object sender, EventArgs args)
@@ -853,7 +888,8 @@ public partial class IndexPage : ContentPage
             frameend.Children.Clear();
             frameend.Children.Add(steckprom);
             stackMain = make_curremt_day(2, n);
-
+            stackMain.GestureRecognizers.Add(LeftSwipeGesture);
+            stackMain.GestureRecognizers.Add(RightSwipeGesture);
             frameend.Children.Add(stackMain);
         };
         void Thursday(object sender, EventArgs args)
@@ -880,6 +916,8 @@ public partial class IndexPage : ContentPage
             frameend.Children.Clear();
             frameend.Children.Add(steckprom);
             stackMain = make_curremt_day(3, n);
+            stackMain.GestureRecognizers.Add(LeftSwipeGesture);
+            stackMain.GestureRecognizers.Add(RightSwipeGesture);
 
             frameend.Children.Add(stackMain);
         };
@@ -907,6 +945,9 @@ public partial class IndexPage : ContentPage
             stackMain = make_curremt_day(4, n);
             frameend.Children.Clear();
             frameend.Children.Add(steckprom);
+            stackMain.GestureRecognizers.Add(LeftSwipeGesture);
+            stackMain.GestureRecognizers.Add(RightSwipeGesture);
+
             frameend.Children.Add(stackMain);
         };
         void Saturday(object sender, EventArgs args)
@@ -933,6 +974,9 @@ public partial class IndexPage : ContentPage
             stackMain = make_curremt_day(5, n);
             frameend.Children.Clear();
             frameend.Children.Add(steckprom);
+            stackMain.GestureRecognizers.Add(LeftSwipeGesture);
+            stackMain.GestureRecognizers.Add(RightSwipeGesture);
+
             frameend.Children.Add(stackMain);
         };
         void Sunday(object sender, EventArgs args)
@@ -949,22 +993,32 @@ public partial class IndexPage : ContentPage
             stackMain = make_vs_day();
             frameend.Children.Clear();
             frameend.Children.Add(steckprom);
+            stackMain.GestureRecognizers.Add(LeftSwipeGesture);
+            stackMain.GestureRecognizers.Add(RightSwipeGesture);
+
+
             frameend.Children.Add(stackMain);
 
         };
 
         Content = scrol;
         EventArgs args321;
-        switch (curDate)
-        {
-            case 0: Monday(btpn, EventArgs.Empty); break;
-            case 1: Tuesday(btvt, EventArgs.Empty); break;
-            case 2: Wednesday(btsr, EventArgs.Empty); break;
-            case 3: Thursday(btch, EventArgs.Empty); break;
-            case 4: Friday(btpt, EventArgs.Empty); break;
-            case 5: Saturday(btsb, EventArgs.Empty); break;
-            case 6: Sunday(btvs, EventArgs.Empty); break;
-            default: break;
+        Show_Day(curDate);
+
+        void Show_Day(int curDate) {
+            switch (curDate)
+            {
+                case 0: Monday(btpn, EventArgs.Empty); break;
+                case 1: Tuesday(btvt, EventArgs.Empty); break;
+                case 2: Wednesday(btsr, EventArgs.Empty); break;
+                case 3: Thursday(btch, EventArgs.Empty); break;
+                case 4: Friday(btpt, EventArgs.Empty); break;
+                case 5: Saturday(btsb, EventArgs.Empty); break;
+                case 6: Sunday(btvs, EventArgs.Empty); break;
+                default: break;
+            }
         }
+
+      
     }
 }
